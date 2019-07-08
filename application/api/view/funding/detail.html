@@ -21,6 +21,14 @@
 .meixin {
 	margin-top: -.2rem;
 }
+
+.header-title{
+	display: flex;
+	justify-content: column;
+}
+#selectAll{
+	margin-top: 5px;
+}
 </style>
 {/block}
 {block name="container"}
@@ -71,6 +79,21 @@
 					<div class="small">支持人数</div>
 					<div class="mt-1">{$fund.people|money}</div>
 				</div>
+				<div class="col-md-4 text-muted text-center">
+					<div class="small">分红比例</div>
+					<div class="mt-1">{if substr_count($fund.bonus, ';') > 1}
+						<?php $bonus = explode( ';', rtrim($fund['bonus'], ';')); ?>
+						{volist name="$bonus" id="value"}
+						<?php $value = explode(',', $value); ?>
+						{volist name="value" id="val"}
+							<span>{$val[0]}-{$val[1]}:{$val[2]}</span>
+						{/volist}
+						{/volist}
+						{else}
+						<?php $bonus = explode( ',', rtrim($fund['bonus'], ';')); ?>
+							<span>支持{$bonus[0]}-{$bonus[1]}的比例是{$bonus[2]}</span>
+						{/if}</div>
+				</div>
 			</div>
 			<div class="progress progress-xs mt-2">
 				{if $fund.current >= $fund.target }
@@ -92,6 +115,7 @@
 						</div>
 					</div>
 				{/eq}
+
 			{else /}
 				<div class="row mb-3 gutters-xs">
 					<div class="col">
@@ -105,9 +129,17 @@
 							<button class="btn btn-danger btn-block" data-toggle="modal" data-target="#modal-over">结束项目</button>
 						</div>
 					{/eq}
+
 				</div>
 			{/if}
+		{else}
+			{eq name="Think.session.user.account.username" value="$fund.owner"}
+				<div class="col">
+					<button class="btn btn-warning btn-block btn-bonus" data-toggle="modal" data-target="#modal-bonus">一键分红</button>
+				</div>
+			{/eq}
 		{/if}
+
 		<div class="card">
 			<div class="card-title f1 pl-5 pt-5 mb-0 font-weight-bold">支持记录</div>
 			<div class="card-body">
@@ -180,6 +212,7 @@
 						<label class="text-muted small form-label font-weight-light text-center">请输入您的安全密码</label>
 						<input type="password" class="form-control" name="safeword" placeholder="安全密码" />
 					</div>
+					<div class="text-green font-weight-light text-center mt-2">项目结束后,您将获得 <strong class="bonus"></strong> {$Think.config.hello.unit}</div>
 				</div>
 			</div>
 			<div class="modal-footer">
@@ -212,10 +245,105 @@
 		</div>
 	</div>
 </div>
+<div class="modal fade" id="modal-bonus" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header header-title">
+				<div>
+				<h5 class="modal-title" id="exampleModalLongTitle">一键分红</h5>
+					<input type="checkbox" id="selectAll"><strong>全选</strong>
+				</div>
+				<div>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button></div>
+			</div>
+			<div class="card">
+				<div class="card-body">
+
+					<ul class="bonusline mb-0"></ul>
+				</div>
+			</div>
+			<div class="modal-body">
+				<div class="form-group mb-0">
+					<div class="form-group mt-2">
+						<label class="text-muted small form-label font-weight-light text-center">请输入您的安全密码</label>
+						<input type="password" class="form-control" name="safeword" placeholder="安全密码" />
+					</div>
+					<div class="text-green font-weight-light text-center mt-2">您将支出 <strong class="bonusmoney"></strong> {$Think.config.hello.unit}</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+				<button type="button" class="btn btn-primary btn-bonus">确认提交</button>
+			</div>
+		</div>
+	</div>
+</div>
 {/block}
 {block name="script"}
 <script>
 var frame = 'detail', id = '{$fund.id}', expire_at = '{$fund.expire_at}';
+</script>
+<script>
+	require(['jquery'], function ($) {
+		$('#modal-invest input[name="money"]').change(function () {
+			var username = "{:session('user.account.username')}";
+			var money = $(this).val();
+			$.post('/funding/bonus', {username:username, id:id, money:money}, function (res) {
+				$('.bonus').text(parseFloat(res * money) + parseFloat(money));
+			})
+		});
+		var list = function(data){
+			var html = '';
+			html += '<li class="timeline-item header-title">';
+			html += '<input type="checkbox" name="username[]" value="'+ data.username +'">';
+			html += '<strong>' + data.username + '</strong>';
+			html += '<div class="timeline-time text-green"><span>' + number_format(data.money + (data.money * data.bonus)) + '</span>' + unit + '</div>';
+			html += '</div>';
+			html += '</div>';
+			html += '</li>';
+			$('.bonusline').append(html);
+		}
+
+		$('.col .btn-bonus').click(function () {
+			$.post('/funding/reword', {id:id}, function (res) {
+				var money = 0;
+				$.each(res.message, function (key,value) {
+					list(value);
+				});
+			});
+		});
+
+		$('#modal-bonus .close').click(function () {
+			$('#modal-bonus li').remove();
+		});
+
+		$('#selectAll').on('click', function () {
+			if ($('#selectAll').prop('checked') == false) {
+				$('input[type="checkbox"]').prop('checked', false);
+			} else {
+				$('input[type="checkbox"]').prop('checked', true);
+			}
+		});
+		
+		$(document).on('click', 'input[type="checkbox"]', function () {
+			var money = 0;
+			$('input[name="username[]"]').each(function (key, value) {
+				if ($(this).prop('checked') == true) {
+					var sum = $(this).parent().children('.text-green').children('span').text();
+					money += parseFloat(sum);
+				}
+			})
+			$('.bonusmoney').text(money);
+		});
+
+		$('#modal-bonus .btn-bonus').click(function () {
+			var safeword = $('#modal-bonus input[name="safeword"]').val();
+			var money = $('.bonusmoney').text();
+			$.post('/funding/resave', {money:money, id:id, safeword:safeword}, function (res) {
+				console.log(money)
+			});
+		});
+	});
 </script>
 <script src="/static/js/funding.js?6"></script>
 {/block}

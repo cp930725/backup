@@ -12,56 +12,69 @@
 	<div class="card-body">
 		<div class="row">
 			<div class="col-md-6 col-lg-6">
-			    <div class="form-group">
-			        <label class="form-label">项目名称</label>
-			        <div class="input-group">
-			        	<div class="input-group-prepend">
-					        <select class="custom-select input-group-text" name="catalog">
-					            {volist name="Think.config.hello.funding.catalog" id="item"}
-					                <option value="{$key}">{$item}</option>
-					            {/volist}
-					        </select>
-				        </div>
-				        <input type="text" class="form-control" placeholder="项目名称" name="title" maxlength="20" />
-			    	</div>
-			    </div>
+				<div class="form-group">
+					<label class="form-label">项目名称</label>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<select class="custom-select input-group-text" name="catalog">
+								{volist name="Think.config.hello.funding.catalog" id="item"}
+								<option value="{$key}">{$item}</option>
+								{/volist}
+							</select>
+						</div>
+						<input type="text" class="form-control" placeholder="项目名称" name="title" maxlength="20" />
+					</div>
+				</div>
 			</div>
 			<div class="col-md-6 col-lg-6">
-			    <div class="form-group">
-			        <label class="form-label">项目图片</label>
-			        <div class="custom-file">
-			            <input type="file" accept="image/*" class="custom-file-input" name="image" />
-			            <label class="custom-file-label">选择图片</label>
-			        </div>
-			    </div>
+				<div class="form-group">
+					<label class="form-label">项目图片</label>
+					<div class="custom-file">
+						<input type="file" accept="image/*" class="custom-file-input" name="image" />
+						<label class="custom-file-label">选择图片</label>
+					</div>
+				</div>
 			</div>
 			<div class="col-md-6 col-lg-6">
-			    <div class="form-group">
-			        <label class="form-label">目标金额</label>
-			        <div class="input-group">
-			        	{if $maxTarget == PHP_INT_MAX }
-			        		<input type="text" class="form-control" name="target" placeholder="最少10000" />
-			        	{else /}
-			        		<input type="text" class="form-control" name="target" placeholder="最少10000，最多{$maxTarget|money}" data-max="{$maxTarget|money}" />
-			        	{/if}
-			        	<span class="input-group-append">
+				<div class="form-group">
+					<label class="form-label">目标金额</label>
+					<div class="input-group">
+						{if $maxTarget == PHP_INT_MAX }
+						<input type="text" class="form-control" name="target" placeholder="最少10000" />
+						{else /}
+						<input type="text" class="form-control" name="target" placeholder="最少10000，最多{$maxTarget|money}" data-max="{$maxTarget|money}" />
+						{/if}
+						<span class="input-group-append">
                             <span class="input-group-text">{$Think.config.hello.unit}</span>
                         </span>
-			        </div>
-			    </div>
+					</div>
+				</div>
 			</div>
 			<div class="col-md-6 col-lg-6">
-			    <div class="form-group">
-			        <label class="form-label">安全密码</label>
-			        <input type="password" class="form-control" name="safeword" />
-			    </div>
+				<div class="form-group">
+					<label class="form-label">投资与分红</label>
+					<div class="input-group">
+						<input type="text" class="form-control" data-min="0" name="min[]" placeholder="最少" />
+						<input type="text" class="form-control" data-max="{$maxTarget}" name="max[]" placeholder="最多" />
+						<input type="text" class="form-control" name="bonus[]" placeholder="0.03" />
+						<span id="plus" class="input-group-append">
+                            <span class="input-group-text"><i class="fe fe-plus"></i></span>
+                        </span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-6">
+				<div class="form-group">
+					<label class="form-label">安全密码</label>
+					<input type="password" class="form-control" name="safeword" />
+				</div>
 			</div>
 			<div class="col-lg-12">
-                <div class="form-group mb-0">
-                    <label class="form-label">项目详情</label>
-                    <script id="editor" name="content" type="text/plain" style="height: 20rem;"></script>
-                </div>
-            </div>
+				<div class="form-group mb-0">
+					<label class="form-label">项目详情</label>
+					<script id="editor" name="content" type="text/plain" style="height: 20rem;"></script>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="card-footer text-right">
@@ -74,7 +87,31 @@
 <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.all.js"></script>
 <script type="text/javascript" charset="utf-8" src="/ueditor/lang/zh-cn/zh-cn.js"></script>
 <script>
-var frame = 'publish';
+	var frame = 'publish';
+</script>
+<script>
+	require(['jquery'], function ($) {
+		var add = function(data) {
+			var min = parseInt($('input[name="max"]').last().val());
+			var html = '<div class="input-group">' +
+					'<input type="text" class="form-control" data-min="'+ min +'" name="min[]" placeholder="最少" />' +
+					'<input type="text" class="form-control" data-max="{$maxTarget}" name="max[]" placeholder="最多" /><input type="text" class="form-control" name="bonus[]" placeholder="0.03" />' +
+					'<span class="input-group-append minus"><span class="input-group-text"><i class="fe fe-minus"></i></span></span></div>';
+			data.parent().parent().parent().children('div:last-child').append(html);
+		};
+
+
+
+		$(function () {
+			$('#plus').click(function () {
+				add($(this));
+			});
+
+			$(document).on('click', '.minus', function () {
+				$(this).parent().remove();
+			})
+		});
+	})
 </script>
 <script src="/static/js/funding.js"></script>
 {/block}

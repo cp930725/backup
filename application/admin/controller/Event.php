@@ -550,6 +550,27 @@ class Event extends Base
                 $this->error('很抱歉、请提供目标金额！');
                 exit;
             }
+            // 项目分红
+            $bonuses = $req->post('bonus/a');
+            $mins = $req->post('min/a');
+            $maxs = $req->post('max/a');
+            $bonus = '';
+            if (empty($bonuses) || empty($mins) || empty($maxs)) {
+                $this->error("请设置正确的分红");
+            } else {
+                foreach ($bonuses as $key => $value) {
+                    if ($mins[$key] > $maxs[$key]) {
+                        $this->error("请设置正确的分红");
+                    }
+                    if ($value>= 1 || $value <=0) {
+                        $this->error("请设置正确的分红");
+                    }
+                    if (empty($bonuses[$key]) || empty($mins[$key]) || empty($maxs[$key])) {
+                        $this->error("请设置正确的分红");
+                    }
+                    $bonus .=  $mins[$key].','.$maxs[$key].','.$bonuses[$key].';';
+                }
+            }
             // 项目分类
             $catalog = $req->param('catalog/d') ?: 1;
             // 项目类型
@@ -576,6 +597,7 @@ class Event extends Base
             $content = $req->param('content');
             try {
                 $data = [
+                    'bonus'     =>  $bonus,
                     'type'      =>  $type,
                     'catalog'   =>  $catalog,
                     'title'     =>  $title,
@@ -625,7 +647,7 @@ class Event extends Base
         // 查询对象
         $query = Db::table('funding');
         // 搜索数据
-        $logs = $query->order('sort DESC, current DESC, people DESC, count DESC, update_at DESC')->paginate(20, false, ['query' => $req->param()]);
+        $logs = $query->order('sort DESC, bonus DESC, current DESC, people DESC, count DESC, update_at DESC')->paginate(20, false, ['query' => $req->param()]);
         $this->assign('logs', $logs);
         // 显示页面
         return $this->fetch();
@@ -659,6 +681,61 @@ class Event extends Base
         return $this->fetch();
     }
 
+    /**
+     * 创业众筹-审核通过
+     */
+    public function funding_ok(Request $req)
+    {
+        $id = $req->param('id');
+        if (empty($id)) {
+            $this->error('很抱歉、请提供编号！');
+            exit;
+        }
+        try {
+            // 开启事务
+            Db::startTrans();
+            // fd对象
+            $fd = new \app\api\controller\Funding();
+            $fd->agree($id);
+            // 提交事务
+            Db::commit();
+        } catch (\Exception $e) {
+            Db::rollback();
+            $this->error($e->getMessage());
+            exit;
+        }
+        // 操作成功
+        $this->success('恭喜您、操作成功！');
+        exit;
+    }
+    /**
+     * 创业众筹-审核拒绝
+     */
+    public function funding_no(Request $req)
+    {
+        // 获取编号
+        $id = $req->param('id');
+        if (empty($id)) {
+            $this->error('很抱歉、请提供编号！');
+            exit;
+        }
+        try {
+            // 开启事务
+            Db::startTrans();
+            // fd对象
+            $fd = new \app\api\controller\Funding();
+            $fd->refush($id);
+            // 提交事务
+            Db::commit();
+        } catch (\Exception $e) {
+            Db::rollback();
+            $this->error($e->getMessage());
+            exit;
+        }
+        // 操作成功
+        $this->success('恭喜您、操作成功！');
+        exit;
+    }
     /**
      * 票券列表
      */

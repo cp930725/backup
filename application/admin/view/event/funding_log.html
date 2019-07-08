@@ -55,6 +55,7 @@
                     <th>货币</th>
                     <th>手续费</th>
                     <th>时间</th>
+                    <th>审核</th>
                 </tr>
             </thead>
             <tbody>
@@ -74,6 +75,12 @@
                         <td>{$log.money|money}{$Think.config.hello.unit}</td>
                         <td>{$log.charge|money}{$Think.config.hello.unit}</td>
                         <td>{$log.create_at}</td>
+                        <td>
+                            {eq name="log.status" value="2"}
+                            <a href="/admin/event/funding_ok.html?id={$log.id}" class="btn btn-green btn-sm">通过</a>
+                            <a href="/admin/event/funding_no.html?id={$log.id}" class="btn btn-danger btn-sm ml-2">拒绝</a>
+                            {/eq}
+                        </td>
                     </tr>
                 {/volist}
             </tbody>

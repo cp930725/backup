@@ -14,12 +14,211 @@ class Funding extends Base
      * 操作类型
      */
     const ACTION_INVEST = 1;				// 购买
+    const ACTION_BONUS = 2;                 // 分红支出
+    const ACTION_resave = 3;                // 分红收入
     const ACTION_OVER = 8;				// 结束
 
     // +----------------------------------------------------------------------
     // | 内部方法
     // +----------------------------------------------------------------------
+    /**
+     * 审核通过
+     */
+    public function agree($id)
+    {
+        $log = Db::table('funding_log')->where('id', '=', $id)->find();
+        $config = config('hello.funding');
+        if (empty($log)) {
+            throw new \think\Exception("很抱歉、该订单不存在！");
+        }
+        if ($log['status'] != 2) {
+            throw new \think\Exception("很抱歉、错误的订单状态！");
+        }
+        // 用户账号
+        $username = $log['username'];
+        $user = (new Account())->instance($username);
+        if (empty($user)) {
+            throw new \think\Exception("很抱歉、用户不存在！");
+        }
+        if (empty($user['account']['status'])) {
+            throw new \think\Exception("很抱歉、用户已被冻结！");
+        }
+        // 投资订单
+        if ($log['action'] == 1) {
+            // 用户扣钱
+            (new Wallet())->change($username, 40, [
+                1 	=>	[$user['wallet']['money'], -$log['money'], $user['wallet']['money'] - $log['money']],
+                2 	=>	[$user['wallet']['deposit'], $log['money'], $user['wallet']['deposit'] + $log['money']],
+            ]);
+            // 投资次数
+            $cishu = Db::table('funding_log')->where('fid', '=', $log['fid'])->where('username', '=', $username)->where('action', '=', self::ACTION_INVEST)->count('id');
+            // 更新项目
+            $this->update($log['fid'], [
+                'current'	=>	Db::raw('current+' . $log['money']),
+                'people'	=>	Db::raw('people+'.($cishu ? 0 : 1)),
+                'count'		=>	Db::raw('count+1'),
+            ]);
+        // 分红订单
+        } elseif ($log['action'] == 2) {
+            // 参与者分红列表
+            $depositList = [];
+            // 发起人所得金额
+            $money = 0;
+            // 找出所有参与人员和他投的钱
+            $holder = Db::table('funding_log')->fieldRaw('username, SUM(money) AS money')->where('fid', '=', $log['fid'])->where('action', '=', self::ACTION_INVEST)->group('username')->select();
+            foreach ($holder as $key => $item) {
+                $bonus = $this->scale($item['username'], $log['fid'], $item['money']);
+                // 准备：用户扣除冻结金额
+                $depositList[] = [
+                    'username'      =>  $item['username'],
+                    'business'      =>  41,
+                    'money'       =>  $item['money'] + ($item['money'] * $bonus),
+                ];
+                // 准备：发起人支出金额
+                $money += $item['money'] + ($item['money'] * $bonus);
+            }
+            // 钱包对象
+            $wl = new Wallet();
+            // 发起人减钱
+            $wl->change($username, 41, [
+                2   =>  [$user['wallet']['deposit'], -$money, $user['wallet']['deposit'] - $money],
+            ]);
+            // 参与人分红
+            $wl->batch($depositList);
+            $this->update($log['fid'], [
+                'status'    =>  4,
+            ]);
+        // 项目结束
+        } else {
+            // 参与者扣钱列表
+            $depositList = [];
+            // 发起人所得金额
+            $money = 0;
+            // 找出所有参与人员和他投的钱
+            $holder = Db::table('funding_log')->fieldRaw('username, SUM(money) AS money')->where('fid', '=', $log['fid'])->where('action', '=', self::ACTION_INVEST)->group('username')->select();
+            foreach ($holder as $key => $item) {
+                // 准备：用户扣除冻结金额
+                $depositList[] = [
+                    'username'      =>  $item['username'],
+                    'business'      =>  41,
+                    'deposit'       =>  -$item['money'],
+                ];
+                // 准备：发起人所得金额
+                $money += $item['money'];
+            }
+            // 计算手续费
+            $charge = $money * $config['charge'];
 
+            if ($money - $charge > 0) {
+                // 钱包对象
+                $wl = new Wallet();
+                // 发起人加钱
+                $wl->change($username, 41, [
+                    1   =>  [$user['wallet']['money'], $money - $charge, $user['wallet']['money'] + ($money - $charge)],
+                ]);
+                // 参与人减钱
+                $wl->batch_deposit($depositList);
+            }
+        }
+        // 更改状态
+        $bool = Db::table('funding_log')->where('id', '=', $id)->update([
+            'status'    =>  1,
+            'update_at' =>  $this->timestamp
+        ]);
+        if (empty($bool)) {
+            throw new \think\Exception("很抱歉、更改订单状态失败！");
+        }
+    }
+    /**
+     * 审核拒绝
+     */
+    public function refush($id)
+    {
+        $log = Db::table('funding_log')->where('id', '=', $id)->find();
+        $wl = new Wallet();
+        if (empty($log)) {
+            throw new \think\Exception("很抱歉、该订单不存在！");
+        }
+        if ($log['status'] != 2) {
+            throw new \think\Exception("很抱歉、错误的订单状态！");
+        }
+        // 用户账号
+        $username = $log['username'];
+        $user = (new Account())->instance($username);
+        if (empty($user)) {
+            throw new \think\Exception("很抱歉、用户不存在！");
+        }
+        if (empty($user['account']['status'])) {
+            throw new \think\Exception("很抱歉、用户已被冻结！");
+        }
+        // 投资订单
+        if ($log['action'] == 1) {
+            // 用户扣钱
+            (new Wallet())->change($username, 42, [
+                1 => [$user['wallet']['money'], $log['money'], $user['wallet']['money'] + $log['money']],
+                2 => [$user['wallet']['deposit'], -$log['money'], $user['wallet']['deposit'] - $log['money']],
+            ]);
+        // 分红订单
+        } elseif ($log['action'] == 2) {
+            // 参与者分红列表
+            $depositList = [];
+            // 发起人所得金额
+            $money = 0;
+            // 找出所有参与人员和他投的钱
+            $holder = Db::table('funding_log')->fieldRaw('username, SUM(money) AS money')->where('fid', '=', $log['fid'])->where('action', '=', self::ACTION_INVEST)->group('username')->select();
+            foreach ($holder as $key => $item) {
+                $bonus = $this->scale($item['username'], $log['fid'], $item['money']);
+                // 准备：用户加钱金额
+                $depositList[] = [
+                    'username' => $item['username'],
+                    'business' => 97,
+                    'money' => $item['money'] + ($item['money'] * $bonus),
+                ];
+                // 准备：发起人支出金额
+                $money += $item['money'] + ($item['money'] * $bonus);
+            }
+            // 钱包对象
+            // 发起人减钱
+            $wl->change($username, 97, [
+                2 => [$user['wallet']['deposit'], -$money, $user['wallet']['deposit'] - $money],
+            ]);
+            $wl->change($username, 96, [
+                1 => [$user['wallet']['money'], $money, $user['wallet']['money'] + $money],
+            ]);
+
+            // 参与人分红
+            $wl->batch($depositList);
+        // 结束订单
+        } else {
+            // 参与者扣钱列表
+            $depositList = [];
+            // 发起人所得金额
+            $money = 0;
+            // 找出所有参与人员和他投的钱
+            $holder = Db::table('funding_log')->fieldRaw('username, SUM(money) AS money')->where('fid', '=', $id)->where('action', '=', self::ACTION_INVEST)->group('username')->select();
+            foreach ($holder as $key => $item) {
+                // 准备：用户扣除冻结金额
+                $depositList[] = [
+                    'username' => $item['username'],
+                    'business' => 43,
+                    'deposit' => -$item['money'],
+                ];
+
+            }
+                // 参与人加钱
+                $wl->batch($depositList);
+                // 参与人减冻结金额
+                $wl->batch_deposit($depositList);
+        }
+        // 更改状态
+        $bool = Db::table('funding_log')->where('id', '=', $id)->update([
+            'status'    =>  0,
+            'update_at' =>  $this->timestamp
+        ]);
+        if (empty($bool)) {
+            throw new \think\Exception("很抱歉、更改订单状态失败！");
+        }
+    }
     /**
      * 获取项目
      */
@@ -43,6 +242,7 @@ class Funding extends Base
             'currency'  =>  1,
             'owner'		=>	null,
             'content'	=>	null,
+            'bonus'     =>  null,
             'target'	=>	0,
             'current'	=>	0,
             'people'	=>	0,
@@ -58,6 +258,8 @@ class Funding extends Base
         // 返回数据
         return $id;
     }
+
+
 
     /**
      * 修改项目
@@ -331,6 +533,9 @@ class Funding extends Base
             }
             // 获取金额
             $money = $req->param('money/f');
+            if (($fund['current'] + $money) >= $fund('target')) {
+                throw new \think\Exception("很抱歉、该项目投资金额已达上限");
+            }
             if (empty($money) || $money < 0) {
                 throw new \think\Exception("很抱歉、错误的金额！");
             }
@@ -338,23 +543,12 @@ class Funding extends Base
             if ($user['wallet']['money'] < $money) {
                 throw new \think\Exception("很抱歉、您的可用资金不足！");
             }
-            // 用户扣钱
-            (new Wallet())->change($username, 40, [
-                1 	=>	[$user['wallet']['money'], -($money), $user['wallet']['money'] - $money],
-                2 	=>	[$user['wallet']['deposit'], $money, $user['wallet']['deposit'] + $money],
-            ]);
-            // 投资次数
-            $cishu = Db::table('funding_log')->where('fid', '=', $id)->where('username', '=', $username)->where('action', '=', self::ACTION_INVEST)->count('id');
-            // 更新项目
-            $this->update($id, [
-                'current'	=>	Db::raw('current+' . $money),
-                'people'	=>	Db::raw('people+'.($cishu ? 0 : 1)),
-                'count'		=>	Db::raw('count+1'),
-            ]);
+
             // 项目记录
             $bool = Db::table('funding_log')->insert([
                 'fid'		=>	$id,
                 'type'		=>	$fund['type'],
+                'status'    =>  2,
                 'currency'  =>  $fund['currency'],
                 'action'	=>	self::ACTION_INVEST,
                 'username'	=>	$username,
@@ -381,6 +575,7 @@ class Funding extends Base
             'message'	=>	'恭喜您、操作成功！'
         ]);
     }
+
 
     /**
      * 项目结束
@@ -445,7 +640,7 @@ class Funding extends Base
             }
             // 计算手续费
             $charge = $money * $config['charge'];
-            if ($money - $charge > 0) {
+            /*if ($money - $charge > 0) {
                 // 钱包对象
                 $wl = new Wallet();
                 // 发起人加钱
@@ -454,7 +649,7 @@ class Funding extends Base
                 ]);
                 // 参与人减钱
                 $wl->batch_deposit($depositList);
-            }
+            }*/
             // 更新项目
             $this->update($id, [
                 'status'    =>  3,
@@ -463,6 +658,7 @@ class Funding extends Base
             $bool = Db::table('funding_log')->insert([
                 'fid'       =>  $id,
                 'type'      =>  $fund['type'],
+                'status'    =>  2,
                 'currency'  =>  $fund['currency'],
                 'action'    =>  self::ACTION_OVER,
                 'username'  =>  $username,
@@ -488,6 +684,173 @@ class Funding extends Base
         return json([
             'code'      =>  200,
             'message'   =>  '恭喜您、操作成功！'
+        ]);
+    }
+
+    /**
+     *  获取分红比例
+     */
+    public function scale($username, $id, $money)
+    {
+        $fund = $this->get($id);
+        $logs = Db::table('funding_log')->where('fid', '=', $fund['id'])->where('username', '=', $username)->where('action', '=', 1)->select();
+        if (!empty($logs)) {
+            foreach ($logs as $key => $value) {
+                $money += $value['money'];
+            }
+        }
+        $array = rtrim($fund['bonus'], ';');
+        if (substr_count($array, ';') >= 1) {
+            $arr = explode(';', $array);
+            foreach ($arr as $key => $value) {
+                $bonus = explode(',', $value);
+                if ($bonus[0] <= $money && $money <= $bonus[1]) {
+                    return $bonus[2];
+                }
+            }
+        } else {
+            $bonus = explode(',', $array);
+            return $bonus[2];
+        }
+    }
+    
+    /**
+     *  分红比例
+     */
+    public function bonus(Request $req)
+    {
+        $username = $req->param('username');
+        $id = $req->param('id');
+        $money = $req->param('money');
+
+        return $this->scale($username, $id, $money);
+    }
+
+    /**
+     *  分红页面
+     */
+    public function reword(Request $req)
+    {
+        $id = $req->param('id');
+
+        $logs = Db::table('funding_log')->where('fid', '=', $id)->where('action', '=', 1)->select();
+        $user = [];
+        foreach ($logs as $key => $value) {
+            array_push($user, $value['username']);
+        }
+        $bonus = [];
+        $user = array_unique($user);
+        foreach ($user as $key => $value) {
+            $money = 0;
+            foreach ($logs as $k => $v) {
+                if ($value == $v['username']) {
+                    $money += $v['money'];
+                }
+            }
+            $bonus[$key]['username'] = $value;
+            $bonus[$key]['money'] = $money;
+            $bonus[$key]['bonus'] = $this->scale($value, $id, $money);
+        }
+
+        return json([
+           'message'    =>     $bonus,
+        ]);
+    }
+
+    /**
+     *  一键分红
+     */
+    public function resave(Request $req)
+    {try {
+        // 获取配置
+        $config = config('hello.funding');
+        if (empty($config) || empty($config['enable'])) {
+            throw new \think\Exception("很抱歉、系统尚未开启该模块！");
+        }
+        // 开启事务
+        Db::startTrans();
+        // 获取编号
+        $id = $req->param('id/d');
+        if (empty($id)) {
+            throw new \think\Exception("很抱歉、请提供编号！");
+        }
+        // 查询项目
+        $fund = $this->get($id);
+        if (empty($fund) || empty($fund['visible'])) {
+            throw new \think\Exception("很抱歉、该项目不存在！");
+        }
+        if ($fund['status'] == 2) {
+            throw new \think\Exception("很抱歉、该项目还未开始！");
+        }
+        if ($fund['status'] == 1 || $fund['expire_at'] < $this->timestamp) {
+            throw new \think\Exception("很抱歉、该项目未结束！");
+        }
+        if ($fund['status'] == 4 ) {
+            throw new \think\Exception("很抱歉、该项目已分红！");
+        }
+        // 安全密码
+        $safeword = $req->param('safeword');
+        if (empty($safeword)) {
+            throw new \think\Exception("很抱歉、请提供安全密码！");
+        }
+        // 用户账号
+        $username = session('user.account.username');
+        // 用户账号
+        $user = (new Account())->instance($username, null, $safeword);
+        if (empty($user)) {
+            throw new \think\Exception("很抱歉、安全密码不正确！");
+        }
+        if (empty($user['account']['status'])) {
+            throw new \think\Exception("很抱歉、您的账号已被冻结！");
+        }
+        // 获取金额
+        $money = $req->param('money/f');
+        if (empty($money) || $money < 0) {
+            throw new \think\Exception("很抱歉、错误的金额！");
+        }
+        // 判断余额
+        if ($user['wallet']['money'] < $money) {
+            throw new \think\Exception("很抱歉、您的可用资金不足！");
+        }
+        // 只能操作自己的项目
+        if ($fund['owner'] != $username) {
+            throw new \think\Exception("很抱歉、您无权执行该操作！");
+        }
+        // 用户扣钱
+        (new Wallet())->change($username, 97, [
+            1 	=>	[$user['wallet']['money'], -($money), $user['wallet']['money'] - ($money)],
+            2 	=>	[$user['wallet']['deposit'], ($money), $user['wallet']['deposit'] + ($money)],
+        ]);
+
+        // 项目记录
+        $bool = Db::table('funding_log')->insert([
+            'fid'		=>	$id,
+            'type'		=>	$fund['type'],
+            'status'    =>  2,
+            'currency'  =>  $fund['currency'],
+            'action'	=>	self::ACTION_BONUS,
+            'username'	=>	$username,
+            'money'		=>	$money,
+            'charge'    =>  0,
+            'create_at'	=>	$this->timestamp,
+            'update_at'	=>	$this->timestamp,
+        ]);
+        if (empty($bool)) {
+            throw new \think\Exception("很抱歉、参与记录保存失败！");
+        }
+        // 提交事务
+        Db::commit();
+    } catch (\Exception $e) {
+        Db::rollback();
+        return json([
+            'code'		=>	555,
+            'message'	=>	$e->getMessage()
+        ]);
+    }
+        // 操作成功
+        return json([
+            'code'		=>	200,
+            'message'	=>	'恭喜您、操作成功！'
         ]);
     }
 
@@ -601,6 +964,27 @@ class Funding extends Base
                 if ($runningProjectCount > 0) {
                     throw new \think\Exception("很抱歉、您已有项目在进行中！");
                 }
+                // 项目分红
+                $bonuses = $req->post('bonus/a');
+                $mins = $req->post('min/a');
+                $maxs = $req->post('max/a');
+                $bonus = '';
+                if (empty($bonuses) || empty($mins) || empty($maxs)) {
+                    throw new \think\Exception("请设置正确的分红");
+                } else {
+                    foreach ($bonuses as $key => $value) {
+                        if ($mins[$key] > $maxs[$key]) {
+                            throw new \think\Exception("请设置正确的分红");
+                        }
+                        if ($value>= 1 || $value <=0) {
+                            throw new \think\Exception("请设置正确的分红");
+                        }
+                        if (empty($bonuses[$key]) || empty($mins[$key]) || empty($maxs[$key])) {
+                            throw new \think\Exception("请设置正确的分红");
+                        }
+                        $bonus .=  $mins[$key].','.$maxs[$key].','.$bonuses[$key].';';
+                    }
+                }
                 // 项目分类
                 $catalog = $req->param('catalog/d');
                 if (empty($catalog) || !array_key_exists($catalog, $config['catalog'])) {
@@ -627,6 +1011,7 @@ class Funding extends Base
                 $status = $config['audit'] ? 2 : 1;
                 $expire_at = date('Y-m-d H:i:s', strtotime('+' . $config['expire'] . ' day'));
                 $id = $this->create([
+                    'bonus'     =>  $bonus,
                     'status'    =>  $status,
                     'owner'     =>  $username,
                     'catalog'   =>  $catalog,
@@ -645,6 +1030,7 @@ class Funding extends Base
             }
             // 操作成功
             $this->success('恭喜您、操作成功！', '/funding/' . $id . '.html');
+            exit;
             exit;
         }
         // 显示页面
@@ -707,6 +1093,27 @@ class Funding extends Base
                 if ($user['account']['authen'] != 1) {
                     throw new \think\Exception("很抱歉、请先完成实名认证！");
                 }
+                // 项目分红
+                $bonuses = $req->post('bonus/a');
+                $mins = $req->post('min/a');
+                $maxs = $req->post('max/a');
+                $bonus = '';
+                if (empty($bonuses) || empty($mins) || empty($maxs)) {
+                    throw new \think\Exception("请设置正确的分红");
+                } else {
+                    foreach ($bonuses as $key => $value) {
+                        if ($mins[$key] > $maxs[$key]) {
+                            throw new \think\Exception("请设置正确的分红");
+                        }
+                        if ($value>= 1 || $value <=0) {
+                            throw new \think\Exception("请设置正确的分红");
+                        }
+                        if (empty($bonuses[$key]) || empty($mins[$key]) || empty($maxs[$key])) {
+                            throw new \think\Exception("请设置正确的分红");
+                        }
+                        $bonus .=  $mins[$key].','.$maxs[$key].','.$bonuses[$key].';';
+                    }
+                }
                 // 项目标题
                 $title = $req->param('title');
                 if (empty($title)) {
@@ -726,6 +1133,7 @@ class Funding extends Base
                 $content = $req->param('content');
                 // 发布项目
                 $data = [
+                    'bonus'     =>  $bonus,
                     'title'     =>  $title,
                     'content'   =>  $content,
                 ];

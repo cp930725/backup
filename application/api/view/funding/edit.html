@@ -30,6 +30,37 @@
 			    </div>
 			</div>
 			<div class="col-md-6 col-lg-6">
+				<div class="form-group">
+					<label class="form-label">投资与分红</label>
+					{if substr_count($fund.bonus, ';') > 1}
+					<?php $bonus = explode( ';', rtrim($fund['bonus'], ';')); ?>
+					{volist name="$bonus" id="value"}
+					<?php $value = explode(',', $value); ?>
+					{volist name="value" id="val"}
+							<div class="input-group">
+								<input type="text" class="form-control" data-min="0" value="{$val[0]}" name="min[]" placeholder="最少" />
+								<input type="text" class="form-control" data-max="" name="max[]" placeholder="最多" />
+								<input type="text" class="form-control" name="bonus[]" placeholder="0.03" />
+								<span id="plus" class="input-group-append">
+                            <span class="input-group-text"><i class="fe fe-plus"></i></span>
+                        </span>
+							</div>
+						{/volist}
+					{/volist}
+					{else}
+					<?php $bonus = explode( ',', rtrim($fund['bonus'], ';')); ?>
+					<div class="input-group">
+						<input type="text" class="form-control" data-min="0" value="{$bonus[0]}" name="min[]" placeholder="最少" />
+						<input type="text" class="form-control" data-max="" value="{$bonus[1]}" name="max[]" placeholder="最多" />
+						<input type="text" class="form-control" name="bonus[]" value="{$bonus[2]}" placeholder="0.03" />
+						<span id="plus" class="input-group-append">
+                            <span class="input-group-text"><i class="fe fe-plus"></i></span>
+                        </span>
+					</div>
+					{/if}
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-6">
 			    <div class="form-group">
 			        <label class="form-label">安全密码</label>
 			        <input type="password" class="form-control" name="safeword" />
@@ -52,6 +83,30 @@
 <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.config.js"></script>
 <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.all.js"></script>
 <script type="text/javascript" charset="utf-8" src="/ueditor/lang/zh-cn/zh-cn.js"></script>
+<script>
+	require(['jquery'], function ($) {
+		var add = function(data) {
+			var min = parseInt($('input[name="max"]').last().val());
+			var html = '<div class="input-group">' +
+					'<input type="text" class="form-control" data-min="'+ min +'" name="min[]" placeholder="最少" />' +
+					'<input type="text" class="form-control" data-max="" name="max[]" placeholder="最多" /><input type="text" class="form-control" name="bonus[]" placeholder="0.03" />' +
+					'<span class="input-group-append minus"><span class="input-group-text"><i class="fe fe-minus"></i></span></span></div>';
+			data.parent().parent().parent().children('div:last-child').append(html);
+		};
+
+
+
+		$(function () {
+			$('#plus').click(function () {
+				add($(this));
+			});
+
+			$(document).on('click', '.minus', function () {
+				$(this).parent().remove();
+			})
+		});
+	})
+</script>
 <script>
 var frame = 'edit';
 </script>

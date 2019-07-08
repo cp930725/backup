@@ -234,6 +234,33 @@ require(['jquery', 'ZeroClipboard'], function($, ZeroClipboard){
 				});
 			});
 		}
+		// 一键分红
+		$('#modal-bonus .btn-bonus').click(function () {
+			if ($(this).hasClass('btn-loading')) {
+				return false;
+			}
+			var safeword = $('#modal-bonus input[name="safeword"]').val();
+			if (safeword == '') {
+				$('#modal-bonus input[name=safeword]').focus();
+				return false;
+			}
+			var money = $('.bonusmoney').text();
+			if (money == '') {
+				toast('请选择要发放分红的用户');
+				return false;
+			}
+			$('#modal-bonus .btn-bonus').addClass('btn-loading');
+			$.post('/funding/resave', {money:money, id:id, safeword:safeword}, function (res) {
+				$('#modal-bonus .btn-bonus').removeClass('btn-loading');
+				if (res.code == 200) {
+					toast(res.message, function(){
+						window.location.reload();
+					});
+				} else {
+					toast(res.message);
+				}
+			});
+		});
 		// 发布项目
 		if (frame == 'publish') {
 			// 实例化编辑器
@@ -249,7 +276,7 @@ require(['jquery', 'ZeroClipboard'], function($, ZeroClipboard){
 				enableContextMenu: false,
 			});
 			// 表单提交
-			$('form').on('submit', function(){
+			$('button[type="submit"]').on('click', function(){
 				// 获取名称
 				var title = $('input[name=title]').val();
 				if (title == '') {
@@ -273,6 +300,31 @@ require(['jquery', 'ZeroClipboard'], function($, ZeroClipboard){
 				if (max && max < target) {
 					toast('很抱歉、您最多筹集' + max + unit + '！');
 					return false;
+				}
+				// 投资与分红
+				var bonus = $('input[name="bonus[]"]');
+				var maxArr = $('input[name="max[]"]');
+				var minArr = $('input[name="min[]"]');
+				if (bonus.length != (maxArr.length & minArr.length)) {
+					toast('请设置正确的分红比例');
+					return false;
+				} else {
+					$.each(minArr, function (key,value) {
+						if (key != 0) {
+							if (minArr.val() >= maxArr.eq(key-1).val() && 0 <= bonus.eq(key).val() <= 1) {
+								toast('请设置正确的分红比例');
+								return false;
+							}
+						} else if (minArr.eq(key).val() == '' || maxArr.eq(key).val() == '' || bonus.eq(key).val() == '') {
+							toast('请设置正确的分红比例');
+							return false;
+						} else {
+							if (minArr.eq(key).val() > maxArr.eq(key).val()) {
+								toast('请设置正确的分红比例');
+								return false;
+							}
+						}
+					});
 				}
 				// 获取密码
 				var safeword = $('input[name=safeword]').val();
