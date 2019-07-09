@@ -106,6 +106,7 @@
 	                <th>实名</th>
 	                <th>可用{$Think.config.hello.unit}</th>
 	                <th>冻结{$Think.config.hello.unit}</th>
+                  	<th>可用{$Think.config.hello.cash}</th>
 	                <th>可用{$Think.config.hello.score.unit}</th>
 	                <th>冻结{$Think.config.hello.score.unit}</th>
 	                <th class="text-center">操作</th>
@@ -144,6 +145,7 @@
 	                </td>
 	                <td>{$user.money|money}</td>
 	                <td>{$user.deposit|money}</td>
+                    <td>{$user.cash|money}</td>
 	                <td>{$user.score|money}</td>
 	                <td>{$user.score_deposit|money}</td>
 	                <td class="text-center">

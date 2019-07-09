@@ -1,4 +1,4 @@
-<?php /*a:2:{s:68:"/www/wwwroot/aa.jdswzc.com/application/admin/view/market/report.html";i:1562574822;s:67:"/www/wwwroot/aa.jdswzc.com/application/admin/view/common/world.html";i:1562661509;}*/ ?>
+<?php /*a:2:{s:68:"/www/wwwroot/aa.jdswzc.com/application/admin/view/market/report.html";i:1562574822;s:67:"/www/wwwroot/aa.jdswzc.com/application/admin/view/common/world.html";i:1562662267;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -58,6 +58,9 @@
     .dropdown-menu {
         z-index: 2200;
     }
+      a:hover{
+      	text-decoration: none;
+      }
     </style>
     
 </head>

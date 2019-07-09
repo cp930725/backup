@@ -1,4 +1,4 @@
-<?php /*a:2:{s:68:"/www/wwwroot/aa.jdswzc.com/application/admin/view/event/funding.html";i:1562578227;s:67:"/www/wwwroot/aa.jdswzc.com/application/admin/view/common/world.html";i:1562574822;}*/ ?>
+<?php /*a:2:{s:68:"/www/wwwroot/aa.jdswzc.com/application/admin/view/event/funding.html";i:1562578227;s:67:"/www/wwwroot/aa.jdswzc.com/application/admin/view/common/world.html";i:1562662267;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -58,6 +58,9 @@
     .dropdown-menu {
         z-index: 2200;
     }
+      a:hover{
+      	text-decoration: none;
+      }
     </style>
     
 <style type="text/css">
@@ -479,7 +482,7 @@
                     <div class="row align-items-center"><?php echo htmlentities(date('Y-m-d g:i a',time())); ?></div>
                 </div>
                 <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
-                    Copyright © 2018 <a href="."><?php echo htmlentities(app('config')->get('hello.title')); ?></a>. &#28304;&#30721;&#26469;&#33258;&#23567;&#23627;&#28304;&#30721;&#119;&#119;&#119;&#46;&#109;&#50;&#49;&#51;&#46;&#99;&#110;
+                    Copyright © 2019 <a href="."><?php echo htmlentities(app('config')->get('hello.title')); ?></a><a>仓实科技</a>
                 </div>
             </div>
         </div>

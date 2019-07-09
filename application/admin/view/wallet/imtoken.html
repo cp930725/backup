@@ -85,11 +85,24 @@
 	                <td class="text-left">{$log.tid}</td>
 	                <td>{$log.username}</td>
 	                <td>
-	                	{eq name="log.type" value="1"}
-	                	充币
-	                	{else /}
-	                	提币
-	                	{/eq}
+                      {switch log.type}
+	                		{case value="1"}
+	                			充币
+	                		{/case}
+	                		{case value="2"}
+	                			提币
+	                		{/case}
+	                		{case value="3"}
+	                			兑换
+	                		{/case}
+	                	{/switch}
+                      
+                      
+                      
+                      
+                      
+                      
+	               
 	               	</td>
 	                <td>
 	                	{switch log.status}

@@ -18,7 +18,7 @@ class Account extends Base
             ->join('profile p', 'p.username = a.username')
             ->join('wallet w', 'w.username = a.username')
             // ->join('dashboard d', 'd.username = a.username')
-            ->field('p.avatar, p.idcard, p.nickname, a.create_at, a.username, a.type, a.status, a.authen, a.inviter, w.money, w.deposit, w.score, w.score_deposit');
+            ->field('p.avatar, p.idcard, p.nickname, a.create_at, a.username, a.type, a.status, a.authen, a.inviter, w.money, w.deposit, w.cash, w.score, w.score_deposit');
         // 条件：按类型搜索
         $type = $req->param('type');
         if (!is_null($type) && $type != -1) {

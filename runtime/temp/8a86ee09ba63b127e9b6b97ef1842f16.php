@@ -1,4 +1,4 @@
-<?php /*a:2:{s:69:"/www/wwwroot/aa.jdswzc.com/application/admin/view/wallet/imtoken.html";i:1562661574;s:67:"/www/wwwroot/aa.jdswzc.com/application/admin/view/common/world.html";i:1562661509;}*/ ?>
+<?php /*a:2:{s:69:"/www/wwwroot/aa.jdswzc.com/application/admin/view/wallet/imtoken.html";i:1562663313;s:67:"/www/wwwroot/aa.jdswzc.com/application/admin/view/common/world.html";i:1562662267;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -58,6 +58,9 @@
     .dropdown-menu {
         z-index: 2200;
     }
+      a:hover{
+      	text-decoration: none;
+      }
     </style>
     
 </head>
@@ -263,11 +266,20 @@
 	                <td class="text-left"><?php echo htmlentities($log['tid']); ?></td>
 	                <td><?php echo htmlentities($log['username']); ?></td>
 	                <td>
-	                	<?php if($log['type'] == '1'): ?>
-	                	充币
-	                	<?php else: ?>
-	                	提币
-	                	<?php endif; ?>
+                      <?php switch($log['type']): case "1": ?>
+	                			充币
+	                		<?php break; case "2": ?>
+	                			提币
+	                		<?php break; case "3": ?>
+	                			兑换
+	                		<?php break; endswitch; ?>
+                      
+                      
+                      
+                      
+                      
+                      
+	               
 	               	</td>
 	                <td>
 	                	<?php switch($log['status']): case "1": ?>

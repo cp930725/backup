@@ -334,8 +334,9 @@ class Wallet extends Base
         // 显示页面
         $this->assign('config', $config);
         $this->assign('types', [
-            1   =>  '充值',
-            2   =>  '提现',
+            1   =>  '充币',
+            2   =>  '提币',
+            3   =>  '兑换',
         ]);
         $this->assign('statuses', [
             0   =>  '失败',

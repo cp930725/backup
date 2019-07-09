@@ -85,6 +85,7 @@
 	                <th>用户</th>
 	                <th>可用{$Think.config.hello.unit}</th>
 	                <th>冻结{$Think.config.hello.unit}</th>
+                  	<th>可用{$Think.config.hello.cash}</th>
 	                <th>可用{$Think.config.hello.score.unit}</th>
 	                <th>冻结{$Think.config.hello.score.unit}</th>
 	                <th>商城消费额</th>
@@ -111,13 +112,14 @@
 	                </td>
 	                <td>{$user.money|money}</td>
 	                <td>{$user.deposit|money}</td>
+                  	<td>{$user.cash|money}</td>
 	                <td>{$user.score|money}</td>
 	                <td>{$user.score_deposit|money}</td>
 	                <td>{$user.spend|money}</td>
 	                <td>{$user.profit|money}</td>
 	                <td>{$user.team_profit|money}</td>
 	                <td>{$user.bonus|money}</td>
-	                <td>{$user.trade|money}</td>
+	                <td>{$user.trade|money}</td>	                
 	                <td>{$user.sell|money}</td>
 	                <td>{$user.buy|money}</td>
 	                <td>{$user.ts_in|money}</td>

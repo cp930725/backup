@@ -1,4 +1,4 @@
-<?php /*a:2:{s:67:"/www/wwwroot/aa.jdswzc.com/application/admin/view/wallet/index.html";i:1562574822;s:67:"/www/wwwroot/aa.jdswzc.com/application/admin/view/common/world.html";i:1562661509;}*/ ?>
+<?php /*a:2:{s:67:"/www/wwwroot/aa.jdswzc.com/application/admin/view/wallet/index.html";i:1562663781;s:67:"/www/wwwroot/aa.jdswzc.com/application/admin/view/common/world.html";i:1562662267;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -58,6 +58,9 @@
     .dropdown-menu {
         z-index: 2200;
     }
+      a:hover{
+      	text-decoration: none;
+      }
     </style>
     
 </head>
@@ -264,6 +267,7 @@
 	                <th>用户</th>
 	                <th>可用<?php echo htmlentities(app('config')->get('hello.unit')); ?></th>
 	                <th>冻结<?php echo htmlentities(app('config')->get('hello.unit')); ?></th>
+                  	<th>可用<?php echo htmlentities(app('config')->get('hello.cash')); ?></th>
 	                <th>可用<?php echo htmlentities(app('config')->get('hello.score.unit')); ?></th>
 	                <th>冻结<?php echo htmlentities(app('config')->get('hello.score.unit')); ?></th>
 	                <th>商城消费额</th>
@@ -290,13 +294,14 @@
 	                </td>
 	                <td><?php echo htmlentities(money($user['money'])); ?></td>
 	                <td><?php echo htmlentities(money($user['deposit'])); ?></td>
+                  	<td><?php echo htmlentities(money($user['cash'])); ?></td>
 	                <td><?php echo htmlentities(money($user['score'])); ?></td>
 	                <td><?php echo htmlentities(money($user['score_deposit'])); ?></td>
 	                <td><?php echo htmlentities(money($user['spend'])); ?></td>
 	                <td><?php echo htmlentities(money($user['profit'])); ?></td>
 	                <td><?php echo htmlentities(money($user['team_profit'])); ?></td>
 	                <td><?php echo htmlentities(money($user['bonus'])); ?></td>
-	                <td><?php echo htmlentities(money($user['trade'])); ?></td>
+	                <td><?php echo htmlentities(money($user['trade'])); ?></td>	                
 	                <td><?php echo htmlentities(money($user['sell'])); ?></td>
 	                <td><?php echo htmlentities(money($user['buy'])); ?></td>
 	                <td><?php echo htmlentities(money($user['ts_in'])); ?></td>

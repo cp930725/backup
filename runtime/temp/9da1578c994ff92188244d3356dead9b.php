@@ -1,4 +1,4 @@
-<?php /*a:2:{s:68:"/www/wwwroot/aa.jdswzc.com/application/admin/view/account/index.html";i:1562574822;s:67:"/www/wwwroot/aa.jdswzc.com/application/admin/view/common/world.html";i:1562661509;}*/ ?>
+<?php /*a:2:{s:68:"/www/wwwroot/aa.jdswzc.com/application/admin/view/account/index.html";i:1562662502;s:67:"/www/wwwroot/aa.jdswzc.com/application/admin/view/common/world.html";i:1562662267;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -58,6 +58,9 @@
     .dropdown-menu {
         z-index: 2200;
     }
+      a:hover{
+      	text-decoration: none;
+      }
     </style>
     
 </head>
@@ -284,6 +287,7 @@
 	                <th>实名</th>
 	                <th>可用<?php echo htmlentities(app('config')->get('hello.unit')); ?></th>
 	                <th>冻结<?php echo htmlentities(app('config')->get('hello.unit')); ?></th>
+                  	<th>可用<?php echo htmlentities(app('config')->get('hello.cash')); ?></th>
 	                <th>可用<?php echo htmlentities(app('config')->get('hello.score.unit')); ?></th>
 	                <th>冻结<?php echo htmlentities(app('config')->get('hello.score.unit')); ?></th>
 	                <th class="text-center">操作</th>
@@ -318,6 +322,7 @@
 	                </td>
 	                <td><?php echo htmlentities(money($user['money'])); ?></td>
 	                <td><?php echo htmlentities(money($user['deposit'])); ?></td>
+                    <td><?php echo htmlentities(money($user['cash'])); ?></td>
 	                <td><?php echo htmlentities(money($user['score'])); ?></td>
 	                <td><?php echo htmlentities(money($user['score_deposit'])); ?></td>
 	                <td class="text-center">

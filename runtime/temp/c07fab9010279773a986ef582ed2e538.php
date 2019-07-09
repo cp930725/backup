@@ -1,4 +1,4 @@
-<?php /*a:2:{s:67:"/www/wwwroot/aa.jdswzc.com/application/api/view/account/authen.html";i:1562574822;s:67:"/www/wwwroot/aa.jdswzc.com/application/api/view/common/default.html";i:1562574822;}*/ ?>
+<?php /*a:2:{s:67:"/www/wwwroot/aa.jdswzc.com/application/api/view/account/authen.html";i:1562662691;s:67:"/www/wwwroot/aa.jdswzc.com/application/api/view/common/default.html";i:1562662293;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -31,8 +31,68 @@
                 display: none !important;
             }
         }
+      a:hover{
+      	text-decoration: none;
+      }
     </style>
     
+<style>
+    .item {
+        width: 190px;
+        height: 50px;
+        position: relative;
+        margin: 20px;
+    }
+    .addImg {
+        width: 190px;
+        height: 50px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        cursor: pointer;
+    }
+    .preview,.preBlock{
+        position: absolute;
+        display: block;
+        width: 190px;
+        height: 50px;
+        left: 0;
+        top: 0;
+    }
+    .delete {
+        width: 30px;
+        position: absolute;
+        right: -30px;
+        top: -15px;
+        cursor: pointer;
+        display: none;
+    }
+    .preBlock img {
+        display: block;
+        width: 190px;
+        height: 50px;
+    }
+    .upload_input {
+        display: block;
+        width: 0;
+        height: 0;
+        -webkit-opacity: 0.0;
+        /* Netscape and Older than Firefox 0.9 */
+        -moz-opacity: 0.0;
+        /* Safari 1.x (pre WebKit!) 老式khtml内核的Safari浏览器*/
+        -khtml-opacity: 0.0;
+        /* IE9 + etc...modern browsers */
+        opacity: .0;
+        /* IE 4-9 */
+        filter: alpha(opacity=0);
+        /*This works in IE 8 & 9 too*/
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        /*IE4-IE9*/
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    }
+</style>
+
 </head>
 
 <body>
@@ -83,25 +143,25 @@
                     <div class="col-lg order-lg-first">
                         <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
                             <li class="nav-item">
-                                <a href="/api" class="nav-link<?php echo app('request')->path()=='account' || app('request')->path() == ''?' active' : ''; ?>">
+                                <a href="/api" class="nav-link<?php echo app('request')->path()=='api' || app('request')->path() == ''?' active' : ''; ?>">
                                     <span><i class="fe fe-home"></i></span>
                                     <span>首页</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="/market" class="nav-link<?php echo app('request')->path()=='market'?' active' : ''; ?>">
+                                <a href="/market" class="nav-link<?php echo app('request')->path()=='market' || app('request')->path() == ''?' active' : ''; ?>">
                                     <span><i class="fe fe-globe"></i></span>
                                     <span>市场</span>
                                 </a>
                             </li>
                           	<li class="nav-item">
-                                <a href="/funding" class="nav-link<?php echo app('request')->path()=='account' || app('request')->path() == ''?' active' : ''; ?>">
+                                <a href="/funding" class="nav-link<?php echo app('request')->path()=='funding' || app('request')->path() == ''?' active' : ''; ?>">
                                     <span><i class="fe fe-star"></i></span>
                                     <span>众筹</span>
                                 </a>
                             </li>
                             <li class="nav-item d-md-block d-lg-block">
-                                <a href="/account" class="nav-link<?php echo app('request')->path()=='help'?' active' : ''; ?>">
+                                <a href="/account" class="nav-link<?php echo app('request')->path()=='account' || app('request')->path() == ''?' active' : ''; ?>">
                                     <span><i class="fe fe-user"></i></span>
                                     <span>我的</span>
                                 </a>
@@ -156,25 +216,37 @@
                         <?php if(!(empty(app('config')->get('hello.authentication.certificate.front')) || ((app('config')->get('hello.authentication.certificate.front') instanceof \think\Collection || app('config')->get('hello.authentication.certificate.front') instanceof \think\Paginator ) && app('config')->get('hello.authentication.certificate.front')->isEmpty()))): ?>
                         <div class="form-group mt-3 mb-0">
                             <div class="form-label">身份证正面</div>
-                            <div class="custom-file">
-                                <input type="file" accept="image/*" class="custom-file-input" name="front" />
-                                <label class="custom-file-label">选择图片</label>
+                            <div class="item">
+                                <img class="icon addImg" onclick="clickImg(this);" src="/static/image/addImg.png" />
+                                <input name="front" accept="image/*" type="file" class="upload_input" onchange="change(this)"/>
+                                <div class="preBlock">
+                                    <img class="preview" alt="" name="pic" width="190" height="190" />
+                                </div>
+                                <img class="delete" onclick="deleteImg(this)" src="/static/image/delete.png"/>
                             </div>
                         </div>
                         <?php endif; if(!(empty(app('config')->get('hello.authentication.certificate.back')) || ((app('config')->get('hello.authentication.certificate.back') instanceof \think\Collection || app('config')->get('hello.authentication.certificate.back') instanceof \think\Paginator ) && app('config')->get('hello.authentication.certificate.back')->isEmpty()))): ?>
                         <div class="form-group mt-3 mb-0">
                             <div class="form-label">身份证反面</div>
-                            <div class="custom-file">
-                                <input type="file" accept="image/*" class="custom-file-input" name="back" />
-                                <label class="custom-file-label">选择图片</label>
+                            <div class="item">
+                                <img class="icon addImg" onclick="clickImg(this);" src="/static/image/addImg.png" />
+                                <input name="back" accept="image/*" type="file" class="upload_input" onchange="change(this)"/>
+                                <div class="preBlock">
+                                    <img class="preview" alt="" name="pic" width="190" height="190" />
+                                </div>
+                                <img class="delete" onclick="deleteImg(this)" src="/static/image/delete.png"/>
                             </div>
                         </div>
                         <?php endif; if(!(empty(app('config')->get('hello.authentication.certificate.hold')) || ((app('config')->get('hello.authentication.certificate.hold') instanceof \think\Collection || app('config')->get('hello.authentication.certificate.hold') instanceof \think\Paginator ) && app('config')->get('hello.authentication.certificate.hold')->isEmpty()))): ?>
                         <div class="form-group mt-3 mb-0">
                             <div class="form-label">手持身份证</div>
-                            <div class="custom-file">
-                                <input type="file" accept="image/*" class="custom-file-input" name="hold" />
-                                <label class="custom-file-label">选择图片</label>
+                            <div class="item">
+                                <img class="icon addImg" onclick="clickImg(this);" src="/static/image/addImg.png" />
+                                <input name="hold" accept="image/*" type="file" class="upload_input" onchange="change(this)"/>
+                                <div class="preBlock">
+                                    <img class="preview" alt="" name="pic" width="190" height="190" />
+                                </div>
+                                <img class="delete" onclick="deleteImg(this)" src="/static/image/delete.png"/>
                             </div>
                         </div>
                         <?php endif; ?>
@@ -201,7 +273,7 @@
                     <div class="row align-items-center"><?php echo htmlentities(date('Y-m-d g:i a',time())); ?></div>
                 </div>
                 <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
-                    Copyright © 2018 <a href="."><?php echo htmlentities(app('config')->get('hello.title')); ?></a>
+                    Copyright © 2019 <a href="."><?php echo htmlentities(app('config')->get('hello.title')); ?></a>
                 </div>
             </div>
         </div>
@@ -227,6 +299,73 @@
 <script type="text/javascript" src="/static/js/global.js?3"></script>
 
 <script type="text/javascript" src="/static/js/authen.js?2"></script>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+    //点击
+    var clickImg = function(obj){
+        $(obj).parent().find('.upload_input').click();
+    }
+    //删除
+    var deleteImg = function(obj){
+        $(obj).parent().find('input').val('');
+        $(obj).parent().find('img.preview').attr("src","");
+        //IE9以下
+        $(obj).parent().find('img.preview').css("filter","");
+        $(obj).hide();
+        $(obj).parent().find('.addImg').show();
+    }
+    //选择图片
+    function change(file) {
+        //预览
+        var pic = $(file).parent().find(".preview");
+        //添加按钮
+        var addImg = $(file).parent().find(".addImg");
+        //删除按钮
+        var deleteImg = $(file).parent().find(".delete");
+
+        var ext=file.value.substring(file.value.lastIndexOf(".")+1).toLowerCase();
+
+        // gif在IE浏览器暂时无法显示
+        if(ext!='png'&&ext!='jpg'&&ext!='jpeg'){
+            if (ext != '') {
+                alert("图片的格式必须为png或者jpg或者jpeg格式！");
+            }
+            return;
+        }
+        //判断IE版本
+        var isIE = navigator.userAgent.match(/MSIE/)!= null,
+            isIE6 = navigator.userAgent.match(/MSIE 6.0/)!= null;
+        isIE10 = navigator.userAgent.match(/MSIE 10.0/)!= null;
+        if(isIE && !isIE10) {
+            file.select();
+            var reallocalpath = document.selection.createRange().text;
+            // IE6浏览器设置img的src为本地路径可以直接显示图片
+            if (isIE6) {
+                pic.attr("src",reallocalpath);
+            }else{
+                // 非IE6版本的IE由于安全问题直接设置img的src无法显示本地图片，但是可以通过滤镜来实现
+                pic.css("filter","progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale',src=\"" + reallocalpath + "\")");
+                // 设置img的src为base64编码的透明图片 取消显示浏览器默认图片
+                pic.attr('src','data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+            }
+            addImg.hide();
+            deleteImg.show();
+        }else {
+            html5Reader(file,pic,addImg,deleteImg);
+        }
+    }
+    //H5渲染
+    function html5Reader(file,pic,addImg,deleteImg){
+        var file = file.files[0];
+        var reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = function(e){
+            pic.attr("src",this.result);
+        }
+        addImg.hide();
+        deleteImg.show();
+    }
+</script>
 
 </body>
 </html>
