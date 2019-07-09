@@ -20,7 +20,7 @@ return [
         'password'			=>	'123456789789',									// 登录密码
     ],
     'inviter'				=>	[											// 邀请设置
-        'enable'			=>	true,										// 是否需要邀请才能注册
+        'enable'			=>	false,										// 是否需要邀请才能注册
         'anonymous'			=>	true,										// 邀请码是否匿名
         'image'				=>	[											// 使用背景图合成
             'version'		=>	3,											// 版本号，每次换了背景图需要更改

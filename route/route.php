@@ -217,6 +217,10 @@ Route::group('funding', function(){
 	Route::post('preview', 'funding/preview');
 	// 记录
 	Route::post('log', 'funding/logs');
+	// 分红
+    Route::post('bonus', 'funding/bonus');
+    Route::post('reword', 'funding/reword');
+    Route::post('resave', 'funding/resave');
 	// 引导
 	Route::get('welcome', 'funding/welcome');
 	// 发布

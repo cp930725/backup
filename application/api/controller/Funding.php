@@ -43,23 +43,7 @@ class Funding extends Base
         if (empty($user['account']['status'])) {
             throw new \think\Exception("很抱歉、用户已被冻结！");
         }
-        // 投资订单
-        if ($log['action'] == 1) {
-            // 用户扣钱
-            (new Wallet())->change($username, 40, [
-                1 	=>	[$user['wallet']['money'], -$log['money'], $user['wallet']['money'] - $log['money']],
-                2 	=>	[$user['wallet']['deposit'], $log['money'], $user['wallet']['deposit'] + $log['money']],
-            ]);
-            // 投资次数
-            $cishu = Db::table('funding_log')->where('fid', '=', $log['fid'])->where('username', '=', $username)->where('action', '=', self::ACTION_INVEST)->count('id');
-            // 更新项目
-            $this->update($log['fid'], [
-                'current'	=>	Db::raw('current+' . $log['money']),
-                'people'	=>	Db::raw('people+'.($cishu ? 0 : 1)),
-                'count'		=>	Db::raw('count+1'),
-            ]);
-        // 分红订单
-        } elseif ($log['action'] == 2) {
+        if ($log['action'] == 2) {
             // 参与者分红列表
             $depositList = [];
             // 发起人所得金额
@@ -151,15 +135,7 @@ class Funding extends Base
         if (empty($user['account']['status'])) {
             throw new \think\Exception("很抱歉、用户已被冻结！");
         }
-        // 投资订单
-        if ($log['action'] == 1) {
-            // 用户扣钱
-            (new Wallet())->change($username, 42, [
-                1 => [$user['wallet']['money'], $log['money'], $user['wallet']['money'] + $log['money']],
-                2 => [$user['wallet']['deposit'], -$log['money'], $user['wallet']['deposit'] - $log['money']],
-            ]);
-        // 分红订单
-        } elseif ($log['action'] == 2) {
+       if ($log['action'] == 2) {
             // 参与者分红列表
             $depositList = [];
             // 发起人所得金额
@@ -192,10 +168,12 @@ class Funding extends Base
         } else {
             // 参与者扣钱列表
             $depositList = [];
+         	// 参与人加钱列表	
+         	$moneyList = [];
             // 发起人所得金额
             $money = 0;
             // 找出所有参与人员和他投的钱
-            $holder = Db::table('funding_log')->fieldRaw('username, SUM(money) AS money')->where('fid', '=', $id)->where('action', '=', self::ACTION_INVEST)->group('username')->select();
+            $holder = Db::table('funding_log')->fieldRaw('username, SUM(money) AS money')->where('fid', '=', $log['fid'])->where('action', '=', self::ACTION_INVEST)->group('username')->select();
             foreach ($holder as $key => $item) {
                 // 准备：用户扣除冻结金额
                 $depositList[] = [
@@ -203,16 +181,25 @@ class Funding extends Base
                     'business' => 43,
                     'deposit' => -$item['money'],
                 ];
+              	$moneyList[] = [
+                    'username' => $item['username'],
+                    'business' => 43,
+                    'money' => $item['money'],
+                ];
 
             }
                 // 参与人加钱
-                $wl->batch($depositList);
+                $wl->batch($moneyList);
                 // 参与人减冻结金额
                 $wl->batch_deposit($depositList);
+         	// 项目变更
+         	$this->update($log['fid'], [
+                'status'    =>  5,
+            ]);
         }
         // 更改状态
         $bool = Db::table('funding_log')->where('id', '=', $id)->update([
-            'status'    =>  0,
+            'status'    =>  3,
             'update_at' =>  $this->timestamp
         ]);
         if (empty($bool)) {
@@ -490,90 +477,106 @@ class Funding extends Base
     /**
      * 投资项目
      */
+   /**
+     * 投资项目
+     */
     public function invest(Request $req)
     {
-        try {
+    	try {
             // 获取配置
             $config = config('hello.funding');
             if (empty($config) || empty($config['enable'])) {
                 throw new \think\Exception("很抱歉、系统尚未开启该模块！");
             }
-            // 开启事务
-            Db::startTrans();
-            // 获取编号
-            $id = $req->param('id/d');
-            if (empty($id)) {
-                throw new \think\Exception("很抱歉、请提供编号！");
-            }
-            // 查询项目
-            $fund = $this->get($id);
-            if (empty($fund) || empty($fund['visible'])) {
-                throw new \think\Exception("很抱歉、该项目不存在！");
-            }
+    		// 开启事务
+    		Db::startTrans();
+    		// 获取编号
+    		$id = $req->param('id/d');
+    		if (empty($id)) {
+    			throw new \think\Exception("很抱歉、请提供编号！");
+    		}
+    		// 查询项目
+    		$fund = $this->get($id);
+    		if (empty($fund) || empty($fund['visible'])) {
+    			throw new \think\Exception("很抱歉、该项目不存在！");
+    		}
             if ($fund['status'] == 2) {
                 throw new \think\Exception("很抱歉、该项目还未开始！");
             }
-            if ($fund['status'] == 3 || $fund['expire_at'] < $this->timestamp) {
-                throw new \think\Exception("很抱歉、该项目已结束！");
-            }
-            // 安全密码
-            $safeword = $req->param('safeword');
+    		if ($fund['status'] == 3 || $fund['expire_at'] < $this->timestamp) {
+    			throw new \think\Exception("很抱歉、该项目已结束！");
+    		}
+    		// 安全密码
+    		$safeword = $req->param('safeword');
             if (empty($safeword)) {
                 throw new \think\Exception("很抱歉、请提供安全密码！");
             }
-            // 用户账号
-            $username = session('user.account.username');
-            // 用户账号
-            $user = (new Account())->instance($username, null, $safeword);
-            if (empty($user)) {
-                throw new \think\Exception("很抱歉、安全密码不正确！");
-            }
-            if (empty($user['account']['status'])) {
-                throw new \think\Exception("很抱歉、您的账号已被冻结！");
-            }
-            // 获取金额
-            $money = $req->param('money/f');
-            if (($fund['current'] + $money) >= $fund('target')) {
+    		// 用户账号
+    		$username = session('user.account.username');
+    		// 用户账号
+    		$user = (new Account())->instance($username, null, $safeword);
+    		if (empty($user)) {
+    			throw new \think\Exception("很抱歉、安全密码不正确！");
+    		}
+    		if (empty($user['account']['status'])) {
+	    		throw new \think\Exception("很抱歉、您的账号已被冻结！");
+	    	}
+	    	// 获取金额
+	    	$money = $req->param('money/f');
+	    	if (empty($money) || $money < 0) {
+	    		throw new \think\Exception("很抱歉、错误的金额！");
+	    	}
+	    	// 判断余额
+	    	if ($user['wallet']['money'] < $money) {
+	    		throw new \think\Exception("很抱歉、您的可用资金不足！");
+	    	}
+          	// 投资上限
+            if ($fund['current'] + $money > $fund['target']) {
                 throw new \think\Exception("很抱歉、该项目投资金额已达上限");
             }
-            if (empty($money) || $money < 0) {
-                throw new \think\Exception("很抱歉、错误的金额！");
-            }
-            // 判断余额
-            if ($user['wallet']['money'] < $money) {
-                throw new \think\Exception("很抱歉、您的可用资金不足！");
-            }
-
-            // 项目记录
-            $bool = Db::table('funding_log')->insert([
-                'fid'		=>	$id,
-                'type'		=>	$fund['type'],
-                'status'    =>  2,
+	    	// 用户扣钱
+	    	(new Wallet())->change($username, 40, [
+	    		1 	=>	[$user['wallet']['money'], -($money), $user['wallet']['money'] - $money],
+    			2 	=>	[$user['wallet']['deposit'], $money, $user['wallet']['deposit'] + $money],
+	    	]);
+	    	// 投资次数
+	    	$cishu = Db::table('funding_log')->where('fid', '=', $id)->where('username', '=', $username)->where('action', '=', self::ACTION_INVEST)->count('id');
+	    	// 更新项目
+	    	$this->update($id, [
+	    		'current'	=>	Db::raw('current+' . $money),
+	    		'people'	=>	Db::raw('people+'.($cishu ? 0 : 1)),
+	    		'count'		=>	Db::raw('count+1'),
+	    	]);
+	    	// 项目记录
+	    	$bool = Db::table('funding_log')->insert([
+	    		'fid'		=>	$id,
+	    		'type'		=>	$fund['type'],
                 'currency'  =>  $fund['currency'],
-                'action'	=>	self::ACTION_INVEST,
-                'username'	=>	$username,
-                'money'		=>	$money,
+              	'status'	=>	1,
+	    		'action'	=>	self::ACTION_INVEST,
+	    		'username'	=>	$username,
+	    		'money'		=>	$money,
                 'charge'    =>  0,
-                'create_at'	=>	$this->timestamp,
-                'update_at'	=>	$this->timestamp,
-            ]);
-            if (empty($bool)) {
-                throw new \think\Exception("很抱歉、参与记录保存失败！");
-            }
-            // 提交事务
-            Db::commit();
-        } catch (\Exception $e) {
-            Db::rollback();
-            return json([
-                'code'		=>	555,
-                'message'	=>	$e->getMessage()
-            ]);
-        }
-        // 操作成功
-        return json([
-            'code'		=>	200,
-            'message'	=>	'恭喜您、操作成功！'
-        ]);
+	    		'create_at'	=>	$this->timestamp,
+	    		'update_at'	=>	$this->timestamp,
+	    	]);
+	    	if (empty($bool)) {
+	    		throw new \think\Exception("很抱歉、参与记录保存失败！");
+	    	}
+    		// 提交事务
+    		Db::commit();
+    	} catch (\Exception $e) {
+    		Db::rollback();
+    		return json([
+    			'code'		=>	555,
+    			'message'	=>	$e->getMessage()
+    		]);
+    	}
+    	// 操作成功
+    	return json([
+    		'code'		=>	200,
+    		'message'	=>	'恭喜您、操作成功！'
+    	]);
     }
 
 

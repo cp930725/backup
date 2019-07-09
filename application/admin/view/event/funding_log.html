@@ -60,7 +60,7 @@
             </thead>
             <tbody>
                 {volist name="logs" id="log"}
-                    <tr>
+                    <tr {eq name="log.status" value="1"}style="success"{\eq} {eq name="log.status" value="3"}style="danger"{\eq}>
                         <td>{$log.title}</td>
                         <td>{$log.username}</td>
                         <td>

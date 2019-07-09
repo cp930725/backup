@@ -85,9 +85,7 @@
 						<?php $bonus = explode( ';', rtrim($fund['bonus'], ';')); ?>
 						{volist name="$bonus" id="value"}
 						<?php $value = explode(',', $value); ?>
-						{volist name="value" id="val"}
-							<span>{$val[0]}-{$val[1]}:{$val[2]}</span>
-						{/volist}
+							<span>{$value[0]}</span><span>-{$value[1]}</span>:<span>{$value[2]}</span>
 						{/volist}
 						{else}
 						<?php $bonus = explode( ',', rtrim($fund['bonus'], ';')); ?>

@@ -15,11 +15,11 @@ return [
     // 服务器地址
     'hostname'        => '127.0.0.1',
     // 数据库名
-    'database'        => 'aa_ggfb_cc',
+    'database'        => 'aa_jdswzc_com',
     // 用户名
-    'username'        => 'aa_ggfb_cc',
+    'username'        => 'aa_jdswzc_com',
     // 密码
-    'password'        => 'aa_ggfb_cc',
+    'password'        => 'aa_jdswzc.cc',
     // 端口
     'hostport'        => '',
     // 连接dsn

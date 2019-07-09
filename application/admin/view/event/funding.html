@@ -23,6 +23,7 @@
                     <th>发起人</th>
                     <th>目标金额</th>
                     <th>当前金额</th>
+                    <th>分红比例</th>
                     <th>参与人数</th>
                     <th>参与次数</th>
                     <th>到期时间</th>
@@ -48,6 +49,7 @@
                         <td>{$log.owner}</td>
                         <td>{$log.target|money}</td>
                         <td>{$log.current|money}</td>
+                        <td>{$log.bonus}</td>
                         <td>{$log.people}</td>
                         <td>{$log.count}</td>
                         <td>{$log.expire_at}</td>
@@ -119,6 +121,19 @@
                                     <input type="text" class="form-control" placeholder="必填" name="target" />
                                     <span class="input-group-append" id="basic-addon2">
                                         <span class="input-group-text">{$Think.config.hello.unit}</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label class="form-label">投资分红</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" data-min="0" name="min[]" placeholder="最少" />
+                                    <input type="text" class="form-control" data-max="{}" name="max[]" placeholder="最多" />
+                                    <input type="text" class="form-control" name="bonus[]" placeholder="0.03" />
+                                    <span class="input-group-append plus">
+                                        <span class="input-group-text"><i class="fe fe-plus"></i></span>
                                     </span>
                                 </div>
                             </div>
@@ -241,6 +256,19 @@
                         </div>
                         <div class="col-lg-12">
                             <div class="form-group">
+                                <label class="form-label">投资分红</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" data-min="0" name="min[]" placeholder="最少" />
+                                    <input type="text" class="form-control" data-max="{}" name="max[]" placeholder="最多" />
+                                    <input type="text" class="form-control" name="bonus[]" placeholder="0.03" />
+                                    <span class="input-group-append plus">
+                                        <span class="input-group-text"><i class="fe fe-plus"></i></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
                                 <label class="form-label">宝贝详情</label>
                                 <script id="editor2" name="content" type="text/plain" style="height: 20rem;"></script>
                             </div>
@@ -271,6 +299,23 @@ require(['jquery', 'ZeroClipboard'], function($, ZeroClipboard){
         var ue2 = UE.getEditor('editor2', {
             zIndex: 2900,
         });
+        // 项目分红
+        var add = function(data) {
+            var html = '<div class="input-group">' +
+                '<input type="text" class="form-control"  name="min[]" placeholder="最少" />' +
+                '<input type="text" class="form-control" name="max[]" placeholder="最多" /><input type="text" class="form-control" name="bonus[]" placeholder="0.03" />' +
+                '<span class="input-group-append minus"><span class="input-group-text"><i class="fe fe-minus"></i></span></span></div>';
+            data.parent().parent().parent().children('div:last-child').append(html);
+        };
+        $(function () {
+            $('.plus').click(function () {
+                add($(this));
+            });
+
+            $(document).on('click', '.minus', function () {
+                $(this).parent().remove();
+            })
+        });
         // 编辑项目
         $('.btn-edit').on('click', function(){
             if ($('.btn-loading').length) {
@@ -278,12 +323,36 @@ require(['jquery', 'ZeroClipboard'], function($, ZeroClipboard){
             }
             $(this).addClass('btn-loading');
             var id = $(this).data('id');
+            $('.modal-update input[name="min[]"]').val('');
+            $('.modal-update input[name="max[]"]').val('');
+            $('.modal-update input[name="bonus[]"]').val('');
             ajax('/admin/event/funding', {action: 'get', id: id}, function(res){
                 $('.btn-edit[data-id=' + id + ']').removeClass('btn-loading');
                 $('.modal-update input[name=id]').val(res.data.id);
                 $('.modal-update select[name=catalog]').val(res.data.catalog);
                 $('.modal-update input[name=title]').val(res.data.title);
                 $('.modal-update input[name=sort]').val(res.data.sort);
+                if (res.data.bonus) {
+                    if ((res.data.bonus.split(';').length-1) > 1) {
+                        var bonus = res.data.bonus;
+                        bonus = bonus.substring(0,bonus.length-1)
+                        var arr = bonus.split(';');
+
+                        $.each(arr, function (key, value) {
+                            add($('.modal-update .plus'));
+                            var val = value.split(',');
+                            $('.modal-update input[name="min[]"]').eq(key).val(val[0]);
+                            $('.modal-update input[name="max[]"]').eq(key).val(val[1]);
+                            $('.modal-update input[name="bonus[]"]').eq(key).val(val[2]);
+                        });
+                    } else {
+                        var bonus = res.data.bonus.substring(0,res.data.bonus.length-1);
+                        var arr = bonus.split(',');
+                        $('.modal-update input[name="min[]"]').val(arr[0]);
+                        $('.modal-update input[name="max[]"]').val(arr[1]);
+                        $('.modal-update input[name="bonus[]"]').val(arr[2]);
+                    }
+                }
                 if (res.data.visible) {
                     $('.modal-update input[name=visible][value=1]').prop('checked', true);
                 } else {
