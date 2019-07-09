@@ -327,7 +327,7 @@ class Wallet extends Base
             $username = session('user.account.username');
             // 获取货币
             $cid = $req->param('cid/d', 1);
-            if (!in_array($cid, [1, 2, 3, 4])) {
+            if (!in_array($cid, [1, 2, 3, 4, 5])) {
                 $cid = 1;
             }
             // 当前货币
@@ -339,27 +339,34 @@ class Wallet extends Base
             $size = $req->param('size/d', 20);
             $offset = $page - 1 < 0 ? 0 : ($page - 1) * $size;
             // 查询对象
-            $query = Db::table('record')->where('username', '=', $username)->where('currency', '=', $cid);
+            $query = Db::table('record')->where('username', '=', $username)->where('currency', 'in', [1,5]);
             // 按类型查询
             $type = $req->param('type');
             if (is_null($type)) {
                 $query->where('business', 'in', $currency['businesses']);
+                $total_cash = Db::table('record')->where('username', '=', $username)->where('currency', '=', 5)->where('business', 'in', $currency['businesses'])->sum('now');
             } else {
                 $query->where('business', '=', $type);
+                $total_cash = Db::table('record')->where('username', '=', $username)->where('currency', '=', 5)->where('business', '=', $type)->sum('now');
             }
             // 查询数据
-            $list = $query->field('rid, business, now, create_at')
+            $list = $query->field('rid, currency, business, now, create_at')
                 ->limit($offset, $size)->order('create_at DESC')
                 ->select();
+//            $list = $query->limit(0, 20)->select();
             // 查询总额
-            $total = $query->sum('now');
+
+            $total =$query->where('currency', '=', 1)->sum('now');
+
             // 返回结果
             return json([
                 'code'              =>  200,
                 'message'           =>  '恭喜您、操作成功！',
                 'data'              =>  [
                     'unit'          =>  config('hello.unit'),
+                    'cash'          =>  config('hello.cash'),
                     'total'         =>  $total,
+                    'total_cash'    =>  $total_cash,
                     'currency'      =>  $currency,
                     'businesses'    =>  $businesses,
                     'list'          =>  $list,

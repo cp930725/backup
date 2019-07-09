@@ -1,4 +1,4 @@
-<?php /*a:2:{s:67:"/www/wwwroot/aa.jdswzc.com/application/api/view/account/signup.html";i:1562574822;s:65:"/www/wwwroot/aa.jdswzc.com/application/api/view/common/hello.html";i:1562574822;}*/ ?>
+<?php /*a:2:{s:67:"/www/wwwroot/aa.jdswzc.com/application/api/view/account/signup.html";i:1562659308;s:65:"/www/wwwroot/aa.jdswzc.com/application/api/view/common/hello.html";i:1562574822;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -70,14 +70,14 @@
 		            	</span>
 		        	</span>
 		        </div>
-				<div class="form-group">
+				<!-- <div class="form-group">
 					<div class="input-group">
-						<input type="text" class="form-control" maxlength="6" name="verify_code" placeholder="手机验证码" />
+						<input type="text" class="form-control" maxlength="6" name="verify_code" value="123456" placeholder="手机验证码" />
 						<span class="input-group-append">
 							<button class="btn btn-secondary btn-send" type="button">获取短信</button>
 						</span>
 					</div>
-				</div>
+				</div> -->
 				<div class="form-group">
 					<label hidden class="form-label d-sm-block">邀请人</label>
 					<?php if(empty(app('request')->get('i')) || ((app('request')->get('i') instanceof \think\Collection || app('request')->get('i') instanceof \think\Paginator ) && app('request')->get('i')->isEmpty())): ?>

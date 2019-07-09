@@ -1,4 +1,4 @@
-<?php /*a:2:{s:66:"/www/wwwroot/aa.jdswzc.com/application/api/view/imtoken/index.html";i:1562574822;s:67:"/www/wwwroot/aa.jdswzc.com/application/api/view/common/default.html";i:1562574822;}*/ ?>
+<?php /*a:2:{s:66:"/www/wwwroot/aa.jdswzc.com/application/api/view/imtoken/index.html";i:1562661395;s:67:"/www/wwwroot/aa.jdswzc.com/application/api/view/common/default.html";i:1562661391;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -92,25 +92,25 @@
                     <div class="col-lg order-lg-first">
                         <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
                             <li class="nav-item">
-                                <a href="/api" class="nav-link<?php echo app('request')->path()=='account' || app('request')->path() == ''?' active' : ''; ?>">
+                                <a href="/api" class="nav-link<?php echo app('request')->path()=='api' || app('request')->path() == ''?' active' : ''; ?>">
                                     <span><i class="fe fe-home"></i></span>
                                     <span>首页</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="/market" class="nav-link<?php echo app('request')->path()=='market'?' active' : ''; ?>">
+                                <a href="/market" class="nav-link<?php echo app('request')->path()=='market' || app('request')->path() == ''?' active' : ''; ?>">
                                     <span><i class="fe fe-globe"></i></span>
                                     <span>市场</span>
                                 </a>
                             </li>
                           	<li class="nav-item">
-                                <a href="/funding" class="nav-link<?php echo app('request')->path()=='account' || app('request')->path() == ''?' active' : ''; ?>">
+                                <a href="/funding" class="nav-link<?php echo app('request')->path()=='funding' || app('request')->path() == ''?' active' : ''; ?>">
                                     <span><i class="fe fe-star"></i></span>
                                     <span>众筹</span>
                                 </a>
                             </li>
                             <li class="nav-item d-md-block d-lg-block">
-                                <a href="/account" class="nav-link<?php echo app('request')->path()=='help'?' active' : ''; ?>">
+                                <a href="/account" class="nav-link<?php echo app('request')->path()=='account' || app('request')->path() == ''?' active' : ''; ?>">
                                     <span><i class="fe fe-user"></i></span>
                                     <span>我的</span>
                                 </a>
@@ -144,14 +144,19 @@
                           
                             <label class="form-label">收币地址：QC</label>
                             <div class="row gutters-xs">
-                                <div class="col">
-                                    <input type="text" class="form-control" name="imtoken_code" readonly="true" value="<?php echo htmlentities($config['code']); ?>" />
-                                </div>
                                 <div class="col-auto">
                                     <button class="btn btn-secondary" data-toggle="collapse" data-target="#qrcode">
                                         <i class="fa fa-qrcode"></i>
                                     </button>
                                 </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" name="imtoken_code" readonly="true" value="<?php echo htmlentities($config['code']); ?>" />
+                                </div>
+
+                                    <div class="input-group-append">
+                                        <button type="button" id="code-copy" class="btn btn-secondary btn-sm"><i class="fe fe-copy"></i></button>
+                                    </div>
+
                             </div>
                         </div>
                     </div>
@@ -308,7 +313,7 @@
                     <div class="row align-items-center"><?php echo htmlentities(date('Y-m-d g:i a',time())); ?></div>
                 </div>
                 <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
-                    Copyright © 2018 <a href="."><?php echo htmlentities(app('config')->get('hello.title')); ?></a>
+                    Copyright © 2019 <a href="."><?php echo htmlentities(app('config')->get('hello.title')); ?></a>
                 </div>
             </div>
         </div>
@@ -336,6 +341,59 @@
 <script type="text/javascript">
     var charge = parseFloat('<?php echo htmlentities((isset($config['charge']) && ($config['charge'] !== '')?$config['charge']:0)); ?>');
     var duihuan = parseFloat('<?php echo htmlentities((isset($price) && ($price !== '')?$price:0.2)); ?>');
+</script>
+<script>
+    var input = '<?php echo htmlentities($config['code']); ?>';
+    var copy = function() {
+        var el = document.createElement('textarea');
+        el.value = input;
+        // Prevent keyboard from showing on mobile
+        el.setAttribute('readonly', '');
+
+        el.style.contain = 'strict';
+        el.style.position = 'absolute';
+        el.style.left = '-9999px';
+        el.style.fontSize = '12pt'; // Prevent zooming on iOS
+
+        var selection = window.getSelection();
+        var originalRange = false;
+        if (selection.rangeCount > 0) {
+            originalRange = selection.getRangeAt(0);
+        }
+        document.body.appendChild(el);
+        el.select();
+
+        // Explicit selection workaround for iOS
+        el.selectionStart = 0;
+        el.selectionEnd = input.length;
+
+        var success = false;
+        try {
+            success = document.execCommand('copy');
+        } catch (err) {
+            toast('很抱歉、您的手机不支持复制功能！请手动点击推广链接后全选复制！');
+        }
+
+        document.body.removeChild(el);
+
+        if (originalRange) {
+            selection.removeAllRanges();
+            selection.addRange(originalRange);
+        }
+
+        return success;
+    };
+    require(['jquery', 'qrcode'], function($, qrcode){
+            // 复制链接
+            $('#code-copy').on('click', function(){
+                var bool = copy();
+                if (bool) {
+                    toast('复制成功！');
+                } else {
+                    toast('很抱歉、您的手机不支持复制功能！请手动点击推广链接后全选复制！');
+                }
+            });
+        });
 </script>
 <script type="text/javascript" src="/static/js/imtoken.js"></script>
 

@@ -1,3 +1,4 @@
+<?php /*a:2:{s:73:"/www/wwwroot/aa.jdswzc.com/application/admin/view/event/contract_log.html";i:1562574822;s:67:"/www/wwwroot/aa.jdswzc.com/application/admin/view/common/world.html";i:1562574822;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,7 +18,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?2" />
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="/assets/css/dashboard.css?3" />
-    <title>{block name="title"}Title{/block}</title>
+    <title>链上合约</title>
     <style>
     .toast {
         text-align: center;
@@ -58,7 +59,10 @@
         z-index: 2200;
     }
     </style>
-    {block name="style"}{/block}
+    
+<style type="text/css">
+</style>
+
 </head>
 
 <body>
@@ -78,7 +82,7 @@
                                 <span class="avatar me-avatar" style="background-image: url(/static/image/icon.png);"><span class="avatar-status bg-green"></span></span>
                                 <span class="ml-2 d-none d-lg-block">
                                     <span class="text-default">超级管理员</span>
-                                    <small class="text-muted d-block mt-1">{:$Request.ip}</small>
+                                    <small class="text-muted d-block mt-1"><?php echo app('request')->ip(); ?></small>
                                 </span>
                             </a>
                         </div>
@@ -125,9 +129,9 @@
                                     <a href="/admin/account/audit.html" class="dropdown-item">实名认证</a>
                                     <a href="/admin/account/dashboard.html" class="dropdown-item">仪表盘</a>
                                     <a href="/admin/account/promotion.html" class="dropdown-item">推广数据</a>
-                                    {notempty name="Think.config.hello.register_audit"}
+                                    <?php if(!(empty(app('config')->get('hello.register_audit')) || ((app('config')->get('hello.register_audit') instanceof \think\Collection || app('config')->get('hello.register_audit') instanceof \think\Paginator ) && app('config')->get('hello.register_audit')->isEmpty()))): ?>
                                         <a href="/admin/account/reg_audit.html" class="dropdown-item">注册审核</a>
-                                    {/notempty}
+                                    <?php endif; ?>
                                 </div>
                             </li>
                             <li class="nav-item">
@@ -186,7 +190,104 @@
         </div>
         <div class="my-3 my-md-5">
             <div class="container container-padding">
-                {block name="container"}{/block}
+                
+<div class="d-flex">
+    <div class="btn-list">
+        <a href="/admin/event/contract.html" class="btn btn-secondary">代理商列表</a>
+        <a href="/admin/event/contract_store.html" class="btn btn-secondary">商品列表</a>
+        <a href="/admin/event/contract_log.html" class="btn btn-primary">操作记录</a>
+    </div>
+</div>
+<form method="get" class="mt-3">
+    <div class="row">
+        <div class="col-md-6 col-lg-3 mb-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">用户账号</span>
+                </div>
+                <input type="text" class="form-control" name="username" value="<?php echo htmlentities(app('request')->get('username')); ?>" />
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">操作类型</span>
+                </div>
+                <select class="custom-select input-group-text" name="action">
+                    <option value="">全部</option>
+                    <?php if(is_array($actions) || $actions instanceof \think\Collection || $actions instanceof \think\Paginator): $i = 0; $__LIST__ = $actions;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$action): $mod = ($i % 2 );++$i;if(is_null(app('request')->get('action')) || app('request')->get('action') == ''): ?>
+                            <option value="<?php echo htmlentities($key); ?>"><?php echo htmlentities($action); ?></option>
+                        <?php else: if(app('request')->get('action') == $key): ?>
+                                <option selected="true" value="<?php echo htmlentities($key); ?>"><?php echo htmlentities($action); ?></option>
+                            <?php else: ?>
+                                <option value="<?php echo htmlentities($key); ?>"><?php echo htmlentities($action); ?></option>
+                            <?php endif; endif; endforeach; endif; else: echo "" ;endif; ?>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">具体商品</span>
+                </div>
+                <select class="custom-select input-group-text" name="cid">
+                    <option value="">全部</option>
+                    <?php if(is_array($cids) || $cids instanceof \think\Collection || $cids instanceof \think\Paginator): $i = 0; $__LIST__ = $cids;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;if(is_null(app('request')->get('cid')) || app('request')->get('cid') == ''): ?>
+                            <option value="<?php echo htmlentities($item['id']); ?>"><?php echo htmlentities($item['title']); ?></option>
+                        <?php else: if(app('request')->get('cid') == $item['id']): ?>
+                                <option selected="true" value="<?php echo htmlentities($item['id']); ?>"><?php echo htmlentities($item['title']); ?></option>
+                            <?php else: ?>
+                                <option value="<?php echo htmlentities($item['id']); ?>"><?php echo htmlentities($item['title']); ?></option>
+                            <?php endif; endif; endforeach; endif; else: echo "" ;endif; ?>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-2 mb-3">
+            <button class="btn btn-primary w-100" type="submit">立即查询</button>
+        </div>
+    </div>
+</form>
+<div class="card mt-3">
+    <div class="card-body p-0">
+        <table class="table table-hover table-outline table-vcenter card-table">
+            <thead>
+                <tr>
+                    <th>商品</th>
+                    <th>用户</th>
+                    <th>操作</th>
+                    <th>货币</th>
+                    <th>手续费</th>
+                    <th>对象</th>
+                    <th>比例</th>
+                    <th>备注</th>
+                    <th>时间</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php if(is_array($logs) || $logs instanceof \think\Collection || $logs instanceof \think\Paginator): $i = 0; $__LIST__ = $logs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$log): $mod = ($i % 2 );++$i;?>
+                    <tr>
+                        <td><?php echo htmlentities($log['title']); ?></td>
+                        <td><?php echo htmlentities($log['username']); ?></td>
+                        <td>
+                            <span class="tag">
+                            <?php switch($log['action']): case "1": ?>一口价<?php break; case "2": ?>团购<?php break; case "3": ?>转让<?php break; case "4": ?>继承<?php break; case "5": ?>出售<?php break; case "6": ?>领取收益<?php break; default: ?> 其他
+                            <?php endswitch; ?>
+                            </span>
+                        </td>
+                        <td><?php echo htmlentities(money($log['money'])); ?><?php echo htmlentities(app('config')->get('hello.unit')); ?></td>
+                        <td><?php echo htmlentities(money($log['charge'])); ?><?php echo htmlentities(app('config')->get('hello.unit')); ?></td>
+                        <td><?php echo htmlentities($log['target']); ?></td>
+                        <td><?php echo htmlentities($log['ratio']); ?></td>
+                        <td><?php echo htmlentities((isset($log['remark']) && ($log['remark'] !== '')?$log['remark']:"")); ?></td>
+                        <td><?php echo htmlentities($log['create_at']); ?></td>
+                    </tr>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
+            </tbody>
+        </table>
+    </div>
+    <div class="card-footer"><?php echo $logs; ?></div>
+</div>
+
             </div>
         </div>
     </div>
@@ -194,10 +295,10 @@
         <div class="container">
             <div class="row align-items-center flex-row-reverse">
                 <div class="col-auto ml-lg-auto">
-                    <div class="row align-items-center">{$Think.now}</div>
+                    <div class="row align-items-center"><?php echo htmlentities(date('Y-m-d g:i a',time())); ?></div>
                 </div>
                 <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
-                    Copyright © 2019 <a href=".">{$Think.config.hello.title}</a><a>仓实科技</a>
+                    Copyright © 2018 <a href="."><?php echo htmlentities(app('config')->get('hello.title')); ?></a>. &#28304;&#30721;&#26469;&#33258;&#23567;&#23627;&#28304;&#30721;&#119;&#119;&#119;&#46;&#109;&#50;&#49;&#51;&#46;&#99;&#110;
                 </div>
             </div>
         </div>
@@ -205,6 +306,6 @@
 </div>
 <script type="text/javascript" src="/assets/js/require.min.js"></script>
 <script type="text/javascript" src="/static/js/global.js?3"></script>
-{block name="script"}{/block}
+
 </body>
 </html>

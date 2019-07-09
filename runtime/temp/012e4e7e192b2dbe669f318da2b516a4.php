@@ -1,3 +1,4 @@
+<?php /*a:2:{s:67:"/www/wwwroot/aa.jdswzc.com/application/admin/view/market/index.html";i:1562574822;s:67:"/www/wwwroot/aa.jdswzc.com/application/admin/view/common/world.html";i:1562661509;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,7 +18,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?2" />
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="/assets/css/dashboard.css?3" />
-    <title>{block name="title"}Title{/block}</title>
+    <title>每日行情</title>
     <style>
     .toast {
         text-align: center;
@@ -58,7 +59,7 @@
         z-index: 2200;
     }
     </style>
-    {block name="style"}{/block}
+    
 </head>
 
 <body>
@@ -78,7 +79,7 @@
                                 <span class="avatar me-avatar" style="background-image: url(/static/image/icon.png);"><span class="avatar-status bg-green"></span></span>
                                 <span class="ml-2 d-none d-lg-block">
                                     <span class="text-default">超级管理员</span>
-                                    <small class="text-muted d-block mt-1">{:$Request.ip}</small>
+                                    <small class="text-muted d-block mt-1"><?php echo app('request')->ip(); ?></small>
                                 </span>
                             </a>
                         </div>
@@ -125,9 +126,9 @@
                                     <a href="/admin/account/audit.html" class="dropdown-item">实名认证</a>
                                     <a href="/admin/account/dashboard.html" class="dropdown-item">仪表盘</a>
                                     <a href="/admin/account/promotion.html" class="dropdown-item">推广数据</a>
-                                    {notempty name="Think.config.hello.register_audit"}
+                                    <?php if(!(empty(app('config')->get('hello.register_audit')) || ((app('config')->get('hello.register_audit') instanceof \think\Collection || app('config')->get('hello.register_audit') instanceof \think\Paginator ) && app('config')->get('hello.register_audit')->isEmpty()))): ?>
                                         <a href="/admin/account/reg_audit.html" class="dropdown-item">注册审核</a>
-                                    {/notempty}
+                                    <?php endif; ?>
                                 </div>
                             </li>
                             <li class="nav-item">
@@ -186,7 +187,82 @@
         </div>
         <div class="my-3 my-md-5">
             <div class="container container-padding">
-                {block name="container"}{/block}
+                
+<div class="row">
+	<div class="col-sm-3">
+		<div class="card">
+			<div class="card-body">
+				<form action="/admin/market/set" method="post">
+					<div class="form-group">
+	                    <label class="form-label">具体日期</label>
+	                    <input type="date" class="form-control" name="date" />
+	                </div>
+	                <div class="form-group">
+	                    <label class="form-label">指导价格</label>
+	                    <input type="text" class="form-control" name="price" placeholder="限制用户买入卖出价格" />
+	                </div>
+	                <div class="form-group">
+	                    <label class="form-label">最高价格</label>
+	                    <input type="text" class="form-control" name="high" placeholder="选填，默认同指导价格" />
+	                </div>
+	                <div class="form-group">
+	                    <label class="form-label">最低价格</label>
+	                    <input type="text" class="form-control" name="low" placeholder="选填，默认同指导价格" />
+	                </div>
+	                <div class="text-right">
+	                	<button class="btn btn-primary" type="submit">立即设置</button>
+	                </div>
+                </form>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-9">
+		<div class="card">
+			<div class="table-responsive">
+			    <table class="table table-hover table-outline table-vcenter text-nowrap card-table">
+			        <thead>
+			            <tr>
+			                <th class="text-center w-1"><i class="icon-people"></i></th>
+			                <th>价格</th>
+			                <th>最高</th>
+			                <th>最低</th>
+			                <th>买入</th>
+			                <th>卖出</th>
+			                <th>成交</th>
+			                <th>手续费</th>
+			            </tr>
+			        </thead>
+			        <tbody>
+			        	<?php if(is_array($markets) || $markets instanceof \think\Collection || $markets instanceof \think\Paginator): $i = 0; $__LIST__ = $markets;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$market): $mod = ($i % 2 );++$i;?>
+			            <tr>
+			                <td><?php echo htmlentities($market['date']); ?></td>
+			                <td><?php echo htmlentities(money($market['price'])); ?></td>
+			                <td><?php echo htmlentities(money($market['high'])); ?></td>
+			                <td><?php echo htmlentities(money($market['low'])); ?></td>
+			                <td>
+			                    <div><?php echo htmlentities($market['buy_count']); ?></div>
+			                    <div class="small text-muted"><?php echo htmlentities(money($market['buy_money'])); ?></div>
+			                </td>
+			                <td>
+			                    <div><?php echo htmlentities($market['sell_count']); ?></div>
+			                    <div class="small text-muted"><?php echo htmlentities(money($market['sell_money'])); ?></div>
+			                </td>
+			                <td>
+			                    <div><?php echo htmlentities($market['success_count']); ?></div>
+			                    <div class="small text-muted"><?php echo htmlentities(money($market['success_money'])); ?></div>
+			                </td>
+			                <td><?php echo htmlentities(money($market['charge'])); ?></td>
+			            </tr>
+			            <?php endforeach; endif; else: echo "" ;endif; ?>
+			        </tbody>
+			    </table>
+			</div>
+			<div class="card-footer"><?php echo $markets; ?></div>
+		</div>
+	</div>
+</div>
+
+
             </div>
         </div>
     </div>
@@ -194,10 +270,10 @@
         <div class="container">
             <div class="row align-items-center flex-row-reverse">
                 <div class="col-auto ml-lg-auto">
-                    <div class="row align-items-center">{$Think.now}</div>
+                    <div class="row align-items-center"><?php echo htmlentities(date('Y-m-d g:i a',time())); ?></div>
                 </div>
                 <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
-                    Copyright © 2019 <a href=".">{$Think.config.hello.title}</a><a>仓实科技</a>
+                    Copyright © 2019 <a href="."><?php echo htmlentities(app('config')->get('hello.title')); ?></a><a>仓实科技</a>
                 </div>
             </div>
         </div>
@@ -205,6 +281,6 @@
 </div>
 <script type="text/javascript" src="/assets/js/require.min.js"></script>
 <script type="text/javascript" src="/static/js/global.js?3"></script>
-{block name="script"}{/block}
+ 
 </body>
 </html>

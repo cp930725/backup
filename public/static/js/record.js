@@ -1,5 +1,5 @@
 require(['jquery'], function($){
-	var page = 1, size = 20, type = '', cid = 1;
+	var page = 1, size = 20, type = '', cid = [1, 5];
 	var data = function(){
 		var param = {
 			page: page,
@@ -11,8 +11,11 @@ require(['jquery'], function($){
 		}
 		ajax(api.wallet.record, param, function(res){
 			if (res.code == 200) {
+				console.log(res.data.list);
 				$('.total').text(res.data.total);
 				$('.unit').text(res.data.unit);
+				$('.total-cash').text(res.data.total_cash);
+				$('.cash').text(res.data.cash);
 				var html = '';
 				if ($('select[name=type] option').length == 1 && res.data.businesses) {
 					html = '';
@@ -36,10 +39,16 @@ require(['jquery'], function($){
 					        html += '<span>' + res.data.businesses[res.data.list[i].business] + '</span>';
 					        html += '<div class="text-muted small">' + res.data.list[i].create_at + '</div>';
 					    html += '</td>';
+					    var str = '';
+					    if (res.data.list[i].currency == 1) {
+					    	str = res.data.unit;
+						} else {
+					    	str = res.data.cash;
+						}
 					    if (res.data.list[i].now > 0) {
-					    	html += '<td class="text-right text-green">+' + number_format(res.data.list[i].now) + '</td>';
+					    	html += '<td class="text-right text-green">+' + number_format(res.data.list[i].now) + str + '</td>';
 					    } else {
-					    	html += '<td class="text-right text-red">' + number_format(res.data.list[i].now) + '</td>';
+					    	html += '<td class="text-right text-red">' + number_format(res.data.list[i].now) + str + '</td>';
 					    }
 					html += '</tr>';
 				}

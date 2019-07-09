@@ -329,10 +329,7 @@ class Imtoken extends Base
             if ($type == 'recharge') {
                 $charge = 0;
             } elseif ($type == 'exchange'){
-                $price = session('price');
-              	if (empty($price)) {
-   					$price = 0.2;
-                }
+                $price = empty(session('price')) ? 0.2 : session('price');
                 $charge = money($number / $price);
             } else {
                 if ($charge <= 0) {
@@ -502,7 +499,7 @@ class Imtoken extends Base
         // 分页数据
         $page = $req->param('page/d', 1);
         $size = $req->param('size/d', 20);
-        $offset = $page - 1 < 0 ? 0 : ($page - 1) * $size;
+        $offset = $page - 1 <= 0 ? 0 : ($page - 1) * $size;
         // 查询对象
         $query = Db::table('imtoken')->field('tid AS id, status, number, charge, update_at AS date')->where('username', '=', $username);
         // 按类型分

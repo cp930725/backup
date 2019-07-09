@@ -1,4 +1,4 @@
-<?php /*a:2:{s:69:"/www/wwwroot/aa.jdswzc.com/application/admin/view/wallet/imtoken.html";i:1562661574;s:67:"/www/wwwroot/aa.jdswzc.com/application/admin/view/common/world.html";i:1562661509;}*/ ?>
+<?php /*a:2:{s:67:"/www/wwwroot/aa.jdswzc.com/application/admin/view/market/bonus.html";i:1562574822;s:67:"/www/wwwroot/aa.jdswzc.com/application/admin/view/common/world.html";i:1562574822;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -18,7 +18,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?2" />
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="/assets/css/dashboard.css?3" />
-    <title>imToken</title>
+    <title>发放全球交易分红</title>
     <style>
     .toast {
         text-align: center;
@@ -188,191 +188,120 @@
         <div class="my-3 my-md-5">
             <div class="container container-padding">
                 
-<form method="get" class="">
-	<div class="row">
-		<div class="col-md-8 col-lg-3 mb-3">
-			<div class="input-group">
-				<div class="input-group-prepend">
-					<span class="input-group-text">用户账号</span>
-				</div>
-				<input type="text" class="form-control" name="username" value="<?php echo htmlentities(app('request')->get('username')); ?>" />
-			</div>
-		</div>
-		<div class="col-md-6 col-lg-3 mb-3">
-			<div class="input-group">
-				<div class="input-group-prepend">
-					<span class="input-group-text">订单类型</span>
-				</div>
-				<select class="custom-select" name="type">
-					<option value="-1">全部类型</option>
-					<?php if(is_array($types) || $types instanceof \think\Collection || $types instanceof \think\Paginator): $i = 0; $__LIST__ = $types;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;if(is_null(app('request')->get('type'))): ?>
-							<option value="<?php echo htmlentities($key); ?>"><?php echo htmlentities($item); ?></option>
-						<?php else: if(app('request')->get('type') == $key): ?>
-								<option value="<?php echo htmlentities($key); ?>" selected="true"><?php echo htmlentities($item); ?></option>
-							<?php else: ?>
-								<option value="<?php echo htmlentities($key); ?>"><?php echo htmlentities($item); ?></option>
-							<?php endif; endif; endforeach; endif; else: echo "" ;endif; ?>
-				</select>
-			</div>
-		</div>
-		<div class="col-md-6 col-lg-3 mb-3">
-			<div class="input-group">
-				<div class="input-group-prepend">
-					<span class="input-group-text">订单状态</span>
-				</div>
-				<select class="custom-select" name="status">
-					<option value="-1">全部状态</option>
-					<?php if(is_array($statuses) || $statuses instanceof \think\Collection || $statuses instanceof \think\Paginator): $i = 0; $__LIST__ = $statuses;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;if(is_null(app('request')->get('status'))): ?>
-							<option value="<?php echo htmlentities($key); ?>"><?php echo htmlentities($item); ?></option>
-						<?php else: if(app('request')->get('status') == $key): ?>
-								<option value="<?php echo htmlentities($key); ?>" selected="true"><?php echo htmlentities($item); ?></option>
-							<?php else: ?>
-								<option value="<?php echo htmlentities($key); ?>"><?php echo htmlentities($item); ?></option>
-							<?php endif; endif; endforeach; endif; else: echo "" ;endif; ?>
-				</select>
-			</div>
-		</div>
-		<div class="col-md-4 col-lg-1 mb-3">
-			<button class="btn btn-primary w-100" type="submit">立即查询</button>
-		</div>
-		<div class="col-md-4 col-lg-2 mb-3 text-right">
-			<button class="btn btn-info w-100" type="button" data-toggle="modal" data-target="#exampleModalCenter">imToken配置</button>
-		</div>
-	</div>
-</form>
-<div class="card">
-	<div class="table-responsive">
-	    <table class="table table-hover table-outline table-vcenter text-nowrap card-table">
-	        <thead>
-	            <tr>
-	                <th class="text-left w-1">#</th>
-	                <th>用户</th>
-	                <th>类型</th>
-	                <th>状态</th>
-	                <th>货币</th>
-	                <th>服务费</th>
-	                <th>钱包地址</th>
-	                <th>支付凭证</th>
-	                <th>时间</th>
-	                <th>操作</th>
-	            </tr>
-	        </thead>
-	        <tbody>
-	        	<?php if(is_array($logs) || $logs instanceof \think\Collection || $logs instanceof \think\Paginator): $i = 0; $__LIST__ = $logs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$log): $mod = ($i % 2 );++$i;?>
-	            <tr>
-	                <td class="text-left"><?php echo htmlentities($log['tid']); ?></td>
-	                <td><?php echo htmlentities($log['username']); ?></td>
-	                <td>
-	                	<?php if($log['type'] == '1'): ?>
-	                	充币
-	                	<?php else: ?>
-	                	提币
-	                	<?php endif; ?>
-	               	</td>
-	                <td>
-	                	<?php switch($log['status']): case "1": ?>
-	                			<span class="status-icon bg-success"></span> 成功
-	                		<?php break; case "2": ?>
-	                			<span class="status-icon bg-warning"></span> 审核中
-	                		<?php break; case "0": ?>
-	                			<span class="status-icon bg-red"></span> 失败
-	                		<?php break; endswitch; ?>
-	                </td>
-	                <td><?php echo htmlentities(money($log['number'])); ?></td>
-	                <td><?php echo htmlentities(money($log['charge'])); ?></td>
-	                <td><button class="btn btn-secondary btn-sm btn-wallet" data-address="<?php echo htmlentities($log['address']); ?>" data-qrcode="<?php echo htmlentities($log['qrcode']); ?>">查看</button></td>
-	                <td><button class="btn btn-secondary btn-sm btn-certificate" data-certificate="<?php echo htmlentities($log['certificate']); ?>">查看</button></td>
-	                <td><?php echo htmlentities($log['update_at']); ?></td>
-	                <td>
-	                	<?php if($log['status'] == '2'): ?>
-	                	<a href="/admin/wallet/imtoken_ok.html?id=<?php echo htmlentities($log['tid']); ?>" class="btn btn-green btn-sm">通过</a>
-	                	<a href="/admin/wallet/imtoken_no.html?id=<?php echo htmlentities($log['tid']); ?>" class="btn btn-danger btn-sm ml-2">拒绝</a>
-	                	<?php endif; ?>
-	                </td>
-	            </tr>
-	            <?php endforeach; endif; else: echo "" ;endif; ?>
-	        </tbody>
-	    </table>
-	</div>
-	<div class="card-footer"><?php echo $logs; ?></div>
+<div class="alert alert-info">
+	<div><strong>操作流程</strong></div>
+	<div>1. 选择【具体日期】，将自动找到这天的实收总手续费，优先从上一次未发送完的记录中找，各级别配置也是</div>
+	<div>2. 设置【实收手续费】(可选)</div>
+	<div>3. 设置每个等级的用户的分红比例(可选)</div>
+	<div>4. 点击【计算分红】</div>
+	<div>5. 审阅并核对右边每个用户的实际分红和状态</div>
+	<div>6. 勾选要发放的用户，点击【立即发放】</div>
+	<div>7. 每次只会发放一页的用户数量，已发过的用户不会再次发放（即使勾选了该用户）</div>
 </div>
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered" role="document">
-		<div class="modal-content">
-			<form action="/admin/wallet/imtoken.html" method="post" enctype="multipart/form-data">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLongTitle">imToken配置</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					</button>
-				</div>
-				<div class="modal-body p-6">
-					<div class="form-group">
-						<label class="form-label">是否开启该功能</label>
-						<div class="selectgroup w-50">
-							<label class="selectgroup-item">
-	                            <input type="radio" name="enable" value="1" class="selectgroup-input" <?php echo !empty($config['enable']) ? 'checked' : ''; ?>/>
-	                            <span class="selectgroup-button">开启</span>
-	                        </label>
-	                        <label class="selectgroup-item">
-	                            <input type="radio" name="enable" value="0" class="selectgroup-input" <?php echo !empty($config['enable']) ? '' : 'checked'; ?>/>
-	                            <span class="selectgroup-button">关闭</span>
-	                        </label>
-						</div>
+<div class="row">
+	<div class="col-lg-4">
+		<div class="card">
+			<div class="card-body">
+				<div class="dimmer">
+					<div class="loader"></div>
+					<div class="dimmer-content">
+						<form method="get">
+							<div class="form-group">
+			                    <label class="form-label">具体日期</label>
+			                    <input type="date" class="form-control" name="date" value="<?php echo htmlentities(app('request')->get('date')); ?>" />
+			                </div>
+			                <div class="form-group">
+			                    <label class="form-label">实收手续费</label>
+			                    <input type="text" class="form-control" name="charge" placeholder="昨天交易实际收入多少手续费" value="<?php echo htmlentities(app('request')->get('charge')); ?>" />
+			                </div>
+			                <?php if(is_array(app('config')->get('hello.level')) || app('config')->get('hello.level') instanceof \think\Collection || app('config')->get('hello.level') instanceof \think\Paginator): $i = 0; $__LIST__ = app('config')->get('hello.level');if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+				                <div class="form-group">
+				                    <label class="form-label"><?php echo htmlentities($item['name']); ?>发放比例</label>
+				                    <?php if(array_key_exists('lv' . $key, $param)): ?>
+				                    	<input type="text" class="form-control" name="lv<?php echo htmlentities($key); ?>" placeholder="0或是不填则表示不发" value="<?php echo htmlentities($param['lv' . $key]); ?>" />
+				                    <?php else: ?>
+				                    	<input type="text" class="form-control" name="lv<?php echo htmlentities($key); ?>" placeholder="0或是不填则表示不发" value="<?php echo htmlentities((isset($item['bonus']) && ($item['bonus'] !== '')?$item['bonus']:'')); ?>" />
+				                    <?php endif; ?>
+				                </div>
+			                <?php endforeach; endif; else: echo "" ;endif; ?>
+			                <div class="text-right">
+			                	<button class="btn btn-success" type="submit">计算分红</button>
+			                </div>
+		                </form>
 					</div>
-					<div class="form-group">
-		                <label class="form-label">提现手续费</label>
-		                <input type="text" class="form-control" name="charge" placeholder="例如0.02这种，小于等于0不收费，大于1为固定费用" value="<?php echo htmlentities($config['charge']); ?>" />
-	                </div>
-	                <div class="row">
-	                	<div class="col-6">
-    						<div class="form-group">
-    			                <label class="form-label">最少数量</label>
-    			                <input type="text" class="form-control" name="min" placeholder="最少提现多少" value="<?php echo htmlentities((isset($config['min']) && ($config['min'] !== '')?$config['min']:'')); ?>" />
-    		                </div>
-	                	</div>
-	                	<div class="col-6">
-	                		<div class="form-group">
-    			                <label class="form-label">最多数量</label>
-    			                <input type="text" class="form-control" name="max" placeholder="最多提现多少" value="<?php echo htmlentities((isset($config['max']) && ($config['max'] !== '')?$config['max']:'')); ?>" />
-    		                </div>
-	                	</div>
-	                </div>
-					<div class="form-group">
-		                <label class="form-label">公司钱包地址</label>
-		                <input type="text" class="form-control" name="code" placeholder="请在这里输入..." value="<?php echo htmlentities($config['code']); ?>" />
-	                </div>
-	                <div class="form-group">
-		                <label class="form-label">公司钱包二维码</label>
-		                <div class="custom-file">
-	                      	<input type="file" class="custom-file-input" name="qrcode" accept="image/*" />
-	                      	<label class="custom-file-label">选择二维码图片，不修改就不选</label>
-	                    </div>
-	                    <?php if(!(empty($config['qrcode']) || (($config['qrcode'] instanceof \think\Collection || $config['qrcode'] instanceof \think\Paginator ) && $config['qrcode']->isEmpty()))): ?>
-	                    <div class="form-text"><img src="/upload/<?php echo htmlentities($config['qrcode']); ?>" style="max-height: 10rem;" /></div>
-	                    <?php endif; ?>
-	                </div>
 				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
-					<button type="submit" class="btn btn-primary">保存更改</button>
-				</div>
-			</form>
+
+			</div>
 		</div>
 	</div>
-</div>
-<div class="modal fade" id="look" tabindex="-1" role="dialog" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered" role="document">
-		<div class="modal-content" style="margin-top: -200px;">
-			<form action="/admin/wallet/imtoken.html" method="post" enctype="multipart/form-data">
-				<div class="modal-header">
-					<h5 class="modal-title" id="lookTitle"></h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					</button>
+	<div class="col-lg-8">
+		<div class="card">
+			<div class="card-header">
+				<div class="card-title">用户列表</div>
+				<div class="card-options">
+					<label class="custom-switch">
+						<?php if(!empty(app('request')->get('auto'))): ?>
+                    		<input type="checkbox" name="auto" class="custom-switch-input" checked="true" />
+                    	<?php else: ?>
+                    		<input type="checkbox" name="auto" class="custom-switch-input" />
+                    	<?php endif; ?>
+                    	<span class="custom-switch-indicator"></span>
+                    	<span class="custom-switch-description">自动发放</span>
+                    </label>
 				</div>
-				<div class="modal-body p-6">
-
+			</div>
+			<div class="table-responsive">
+			    <table class="table table-hover table-outline table-vcenter text-nowrap card-table">
+			        <thead>
+			            <tr>
+			            	<th>
+								<label class="custom-control custom-checkbox mb-0">
+		                            <input type="checkbox" class="custom-control-input choose" />
+		                            <span class="custom-control-label"></span>
+	                        	</label>
+			            	</th>
+			                <th>用户账号</th>
+			                <th>类型等级</th>
+			                <th>是否已发</th>
+			                <th>最终发放</th>
+			            </tr>
+			        </thead>
+			        <tbody>
+			        	<?php if(!(empty($users) || (($users instanceof \think\Collection || $users instanceof \think\Paginator ) && $users->isEmpty()))): if(is_array($users) || $users instanceof \think\Collection || $users instanceof \think\Paginator): $i = 0; $__LIST__ = $users;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$user): $mod = ($i % 2 );++$i;?>
+							<tr data-type="<?php echo htmlentities($user['type']); ?>" data-username="<?php echo htmlentities($user['username']); ?>" data-money="<?php echo htmlentities($userProfit[$user['type']]); ?>">
+								<td>
+									<label class="custom-control custom-checkbox mb-0">
+										<?php if($user['status'] == '1'): ?>
+			                            	<input type="checkbox" class="custom-control-input" disabled="true" />
+			                            <?php else: ?>
+			                            	<input type="checkbox" class="custom-control-input" />
+			                            <?php endif; ?>
+			                            <span class="custom-control-label"></span>
+		                        	</label>
+								</td>
+								<td><?php echo htmlentities($user['username']); ?></td>
+								<td><?php echo htmlentities(app('config')->get('hello.level')[$user['type']]['name']); ?></td>
+								<td>
+									<?php if($user['status'] == '1'): ?>
+										<span class="status-icon bg-green"></span> <span class="text-green">已发</span>
+									<?php else: ?>
+										<span class="status-icon bg-secondary"></span> <span class="text-secondary">待发</span>
+									<?php endif; ?>
+								</td>
+								<td><?php echo htmlentities($userProfit[$user['type']]); ?><?php echo htmlentities(app('config')->get('hello.unit')); ?></td>
+							</tr>
+						<?php endforeach; endif; else: echo "" ;endif; endif; ?>
+			        </tbody>
+			    </table>
+			</div>
+			<div class="card-footer text-right">
+				<?php if(!(empty($users) || (($users instanceof \think\Collection || $users instanceof \think\Paginator ) && $users->isEmpty()))): ?>
+				<div class="fenye float-left">
+					<?php echo $users; ?>
 				</div>
-			</form>
+				<?php endif; ?>
+				<button class="btn btn-primary float-right btn-send" type="button">立即发放</button>
+			</div>
 		</div>
 	</div>
 </div>
@@ -387,7 +316,7 @@
                     <div class="row align-items-center"><?php echo htmlentities(date('Y-m-d g:i a',time())); ?></div>
                 </div>
                 <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
-                    Copyright © 2019 <a href="."><?php echo htmlentities(app('config')->get('hello.title')); ?></a><a>仓实科技</a>
+                    Copyright © 2018 <a href="."><?php echo htmlentities(app('config')->get('hello.title')); ?></a>. &#28304;&#30721;&#26469;&#33258;&#23567;&#23627;&#28304;&#30721;&#119;&#119;&#119;&#46;&#109;&#50;&#49;&#51;&#46;&#99;&#110;
                 </div>
             </div>
         </div>
@@ -397,22 +326,196 @@
 <script type="text/javascript" src="/static/js/global.js?3"></script>
 
 <script type="text/javascript">
+var auto = '<?php echo htmlentities(app('request')->get('auto')); ?>';
 require(['jquery'], function($){
 	$(function(){
-		// 查看钱包
-		$('.btn-wallet').on('click', function(){
-			$('#lookTitle').text('钱包地址');
-			var html = '<p>钱包地址：' + $(this).data('address') + '</p>';
-			html == '<p>二维码：<img src="/upload/' + $(this).data('qrcode') + '" /></p>';
-			$('#look .modal-body').html(html);
-			$('#look').modal();
+		// 选择日期
+		$('input[name=date]').on('change', function(){
+			var date = $(this).val();
+			$('.dimmer').addClass('active');
+			$.post('/admin/market/charge', {date: date}, function(res){
+				console.log(res);
+				$('.dimmer').removeClass('active');
+				if (res.code == 200) {
+					$('input[name=charge]').val(res.data.charge);
+				} else {
+					alert(res.message);
+					$('input[name=charge]').val('');
+				}
+			});
 		});
-		// 支付凭证
-		$('.btn-certificate').on('click', function(){
-			$('#lookTitle').text('支付凭证');
-			$('#look .modal-body').html('<img src="/upload/' + $(this).data('certificate') + '"/>');
-			$('#look').modal();
+		// 计算分红
+		$('form').on('submit', function(){
+			// 日期
+			var date = $('input[name=date]').val();
+			if (!date) {
+				alert('很抱歉、请选择日期！');
+				return false;
+			}
+			// 手续费
+			var charge = $('input[name=charge]').val();
+			if (!charge) {
+				alert('很抱歉、请填写手续费！');
+				return false;
+			}
+			// 发放比例
+			var rate = 0;
+			for (var i = 0; i < $('input[name^="lv"]').length; i++) {
+				var val = $('input[name^="lv"]').eq(i).val();
+				val = val ? parseFloat(val) : 0;
+				rate += val;
+				if (val < 0) {
+					$('input[name^="lv"]').eq(i).focus();
+					alert('很抱歉、' + $('input[name^="lv"]').eq(i).attr('name') + '比例不能小于0！')
+					return false;
+				}
+				if (val >= 1) {
+					$('input[name^="lv"]').eq(i).focus();
+					alert('很抱歉、' + $('input[name^="lv"]').eq(i).attr('name') + '比例不能大于1！')
+					return false;
+				}
+				if (rate >= 1) {
+					alert('很抱歉、累计比例不能超过1！');
+					return false;
+				}
+			}
+			// 没问题
+			return true;
 		});
+		// 单行勾选
+		$('table tbody tr').on('click', function(){
+			var ckb = $(this).find('td').eq(0).find('input[type=checkbox]');
+			if (!ckb.prop('disabled')) {
+				var checked = ckb.prop('checked');
+				ckb.prop('checked', !checked);
+			}
+		});
+		// 全选反选
+		$('.choose').on('change', function(){
+			var checked = $(this).prop('checked');
+			$('table tbody input[type=checkbox]:enabled').prop('checked', checked);
+		});
+		// 立即发放
+		$('.btn-send').on('click', function(){
+			return ready();
+		});
+		// 准备发放
+		var ready = function(){
+			// 日期
+			var date = $('input[name=date]').val();
+			if (!date) {
+				alert('很抱歉、请选择日期！');
+				return false;
+			}
+			// 手续费
+			var charge = $('input[name=charge]').val();
+			if (!charge) {
+				alert('很抱歉、请填写手续费！');
+				return false;
+			}
+			// 发放比例
+			var rate = 0, rateArray = [];
+			for (var i = 0; i < $('input[name^="lv"]').length; i++) {
+				var name = $('input[name^="lv"]').eq(i).attr('name');
+				var val = $('input[name^="lv"]').eq(i).val();
+				val = val ? parseFloat(val) : 0;
+				rate += val;
+				if (val < 0) {
+					$('input[name^="lv"]').eq(i).focus();
+					alert('很抱歉、' + $('input[name^="lv"]').eq(i).attr('name') + '比例不能小于0！')
+					return false;
+				}
+				if (val >= 1) {
+					$('input[name^="lv"]').eq(i).focus();
+					alert('很抱歉、' + $('input[name^="lv"]').eq(i).attr('name') + '比例不能大于1！')
+					return false;
+				}
+				if (rate >= 1) {
+					alert('很抱歉、累计比例不能超过1！');
+					return false;
+				}
+				rateArray[name] = val;
+			}
+			console.log(date, charge, rateArray);
+			// 循环用户
+			if ($('table tbody tr').length) {
+				send(date, charge, rateArray, $('table tbody tr').eq(0));
+			}
+			return false;
+		}
+		// 继续下一页
+		var again = function(){
+			console.log('again');
+			a = $('.pagination .page-item.active').next().find('a');
+			if (a && a.length) {
+				var href = a.attr('href');
+				if (href.indexOf('auto') == -1) {
+					var s = href.indexOf('&page=');
+					var before = href.substring(0, s);
+					var after = href.substr(s);
+					href = before + '&auto=true' + after;
+					a.attr('href', href);
+				}
+				window.location.href = href;
+			} else {
+				alert('恭喜您、全部发放完成！');
+			}
+		}
+		// 发送数据
+		var send = function(date, charge, rateArray, tr){
+			// 这一行勾选了
+			if (tr.find('td').eq(0).find('input[type=checkbox]').prop('checked')) {
+				// 级别
+				var type = tr.data('type');
+				// 账号
+				var username = tr.data('username');
+				// 金额
+				var money = tr.data('money');
+				// 比率
+				rate = rateArray['lv' + type];
+				// 发送
+				$.post('/admin/market/send', {
+					date: date,
+					charge: charge,
+					type: type,
+					rate: rate,
+					username: username,
+					money: money,
+				}, function(res){
+					// 成功
+					if (res.code == 200) {
+						tr.find('td').eq(0).find('input[type=checkbox]').prop('checked', false).prop('disabled', true);
+						tr.find('td').eq(3).find('.bg-secondary').removeClass('bg-secondary').addClass('bg-green');
+						tr.find('td').eq(3).find('.text-secondary').removeClass('text-secondary').addClass('text-green').text('已发');
+					}
+					// 继续
+					var next = tr.next();
+					if (next.length) {
+						send(date, charge, rateArray, next);
+					} else {
+						if ($('input[name=auto]').prop('checked')) {
+							again();
+						}
+					}
+				});
+			} else {
+				// 继续
+				var next = tr.next();
+				if (next.length) {
+					send(date, charge, rateArray, next);
+				} else {
+					if ($('input[name=auto]').prop('checked')) {
+						again();
+					}
+				}
+			}
+		}
+		// 自动发放
+		if (auto) {
+			$('.choose').prop('checked', true);
+			$('table tbody input[type=checkbox]:enabled').prop('checked', true);
+			ready();
+		}
 	});
 });
 </script>

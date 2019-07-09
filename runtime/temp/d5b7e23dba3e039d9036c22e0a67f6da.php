@@ -1,4 +1,4 @@
-<?php /*a:2:{s:66:"/www/wwwroot/aa.jdswzc.com/application/api/view/wallet/record.html";i:1562574822;s:67:"/www/wwwroot/aa.jdswzc.com/application/api/view/common/default.html";i:1562574822;}*/ ?>
+<?php /*a:2:{s:66:"/www/wwwroot/aa.jdswzc.com/application/api/view/wallet/record.html";i:1562660149;s:67:"/www/wwwroot/aa.jdswzc.com/application/api/view/common/default.html";i:1562661391;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -83,25 +83,25 @@
                     <div class="col-lg order-lg-first">
                         <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
                             <li class="nav-item">
-                                <a href="/api" class="nav-link<?php echo app('request')->path()=='account' || app('request')->path() == ''?' active' : ''; ?>">
+                                <a href="/api" class="nav-link<?php echo app('request')->path()=='api' || app('request')->path() == ''?' active' : ''; ?>">
                                     <span><i class="fe fe-home"></i></span>
                                     <span>首页</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="/market" class="nav-link<?php echo app('request')->path()=='market'?' active' : ''; ?>">
+                                <a href="/market" class="nav-link<?php echo app('request')->path()=='market' || app('request')->path() == ''?' active' : ''; ?>">
                                     <span><i class="fe fe-globe"></i></span>
                                     <span>市场</span>
                                 </a>
                             </li>
                           	<li class="nav-item">
-                                <a href="/funding" class="nav-link<?php echo app('request')->path()=='account' || app('request')->path() == ''?' active' : ''; ?>">
+                                <a href="/funding" class="nav-link<?php echo app('request')->path()=='funding' || app('request')->path() == ''?' active' : ''; ?>">
                                     <span><i class="fe fe-star"></i></span>
                                     <span>众筹</span>
                                 </a>
                             </li>
                             <li class="nav-item d-md-block d-lg-block">
-                                <a href="/account" class="nav-link<?php echo app('request')->path()=='help'?' active' : ''; ?>">
+                                <a href="/account" class="nav-link<?php echo app('request')->path()=='account' || app('request')->path() == ''?' active' : ''; ?>">
                                     <span><i class="fe fe-user"></i></span>
                                     <span>我的</span>
                                 </a>
@@ -122,6 +122,7 @@
         </select>
     </div>
     <div class="text-muted mt-2 ml-3 small">合计：<span class="total"></span><span class="unit"></span></div>
+    <div class="text-muted mt-2 ml-3 small">合计：<span class="total-cash"></span><span class="cash"></span></div>
 </div>
 <div class="card">
     <table class="table card-table table-vcenter text-nowrap">
@@ -146,7 +147,7 @@
                     <div class="row align-items-center"><?php echo htmlentities(date('Y-m-d g:i a',time())); ?></div>
                 </div>
                 <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
-                    Copyright © 2018 <a href="."><?php echo htmlentities(app('config')->get('hello.title')); ?></a>
+                    Copyright © 2019 <a href="."><?php echo htmlentities(app('config')->get('hello.title')); ?></a>
                 </div>
             </div>
         </div>

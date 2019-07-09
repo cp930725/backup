@@ -1,4 +1,4 @@
-<?php /*a:2:{s:69:"/www/wwwroot/aa.jdswzc.com/application/admin/view/wallet/imtoken.html";i:1562661574;s:67:"/www/wwwroot/aa.jdswzc.com/application/admin/view/common/world.html";i:1562661509;}*/ ?>
+<?php /*a:2:{s:65:"/www/wwwroot/aa.jdswzc.com/application/admin/view/event/pool.html";i:1562574822;s:67:"/www/wwwroot/aa.jdswzc.com/application/admin/view/common/world.html";i:1562574822;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -18,7 +18,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?2" />
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="/assets/css/dashboard.css?3" />
-    <title>imToken</title>
+    <title>共享矿池</title>
     <style>
     .toast {
         text-align: center;
@@ -190,7 +190,7 @@
                 
 <form method="get" class="">
 	<div class="row">
-		<div class="col-md-8 col-lg-3 mb-3">
+		<div class="col-md-6 col-lg-3 mb-3">
 			<div class="input-group">
 				<div class="input-group-prepend">
 					<span class="input-group-text">用户账号</span>
@@ -201,42 +201,42 @@
 		<div class="col-md-6 col-lg-3 mb-3">
 			<div class="input-group">
 				<div class="input-group-prepend">
-					<span class="input-group-text">订单类型</span>
+					<span class="input-group-text">操作类型</span>
 				</div>
-				<select class="custom-select" name="type">
-					<option value="-1">全部类型</option>
-					<?php if(is_array($types) || $types instanceof \think\Collection || $types instanceof \think\Paginator): $i = 0; $__LIST__ = $types;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;if(is_null(app('request')->get('type'))): ?>
-							<option value="<?php echo htmlentities($key); ?>"><?php echo htmlentities($item); ?></option>
-						<?php else: if(app('request')->get('type') == $key): ?>
-								<option value="<?php echo htmlentities($key); ?>" selected="true"><?php echo htmlentities($item); ?></option>
+				<select class="custom-select input-group-text" name="action">
+					<option value="">全部</option>
+					<?php if(is_array($actions) || $actions instanceof \think\Collection || $actions instanceof \think\Paginator): $i = 0; $__LIST__ = $actions;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$action): $mod = ($i % 2 );++$i;if(is_null(app('request')->get('action')) || app('request')->get('action') == ''): ?>
+							<option value="<?php echo htmlentities($key); ?>"><?php echo htmlentities($action); ?></option>
+						<?php else: if(app('request')->get('action') == $key): ?>
+								<option selected="true" value="<?php echo htmlentities($key); ?>"><?php echo htmlentities($action); ?></option>
 							<?php else: ?>
-								<option value="<?php echo htmlentities($key); ?>"><?php echo htmlentities($item); ?></option>
+								<option value="<?php echo htmlentities($key); ?>"><?php echo htmlentities($action); ?></option>
 							<?php endif; endif; endforeach; endif; else: echo "" ;endif; ?>
-				</select>
+			    </select>
 			</div>
 		</div>
 		<div class="col-md-6 col-lg-3 mb-3">
 			<div class="input-group">
 				<div class="input-group-prepend">
-					<span class="input-group-text">订单状态</span>
+					<span class="input-group-text">具体道具</span>
 				</div>
-				<select class="custom-select" name="status">
-					<option value="-1">全部状态</option>
-					<?php if(is_array($statuses) || $statuses instanceof \think\Collection || $statuses instanceof \think\Paginator): $i = 0; $__LIST__ = $statuses;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;if(is_null(app('request')->get('status'))): ?>
-							<option value="<?php echo htmlentities($key); ?>"><?php echo htmlentities($item); ?></option>
-						<?php else: if(app('request')->get('status') == $key): ?>
-								<option value="<?php echo htmlentities($key); ?>" selected="true"><?php echo htmlentities($item); ?></option>
+				<select class="custom-select input-group-text" name="prop">
+					<option value="">全部</option>
+					<?php if(is_array($props) || $props instanceof \think\Collection || $props instanceof \think\Paginator): $i = 0; $__LIST__ = $props;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;if(is_null(app('request')->get('prop')) || app('request')->get('prop') == ''): ?>
+							<option value="<?php echo htmlentities($item['title']); ?>"><?php echo htmlentities($item['title']); ?></option>
+						<?php else: if(app('request')->get('prop') == $item['title']): ?>
+								<option selected="true" value="<?php echo htmlentities($item['title']); ?>"><?php echo htmlentities($item['title']); ?></option>
 							<?php else: ?>
-								<option value="<?php echo htmlentities($key); ?>"><?php echo htmlentities($item); ?></option>
+								<option value="<?php echo htmlentities($item['title']); ?>"><?php echo htmlentities($item['title']); ?></option>
 							<?php endif; endif; endforeach; endif; else: echo "" ;endif; ?>
-				</select>
+			    </select>
 			</div>
 		</div>
-		<div class="col-md-4 col-lg-1 mb-3">
+		<div class="col-lg-3 mb-3">
 			<button class="btn btn-primary w-100" type="submit">立即查询</button>
 		</div>
-		<div class="col-md-4 col-lg-2 mb-3 text-right">
-			<button class="btn btn-info w-100" type="button" data-toggle="modal" data-target="#exampleModalCenter">imToken配置</button>
+		<div class="col-lg-2 mb-3">
+			<button class="btn btn-info w-100" data-toggle="modal" data-target="#pool_config" type="button">矿池配置</button>
 		</div>
 	</div>
 </form>
@@ -245,132 +245,186 @@
 	    <table class="table table-hover table-outline table-vcenter text-nowrap card-table">
 	        <thead>
 	            <tr>
-	                <th class="text-left w-1">#</th>
 	                <th>用户</th>
-	                <th>类型</th>
-	                <th>状态</th>
-	                <th>货币</th>
-	                <th>服务费</th>
-	                <th>钱包地址</th>
-	                <th>支付凭证</th>
-	                <th>时间</th>
 	                <th>操作</th>
+	                <th>当前算力</th>
+	                <th>消费货币</th>
+	                <th>道具名称</th>
+	                <th>奖励算力</th>
+	                <th>奖励货币</th>
+	                <th>时间</th>
 	            </tr>
 	        </thead>
 	        <tbody>
-	        	<?php if(is_array($logs) || $logs instanceof \think\Collection || $logs instanceof \think\Paginator): $i = 0; $__LIST__ = $logs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$log): $mod = ($i % 2 );++$i;?>
-	            <tr>
-	                <td class="text-left"><?php echo htmlentities($log['tid']); ?></td>
-	                <td><?php echo htmlentities($log['username']); ?></td>
-	                <td>
-	                	<?php if($log['type'] == '1'): ?>
-	                	充币
-	                	<?php else: ?>
-	                	提币
-	                	<?php endif; ?>
-	               	</td>
-	                <td>
-	                	<?php switch($log['status']): case "1": ?>
-	                			<span class="status-icon bg-success"></span> 成功
-	                		<?php break; case "2": ?>
-	                			<span class="status-icon bg-warning"></span> 审核中
-	                		<?php break; case "0": ?>
-	                			<span class="status-icon bg-red"></span> 失败
-	                		<?php break; endswitch; ?>
-	                </td>
-	                <td><?php echo htmlentities(money($log['number'])); ?></td>
-	                <td><?php echo htmlentities(money($log['charge'])); ?></td>
-	                <td><button class="btn btn-secondary btn-sm btn-wallet" data-address="<?php echo htmlentities($log['address']); ?>" data-qrcode="<?php echo htmlentities($log['qrcode']); ?>">查看</button></td>
-	                <td><button class="btn btn-secondary btn-sm btn-certificate" data-certificate="<?php echo htmlentities($log['certificate']); ?>">查看</button></td>
-	                <td><?php echo htmlentities($log['update_at']); ?></td>
-	                <td>
-	                	<?php if($log['status'] == '2'): ?>
-	                	<a href="/admin/wallet/imtoken_ok.html?id=<?php echo htmlentities($log['tid']); ?>" class="btn btn-green btn-sm">通过</a>
-	                	<a href="/admin/wallet/imtoken_no.html?id=<?php echo htmlentities($log['tid']); ?>" class="btn btn-danger btn-sm ml-2">拒绝</a>
-	                	<?php endif; ?>
-	                </td>
-	            </tr>
-	            <?php endforeach; endif; else: echo "" ;endif; ?>
+			<?php if(is_array($logs) || $logs instanceof \think\Collection || $logs instanceof \think\Paginator): $i = 0; $__LIST__ = $logs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$log): $mod = ($i % 2 );++$i;?>
+				<tr>
+					<td><?php echo htmlentities($log['username']); ?></td>
+					<td>
+						<?php if($log['action'] == '1'): ?>
+							领取收益
+						<?php else: ?>
+							使用道具
+						<?php endif; ?>
+					</td>
+					<td><?php echo htmlentities($log['power']); ?></td>
+					<td><?php echo htmlentities($log['spend']); ?></td>
+					<td><?php echo htmlentities($log['prop']); ?></td>
+					<td>
+						<?php if($log['action'] == '1'): ?>
+							0
+						<?php else: ?>
+							<?php echo htmlentities($log['reward']); endif; ?>
+					</td>
+					<td>
+						<?php if($log['action'] == '1'): ?>
+							<?php echo htmlentities($log['reward']); else: ?>
+							0
+						<?php endif; ?>
+					</td>
+					<td><?php echo htmlentities($log['create_at']); ?></td>
+				</tr>
+			<?php endforeach; endif; else: echo "" ;endif; ?>
 	        </tbody>
 	    </table>
 	</div>
 	<div class="card-footer"><?php echo $logs; ?></div>
 </div>
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal fade" id="pool_config" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered" role="document">
 		<div class="modal-content">
-			<form action="/admin/wallet/imtoken.html" method="post" enctype="multipart/form-data">
+			<form method="post" enctype="multipart/form-data">
+				<input type="hidden" name="action" value="pool" />
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLongTitle">imToken配置</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					</button>
+					<h5 class="modal-title" id="exampleModalLongTitle">矿池配置</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
 				</div>
-				<div class="modal-body p-6">
-					<div class="form-group">
-						<label class="form-label">是否开启该功能</label>
-						<div class="selectgroup w-50">
-							<label class="selectgroup-item">
-	                            <input type="radio" name="enable" value="1" class="selectgroup-input" <?php echo !empty($config['enable']) ? 'checked' : ''; ?>/>
-	                            <span class="selectgroup-button">开启</span>
-	                        </label>
-	                        <label class="selectgroup-item">
-	                            <input type="radio" name="enable" value="0" class="selectgroup-input" <?php echo !empty($config['enable']) ? '' : 'checked'; ?>/>
-	                            <span class="selectgroup-button">关闭</span>
-	                        </label>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="form-group">
+								<label class="form-label">是否开启该功能</label>
+								<div class="selectgroup w-50">
+									<label class="selectgroup-item">
+			                            <input type="radio" name="enable" value="1" class="selectgroup-input" <?php echo !empty($config['enable']) ? 'checked' : ''; ?>/>
+			                            <span class="selectgroup-button">开启</span>
+			                        </label>
+			                        <label class="selectgroup-item">
+			                            <input type="radio" name="enable" value="0" class="selectgroup-input" <?php echo !empty($config['enable']) ? '' : 'checked'; ?>/>
+			                            <span class="selectgroup-button">关闭</span>
+			                        </label>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="form-group">
+				                <label class="form-label">矿池总量</label>
+				                <input type="text" class="form-control" name="volume" placeholder="目前矿池总共可以产出的收益总量" value="<?php echo htmlentities($config['volume']); ?>" />
+			                </div>
+						</div>
+						<div class="col-lg-6">
+							<div class="form-group">
+				                <label class="form-label">初始难度(没有任何用，仅作展示)</label>
+				                <input type="text" class="form-control" name="complexity" placeholder="实际上没什么用" value="<?php echo htmlentities($config['complexity']); ?>" />
+			                </div>
+						</div>
+						<div class="col-lg-12">
+			                <div class="form-group">
+				                <label class="form-label">收益比例</label>
+				                <div class="input-group">
+				                	<div class="input-group-prepend">
+										<span class="input-group-text">1点算力每秒钟可得</span>
+									</div>
+				                	<input type="text" class="form-control" name="percent" placeholder="算力和货币的比例，例如0.0001比1，填0.0001" value="<?php echo htmlentities($config['percent']); ?>" />
+				                	<div class="input-group-append">
+				                		<span class="input-group-text"><?php echo htmlentities(app('config')->get('hello.unit')); ?></span>
+				                	</div>
+				                </div>
+				                <div class="form-text small text-red">计算公式</div>
+				                <div class="form-text small text-red">1 - (已领总矿 / 矿池总量) = 已领比例(保留最多8位小数)</div>
+				                <div class="form-text small text-red">用户总算力 * 已等待秒数 * 收益比例 * 已领比例 = 最终收益</div>
+			                </div>
+						</div>
+						<div class="col-lg-12">
+			                <div class="form-group">
+				                <label class="form-label">时间间隔，每次领矿的时间间隔</label>
+				                <div class="input-group">
+				                	<input type="text" class="form-control" name="interval" placeholder="单位是秒" value="<?php echo htmlentities($config['interval']); ?>" />
+				                	<div class="input-group-append">
+				                		<span class="input-group-text">秒</span>
+				                	</div>
+				                </div>
+			                </div>
+						</div>
+						<div class="col-lg-12">
+							<div class="form-group">
+				                <label class="form-label">背景图片</label>
+				                <div class="custom-file">
+			                      	<input type="file" class="custom-file-input" name="background" accept="image/*" />
+			                      	<label class="custom-file-label">选择图片，不修改就不选</label>
+			                    </div>
+			                    <?php if(!(empty($config['background']) || (($config['background'] instanceof \think\Collection || $config['background'] instanceof \think\Paginator ) && $config['background']->isEmpty()))): ?>
+			                    	<div class="form-text"><img src="<?php echo htmlentities($config['background']); ?>" style="max-height: 10rem;" /></div>
+			                    <?php endif; ?>
+			                </div>
 						</div>
 					</div>
-					<div class="form-group">
-		                <label class="form-label">提现手续费</label>
-		                <input type="text" class="form-control" name="charge" placeholder="例如0.02这种，小于等于0不收费，大于1为固定费用" value="<?php echo htmlentities($config['charge']); ?>" />
-	                </div>
-	                <div class="row">
-	                	<div class="col-6">
-    						<div class="form-group">
-    			                <label class="form-label">最少数量</label>
-    			                <input type="text" class="form-control" name="min" placeholder="最少提现多少" value="<?php echo htmlentities((isset($config['min']) && ($config['min'] !== '')?$config['min']:'')); ?>" />
-    		                </div>
-	                	</div>
-	                	<div class="col-6">
-	                		<div class="form-group">
-    			                <label class="form-label">最多数量</label>
-    			                <input type="text" class="form-control" name="max" placeholder="最多提现多少" value="<?php echo htmlentities((isset($config['max']) && ($config['max'] !== '')?$config['max']:'')); ?>" />
-    		                </div>
-	                	</div>
-	                </div>
-					<div class="form-group">
-		                <label class="form-label">公司钱包地址</label>
-		                <input type="text" class="form-control" name="code" placeholder="请在这里输入..." value="<?php echo htmlentities($config['code']); ?>" />
-	                </div>
-	                <div class="form-group">
-		                <label class="form-label">公司钱包二维码</label>
-		                <div class="custom-file">
-	                      	<input type="file" class="custom-file-input" name="qrcode" accept="image/*" />
-	                      	<label class="custom-file-label">选择二维码图片，不修改就不选</label>
-	                    </div>
-	                    <?php if(!(empty($config['qrcode']) || (($config['qrcode'] instanceof \think\Collection || $config['qrcode'] instanceof \think\Paginator ) && $config['qrcode']->isEmpty()))): ?>
-	                    <div class="form-text"><img src="/upload/<?php echo htmlentities($config['qrcode']); ?>" style="max-height: 10rem;" /></div>
-	                    <?php endif; ?>
-	                </div>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
-					<button type="submit" class="btn btn-primary">保存更改</button>
+					<button type="submit" class="btn btn-primary">保存设置</button>
 				</div>
 			</form>
 		</div>
 	</div>
 </div>
-<div class="modal fade" id="look" tabindex="-1" role="dialog" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered" role="document">
-		<div class="modal-content" style="margin-top: -200px;">
-			<form action="/admin/wallet/imtoken.html" method="post" enctype="multipart/form-data">
+<div class="modal fade" id="prop_config" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<form method="post" enctype="multipart/form-data">
+				<input type="hidden" name="action" value="prop" />
 				<div class="modal-header">
-					<h5 class="modal-title" id="lookTitle"></h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					</button>
+					<h5 class="modal-title" id="exampleModalLongTitle">道具配置</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
 				</div>
-				<div class="modal-body p-6">
-
+				<div class="modal-body p-0 px-2">
+					<table class="table table-hover table-outline table-vcenter text-nowrap table-prop">
+						<thead>
+							<tr>
+								<th>名称</th>
+								<th>算力</th>
+								<th>价格</th>
+								<th>每天总限量</th>
+								<th>每人限量</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<?php if(empty($config['prop']) || (($config['prop'] instanceof \think\Collection || $config['prop'] instanceof \think\Paginator ) && $config['prop']->isEmpty())): ?>
+							<tr>
+								<td><input type="text" class="form-control" name="name[]" /></td>
+								<td><input type="text" class="form-control" name="power[]" /></td>
+								<td><input type="text" class="form-control" name="price[]" /></td>
+								<td><input type="text" class="form-control" name="day[]" /></td>
+								<td><input type="text" class="form-control" name="person[]" /></td>
+								<td><a href="javascript:;" class="btn-remrow"><i class="fe fe-trash"></i></a></td>
+							</tr>
+							<?php else: if(is_array($config['prop']) || $config['prop'] instanceof \think\Collection || $config['prop'] instanceof \think\Paginator): $i = 0; $__LIST__ = $config['prop'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+									<tr>
+										<td><input type="text" class="form-control" name="name[]" value="<?php echo htmlentities($item['name']); ?>" /></td>
+										<td><input type="text" class="form-control" name="power[]" value="<?php echo htmlentities($item['power']); ?>" /></td>
+										<td><input type="text" class="form-control" name="price[]" value="<?php echo htmlentities($item['price']); ?>" /></td>
+										<td><input type="text" class="form-control" name="day[]" value="<?php echo htmlentities($item['limit']['day']); ?>" /></td>
+										<td><input type="text" class="form-control" name="person[]" value="<?php echo htmlentities($item['limit']['person']); ?>" /></td>
+										<td><a href="javascript:;" class="btn-remrow"><i class="fe fe-trash"></i></a></td>
+									</tr>
+								<?php endforeach; endif; else: echo "" ;endif; endif; ?>
+						</tbody>
+					</table>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+					<button type="button" class="btn btn-secondary btn-addrow">再添加一行</button>
+					<button type="submit" class="btn btn-primary">保存设置</button>
 				</div>
 			</form>
 		</div>
@@ -387,7 +441,7 @@
                     <div class="row align-items-center"><?php echo htmlentities(date('Y-m-d g:i a',time())); ?></div>
                 </div>
                 <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
-                    Copyright © 2019 <a href="."><?php echo htmlentities(app('config')->get('hello.title')); ?></a><a>仓实科技</a>
+                    Copyright © 2018 <a href="."><?php echo htmlentities(app('config')->get('hello.title')); ?></a>. &#28304;&#30721;&#26469;&#33258;&#23567;&#23627;&#28304;&#30721;&#119;&#119;&#119;&#46;&#109;&#50;&#49;&#51;&#46;&#99;&#110;
                 </div>
             </div>
         </div>
@@ -399,19 +453,12 @@
 <script type="text/javascript">
 require(['jquery'], function($){
 	$(function(){
-		// 查看钱包
-		$('.btn-wallet').on('click', function(){
-			$('#lookTitle').text('钱包地址');
-			var html = '<p>钱包地址：' + $(this).data('address') + '</p>';
-			html == '<p>二维码：<img src="/upload/' + $(this).data('qrcode') + '" /></p>';
-			$('#look .modal-body').html(html);
-			$('#look').modal();
+		$('.btn-addrow').on('click', function(){
+			var html = $('.table-prop tbody tr').last().html();
+			$('.table-prop tbody').append('<tr>' + html + '</tr>');
 		});
-		// 支付凭证
-		$('.btn-certificate').on('click', function(){
-			$('#lookTitle').text('支付凭证');
-			$('#look .modal-body').html('<img src="/upload/' + $(this).data('certificate') + '"/>');
-			$('#look').modal();
+		$('.table').on('click', '.btn-remrow', function(){
+			$(this).parents('tr').remove();
 		});
 	});
 });

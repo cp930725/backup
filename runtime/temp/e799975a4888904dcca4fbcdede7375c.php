@@ -1,3 +1,4 @@
+<?php /*a:2:{s:67:"/www/wwwroot/aa.jdswzc.com/application/admin/view/wallet/index.html";i:1562574822;s:67:"/www/wwwroot/aa.jdswzc.com/application/admin/view/common/world.html";i:1562661509;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,7 +18,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?2" />
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="/assets/css/dashboard.css?3" />
-    <title>{block name="title"}Title{/block}</title>
+    <title>钱包概览</title>
     <style>
     .toast {
         text-align: center;
@@ -58,7 +59,7 @@
         z-index: 2200;
     }
     </style>
-    {block name="style"}{/block}
+    
 </head>
 
 <body>
@@ -78,7 +79,7 @@
                                 <span class="avatar me-avatar" style="background-image: url(/static/image/icon.png);"><span class="avatar-status bg-green"></span></span>
                                 <span class="ml-2 d-none d-lg-block">
                                     <span class="text-default">超级管理员</span>
-                                    <small class="text-muted d-block mt-1">{:$Request.ip}</small>
+                                    <small class="text-muted d-block mt-1"><?php echo app('request')->ip(); ?></small>
                                 </span>
                             </a>
                         </div>
@@ -125,9 +126,9 @@
                                     <a href="/admin/account/audit.html" class="dropdown-item">实名认证</a>
                                     <a href="/admin/account/dashboard.html" class="dropdown-item">仪表盘</a>
                                     <a href="/admin/account/promotion.html" class="dropdown-item">推广数据</a>
-                                    {notempty name="Think.config.hello.register_audit"}
+                                    <?php if(!(empty(app('config')->get('hello.register_audit')) || ((app('config')->get('hello.register_audit') instanceof \think\Collection || app('config')->get('hello.register_audit') instanceof \think\Paginator ) && app('config')->get('hello.register_audit')->isEmpty()))): ?>
                                         <a href="/admin/account/reg_audit.html" class="dropdown-item">注册审核</a>
-                                    {/notempty}
+                                    <?php endif; ?>
                                 </div>
                             </li>
                             <li class="nav-item">
@@ -186,7 +187,131 @@
         </div>
         <div class="my-3 my-md-5">
             <div class="container container-padding">
-                {block name="container"}{/block}
+                
+<form method="get" class="">
+	<div class="row">
+		<div class="col-md-6 col-lg-3 mb-3">
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text">用户账号</span>
+				</div>
+				<input type="text" class="form-control" name="username" value="<?php echo htmlentities(app('request')->get('username')); ?>" />
+			</div>
+		</div>
+	    <div class="col-md-6 col-lg-4 mb-3">
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<select class="custom-select input-group-text" name="numberField">
+						<?php if(is_array($fields) || $fields instanceof \think\Collection || $fields instanceof \think\Paginator): $i = 0; $__LIST__ = $fields;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$field): $mod = ($i % 2 );++$i;if(app('request')->get('numberField') == $key): ?>
+								<option selected="true" value="<?php echo htmlentities($key); ?>"><?php echo htmlentities($field); ?></option>
+							<?php else: ?>
+								<option value="<?php echo htmlentities($key); ?>"><?php echo htmlentities($field); ?></option>
+							<?php endif; endforeach; endif; else: echo "" ;endif; ?>
+				    </select>
+				</div>
+				<select class="custom-select input-group-text" name="numberOperator">
+					<?php switch(app('request')->get('numberOperator')): case "2": ?>
+							<option value="1">大于</option>
+							<option value="2" selected="true">等于</option>
+							<option value="3">小于</option>
+						<?php break; case "3": ?>
+							<option value="1">大于</option>
+							<option value="2">等于</option>
+							<option value="3" selected="true">小于</option>
+						<?php break; default: ?>
+							<option value="1">大于</option>
+							<option value="2">等于</option>
+							<option value="3">小于</option>
+					<?php endswitch; ?>
+			    </select>
+				<input type="text" class="form-control" aria-label="Text input with dropdown button" name="numberValue" value="<?php echo htmlentities(app('request')->get('numberValue')); ?>" />
+			</div>
+		</div>
+		<div class="col-md-4 col-lg-4">
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text">排列顺序</span>
+				</div>
+				<select class="custom-select input-group-text" name="sortField">
+					<?php if(is_array($fields) || $fields instanceof \think\Collection || $fields instanceof \think\Paginator): $i = 0; $__LIST__ = $fields;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$field): $mod = ($i % 2 );++$i;if(app('request')->get('sortField') == $key): ?>
+							<option selected="true" value="<?php echo htmlentities($key); ?>">按<?php echo htmlentities($field); ?></option>
+						<?php else: ?>
+							<option value="<?php echo htmlentities($key); ?>">按<?php echo htmlentities($field); ?></option>
+						<?php endif; endforeach; endif; else: echo "" ;endif; ?>
+			    </select>
+			    <select class="custom-select input-group-text" name="sortType">
+			    	<?php if(app('request')->get('sortType') == 'asc'): ?>
+			    		<option value="desc">降序</option>
+			    		<option value="asc" selected="true">升序</option>
+			    	<?php else: ?>
+			    		<option value="desc">降序</option>
+			    		<option value="asc">升序</option>
+			    	<?php endif; ?>
+			    </select>
+			</div>
+		</div>
+		<div class="col-lg-1 mb-3">
+			<button class="btn btn-primary w-100" type="submit">查询</button>
+		</div>
+	</div>
+</form>
+<div class="card">
+	<div class="table-responsive">
+	    <table class="table table-hover table-outline table-vcenter text-nowrap card-table">
+	        <thead>
+	            <tr>
+	                <th class="text-center w-1"><i class="icon-people"></i></th>
+	                <th>用户</th>
+	                <th>可用<?php echo htmlentities(app('config')->get('hello.unit')); ?></th>
+	                <th>冻结<?php echo htmlentities(app('config')->get('hello.unit')); ?></th>
+	                <th>可用<?php echo htmlentities(app('config')->get('hello.score.unit')); ?></th>
+	                <th>冻结<?php echo htmlentities(app('config')->get('hello.score.unit')); ?></th>
+	                <th>商城消费额</th>
+	                <th>矿机收益</th>
+	                <th>团队矿机收益</th>
+	                <th>全球分红</th>
+	                <th>交易分红</th>
+	                <th>卖出</th>
+	                <th>买入</th>
+	                <th>转入</th>
+	                <th>转出</th>
+	                <th>操作</th>
+	            </tr>
+	        </thead>
+	        <tbody>
+	        	<?php if(is_array($users) || $users instanceof \think\Collection || $users instanceof \think\Paginator): $i = 0; $__LIST__ = $users;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$user): $mod = ($i % 2 );++$i;?>
+	            <tr>
+	                <td class="text-center">
+	                    <div class="avatar d-block" style="background-image: url(<?php echo avatar($user['avatar'], $user['idcard']); ?>)"></div>
+	                </td>
+	                <td>
+	                    <div><?php echo htmlentities($user['nickname']); ?></div>
+	                    <div class="small text-muted"><?php echo htmlentities($user['username']); ?></div>
+	                </td>
+	                <td><?php echo htmlentities(money($user['money'])); ?></td>
+	                <td><?php echo htmlentities(money($user['deposit'])); ?></td>
+	                <td><?php echo htmlentities(money($user['score'])); ?></td>
+	                <td><?php echo htmlentities(money($user['score_deposit'])); ?></td>
+	                <td><?php echo htmlentities(money($user['spend'])); ?></td>
+	                <td><?php echo htmlentities(money($user['profit'])); ?></td>
+	                <td><?php echo htmlentities(money($user['team_profit'])); ?></td>
+	                <td><?php echo htmlentities(money($user['bonus'])); ?></td>
+	                <td><?php echo htmlentities(money($user['trade'])); ?></td>
+	                <td><?php echo htmlentities(money($user['sell'])); ?></td>
+	                <td><?php echo htmlentities(money($user['buy'])); ?></td>
+	                <td><?php echo htmlentities(money($user['ts_in'])); ?></td>
+	                <td><?php echo htmlentities(money($user['ts_out'])); ?></td>
+	                <td>
+						<a href="/admin/account/simulate.html?username=<?php echo htmlentities($user['username']); ?>" target="_blank" class="icon"><i class="fe fe-log-in ml-2"></i></a>
+					</td>
+	            </tr>
+	            <?php endforeach; endif; else: echo "" ;endif; ?>
+	        </tbody>
+	    </table>
+	</div>
+	<div class="card-footer"><?php echo $users; ?></div>
+</div>
+
             </div>
         </div>
     </div>
@@ -194,10 +319,10 @@
         <div class="container">
             <div class="row align-items-center flex-row-reverse">
                 <div class="col-auto ml-lg-auto">
-                    <div class="row align-items-center">{$Think.now}</div>
+                    <div class="row align-items-center"><?php echo htmlentities(date('Y-m-d g:i a',time())); ?></div>
                 </div>
                 <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
-                    Copyright © 2019 <a href=".">{$Think.config.hello.title}</a><a>仓实科技</a>
+                    Copyright © 2019 <a href="."><?php echo htmlentities(app('config')->get('hello.title')); ?></a><a>仓实科技</a>
                 </div>
             </div>
         </div>
@@ -205,6 +330,6 @@
 </div>
 <script type="text/javascript" src="/assets/js/require.min.js"></script>
 <script type="text/javascript" src="/static/js/global.js?3"></script>
-{block name="script"}{/block}
+ 
 </body>
 </html>

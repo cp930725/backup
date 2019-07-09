@@ -1,3 +1,4 @@
+<?php /*a:2:{s:69:"/www/wwwroot/aa.jdswzc.com/application/admin/view/account/create.html";i:1562574822;s:67:"/www/wwwroot/aa.jdswzc.com/application/admin/view/common/world.html";i:1562574822;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,7 +18,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?2" />
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="/assets/css/dashboard.css?3" />
-    <title>{block name="title"}Title{/block}</title>
+    <title>创建用户</title>
     <style>
     .toast {
         text-align: center;
@@ -58,7 +59,7 @@
         z-index: 2200;
     }
     </style>
-    {block name="style"}{/block}
+    
 </head>
 
 <body>
@@ -78,7 +79,7 @@
                                 <span class="avatar me-avatar" style="background-image: url(/static/image/icon.png);"><span class="avatar-status bg-green"></span></span>
                                 <span class="ml-2 d-none d-lg-block">
                                     <span class="text-default">超级管理员</span>
-                                    <small class="text-muted d-block mt-1">{:$Request.ip}</small>
+                                    <small class="text-muted d-block mt-1"><?php echo app('request')->ip(); ?></small>
                                 </span>
                             </a>
                         </div>
@@ -125,9 +126,9 @@
                                     <a href="/admin/account/audit.html" class="dropdown-item">实名认证</a>
                                     <a href="/admin/account/dashboard.html" class="dropdown-item">仪表盘</a>
                                     <a href="/admin/account/promotion.html" class="dropdown-item">推广数据</a>
-                                    {notempty name="Think.config.hello.register_audit"}
+                                    <?php if(!(empty(app('config')->get('hello.register_audit')) || ((app('config')->get('hello.register_audit') instanceof \think\Collection || app('config')->get('hello.register_audit') instanceof \think\Paginator ) && app('config')->get('hello.register_audit')->isEmpty()))): ?>
                                         <a href="/admin/account/reg_audit.html" class="dropdown-item">注册审核</a>
-                                    {/notempty}
+                                    <?php endif; ?>
                                 </div>
                             </li>
                             <li class="nav-item">
@@ -186,7 +187,48 @@
         </div>
         <div class="my-3 my-md-5">
             <div class="container container-padding">
-                {block name="container"}{/block}
+                
+<div class="page">
+    <div class="page-single">
+        <form class="card" method="post" style="max-width: 24rem;">
+            <div class="card-header">
+                <h3 class="card-title">注册一个新的账户</h3>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label class="form-label">用户账号</label>
+                    <input type="text" class="form-control" name="username" placeholder="用户账号" required="true" maxlength="11" />
+                </div>
+                <div class="form-group">
+                    <label class="form-label">登录密码</label>
+                    <input type="text" class="form-control" name="password" placeholder="默认：123456" />
+                </div>
+                <div class="form-group">
+                    <label class="form-label">安全密码</label>
+                    <input type="text" class="form-control" name="safeword" placeholder="默认：123456" />
+                </div>
+                <div class="form-group">
+                    <label class="form-label">用户类型</label>
+                    <select class="form-control custom-select" name="type">
+                        <?php if(is_array($level) || $level instanceof \think\Collection || $level instanceof \think\Paginator): $i = 0; $__LIST__ = $level;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+                            <option value="<?php echo htmlentities($key); ?>"><?php echo htmlentities($item['name']); ?></option>
+                        <?php endforeach; endif; else: echo "" ;endif; ?>
+                    </select>
+                </div>
+                <div class="form-group mb-0">
+                    <label class="form-label">推荐人</label>
+                    <input type="text" class="form-control" name="inviter" placeholder="推荐人" maxlength="11" />
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="text-right">
+                    <button class="btn btn-primary">添加用户</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
             </div>
         </div>
     </div>
@@ -194,10 +236,10 @@
         <div class="container">
             <div class="row align-items-center flex-row-reverse">
                 <div class="col-auto ml-lg-auto">
-                    <div class="row align-items-center">{$Think.now}</div>
+                    <div class="row align-items-center"><?php echo htmlentities(date('Y-m-d g:i a',time())); ?></div>
                 </div>
                 <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
-                    Copyright © 2019 <a href=".">{$Think.config.hello.title}</a><a>仓实科技</a>
+                    Copyright © 2018 <a href="."><?php echo htmlentities(app('config')->get('hello.title')); ?></a>. &#28304;&#30721;&#26469;&#33258;&#23567;&#23627;&#28304;&#30721;&#119;&#119;&#119;&#46;&#109;&#50;&#49;&#51;&#46;&#99;&#110;
                 </div>
             </div>
         </div>
@@ -205,6 +247,6 @@
 </div>
 <script type="text/javascript" src="/assets/js/require.min.js"></script>
 <script type="text/javascript" src="/static/js/global.js?3"></script>
-{block name="script"}{/block}
+ 
 </body>
 </html>

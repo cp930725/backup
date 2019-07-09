@@ -94,7 +94,7 @@ require(['echarts-common'], function(echarts){
             },
             grid: {
                 top: 40,
-                left: 30,
+                left: 40,
                 right: 20,
                 bottom: 20,
                 borderColor: '#dee2e6',

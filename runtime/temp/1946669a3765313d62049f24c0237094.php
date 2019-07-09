@@ -1,3 +1,4 @@
+<?php /*a:2:{s:63:"/www/wwwroot/aa.jdswzc.com/application/api/view/team/index.html";i:1562574822;s:67:"/www/wwwroot/aa.jdswzc.com/application/api/view/common/default.html";i:1562661391;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -19,7 +20,7 @@
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="/assets/css/dashboard.css?3" />
     <link rel="stylesheet" href="/static/css/global.css?3" />
-    <title>{block name="title"}Title{/block}</title>
+    <title>公会团队</title>
     <style>
         @media (max-width: 360px) {
             .icon-group {
@@ -31,7 +32,7 @@
             }
         }
     </style>
-    {block name="style"}{/block}
+    
 </head>
 
 <body>
@@ -41,27 +42,23 @@
         <div class="header py-4">
             <div class="container">
                 <div class="d-flex">
-                    <img src="{$Think.config.hello.logo}" class="header-brand-img" alt="tabler logo">
+                    <img src="<?php echo htmlentities(app('config')->get('hello.logo')); ?>" class="header-brand-img" alt="tabler logo">
                     <div class="d-flex order-lg-2 ml-auto">
                         <div class="nav-item d-xs-flex" style="display: none !important;">
-                            {neq name="Think.session.platform" value="app"}
-                            {notempty name="Think.config.hello.appurl"}
-                            {eq name="platform" value="android"}
-                            <a href="{$Think.config.hello.appurl}" target="_blank" class="btn btn-sm btn-outline-primary btn-app-download">APP 下载</a>
-                            {/eq}
-                            {else /}
+                            <?php if(app('session')->get('platform') != 'app'): if(!(empty(app('config')->get('hello.appurl')) || ((app('config')->get('hello.appurl') instanceof \think\Collection || app('config')->get('hello.appurl') instanceof \think\Paginator ) && app('config')->get('hello.appurl')->isEmpty()))): if($platform == 'android'): ?>
+                            <a href="<?php echo htmlentities(app('config')->get('hello.appurl')); ?>" target="_blank" class="btn btn-sm btn-outline-primary btn-app-download">APP 下载</a>
+                            <?php endif; else: ?>
                             <a href="javascript:;" class="btn btn-sm btn-outline-primary btn-app-download" data-toggle="tooltip" data-original-title="敬请期待">APP 下载</a>
-                            {/notempty}
-                            {/neq}
+                            <?php endif; endif; ?>
                         </div>
                         <div class="dropdown">
                             <a href="javascript:;" class="nav-link pr-0 leading-none" data-toggle="dropdown">
-                               <span class="avatar me-avatar" style="background-image: url({:avatar($Think.session.user.profile.avatar, $Think.session.user.profile.idcard)});"><span class="avatar-status bg-green"></span></span>
+                               <span class="avatar me-avatar" style="background-image: url(<?php echo avatar(app('session')->get('user.profile.avatar'), app('session')->get('user.profile.idcard')); ?>);"><span class="avatar-status bg-green"></span></span>
                                 <span class="ml-2 d-none d-lg-block">
-                                  	{if !empty($Think.session.user)}
-                                    <span class="text-default">{$Think.session.user.profile.nickname}</span>
-                                    <small class="text-muted d-block mt-1">{$Think.config.hello.level[$Think.session.user.account.type]['name']}</small>
-                                  	{/if}
+                                  	<?php if(!empty(app('session')->get('user'))): ?>
+                                    <span class="text-default"><?php echo htmlentities(app('session')->get('user.profile.nickname')); ?></span>
+                                    <small class="text-muted d-block mt-1"><?php echo htmlentities(app('config')->get('hello.level')[app('session')->get('user.account.type')]['name']); ?></small>
+                                  	<?php endif; ?>
                                 </span>
                             </a>
                         </div>
@@ -86,25 +83,25 @@
                     <div class="col-lg order-lg-first">
                         <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
                             <li class="nav-item">
-                                <a href="/api" class="nav-link{$Request.path == 'api' || $Request.path == '' ? ' active' : ''}">
+                                <a href="/api" class="nav-link<?php echo app('request')->path()=='api' || app('request')->path() == ''?' active' : ''; ?>">
                                     <span><i class="fe fe-home"></i></span>
                                     <span>首页</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="/market" class="nav-link{$Request.path == 'market' || $Request.path == '' ? ' active' : ''}">
+                                <a href="/market" class="nav-link<?php echo app('request')->path()=='market' || app('request')->path() == ''?' active' : ''; ?>">
                                     <span><i class="fe fe-globe"></i></span>
                                     <span>市场</span>
                                 </a>
                             </li>
                           	<li class="nav-item">
-                                <a href="/funding" class="nav-link{$Request.path == 'funding' || $Request.path == '' ? ' active' : ''}">
+                                <a href="/funding" class="nav-link<?php echo app('request')->path()=='funding' || app('request')->path() == ''?' active' : ''; ?>">
                                     <span><i class="fe fe-star"></i></span>
                                     <span>众筹</span>
                                 </a>
                             </li>
                             <li class="nav-item d-md-block d-lg-block">
-                                <a href="/account" class="nav-link{$Request.path == 'account' || $Request.path == '' ? ' active' : ''}">
+                                <a href="/account" class="nav-link<?php echo app('request')->path()=='account' || app('request')->path() == ''?' active' : ''; ?>">
                                     <span><i class="fe fe-user"></i></span>
                                     <span>我的</span>
                                 </a>
@@ -114,10 +111,69 @@
                 </div>
             </div>
         </div>
-        {block name="carousel"}{/block}
+        
         <div class="my-3 my-md-5">
             <div class="container container-padding">
-                {block name="container"}{/block}
+                
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body p-3 text-center">
+                <div class="text-right text-green">位</div>
+                <div class="h2 m-0"><?php echo htmlentities($user['dashboard']['team_count']); ?></div>
+                <div class="small text-muted">团队人数</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body p-3 text-center">
+                <div class="text-right text-red">Gh/s</div>
+                <div class="h2 m-0"><?php echo htmlentities(money($user['dashboard']['team_power'])); ?></div>
+                <div class="small text-muted">团队算力</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="form-group mb-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <select class="form-control custom-select w-auto" name="type">
+                        <option value="">全部成员</option>
+                        <?php if(is_array(app('config')->get('hello.level')) || app('config')->get('hello.level') instanceof \think\Collection || app('config')->get('hello.level') instanceof \think\Paginator): $i = 0; $__LIST__ = app('config')->get('hello.level');if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
+                            <option value="<?php echo htmlentities($key); ?>"><?php echo htmlentities($item['name']); ?></option>
+                        <?php endforeach; endif; else: echo "" ;endif; ?>
+                    </select>
+                </div>
+                <input type="text" class="form-control" placeholder="搜索成员..." name="key" maxlength="11" />
+                <span class="input-group-append">
+                    <button class="btn btn-secondary btn-search" type="button"><i class="fe fe-search"></i></button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="table-responsive">
+        <table class="table table-hover table-outline table-vcenter text-nowrap card-table table-member">
+            <thead>
+                <tr>
+                    <th class="text-center w-1"></th>
+                    <th>用户</th>
+                    <!-- <th hidden class="d-md-table-cell">Usage</th>
+                    <th hidden class="d-lg-table-cell">Activity</th> -->
+                    <th class="text-center">电话</th>
+                    <th class="text-center">人数</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div hidden class="card-footer text-center card-more"><div class="text-muted">点击加载更多</div></div>
+</div>
+
             </div>
         </div>
     </div>
@@ -125,10 +181,10 @@
         <div class="container">
             <div class="row align-items-center flex-row-reverse">
                 <div class="col-auto ml-lg-auto">
-                    <div class="row align-items-center">{$Think.now}</div>
+                    <div class="row align-items-center"><?php echo htmlentities(date('Y-m-d g:i a',time())); ?></div>
                 </div>
                 <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
-                    Copyright © 2019 <a href=".">{$Think.config.hello.title}</a>
+                    Copyright © 2019 <a href="."><?php echo htmlentities(app('config')->get('hello.title')); ?></a>
                 </div>
             </div>
         </div>
@@ -142,7 +198,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                {$group.content|raw}
+                <?php echo $group['content']; ?>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">我知道了</button>
@@ -152,6 +208,8 @@
 </div>
 <script type="text/javascript" src="/assets/js/require.min.js"></script>
 <script type="text/javascript" src="/static/js/global.js?3"></script>
-{block name="script"}{/block}
+
+<script type="text/javascript" src="/static/js/team.js?1"></script>
+
 </body>
 </html>

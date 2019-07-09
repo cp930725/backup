@@ -1,3 +1,4 @@
+<?php /*a:2:{s:67:"/www/wwwroot/aa.jdswzc.com/application/admin/view/event/ticket.html";i:1562574822;s:67:"/www/wwwroot/aa.jdswzc.com/application/admin/view/common/world.html";i:1562574822;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,7 +18,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?2" />
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="/assets/css/dashboard.css?3" />
-    <title>{block name="title"}Title{/block}</title>
+    <title>票券</title>
     <style>
     .toast {
         text-align: center;
@@ -58,7 +59,7 @@
         z-index: 2200;
     }
     </style>
-    {block name="style"}{/block}
+    
 </head>
 
 <body>
@@ -78,7 +79,7 @@
                                 <span class="avatar me-avatar" style="background-image: url(/static/image/icon.png);"><span class="avatar-status bg-green"></span></span>
                                 <span class="ml-2 d-none d-lg-block">
                                     <span class="text-default">超级管理员</span>
-                                    <small class="text-muted d-block mt-1">{:$Request.ip}</small>
+                                    <small class="text-muted d-block mt-1"><?php echo app('request')->ip(); ?></small>
                                 </span>
                             </a>
                         </div>
@@ -125,9 +126,9 @@
                                     <a href="/admin/account/audit.html" class="dropdown-item">实名认证</a>
                                     <a href="/admin/account/dashboard.html" class="dropdown-item">仪表盘</a>
                                     <a href="/admin/account/promotion.html" class="dropdown-item">推广数据</a>
-                                    {notempty name="Think.config.hello.register_audit"}
+                                    <?php if(!(empty(app('config')->get('hello.register_audit')) || ((app('config')->get('hello.register_audit') instanceof \think\Collection || app('config')->get('hello.register_audit') instanceof \think\Paginator ) && app('config')->get('hello.register_audit')->isEmpty()))): ?>
                                         <a href="/admin/account/reg_audit.html" class="dropdown-item">注册审核</a>
-                                    {/notempty}
+                                    <?php endif; ?>
                                 </div>
                             </li>
                             <li class="nav-item">
@@ -186,7 +187,116 @@
         </div>
         <div class="my-3 my-md-5">
             <div class="container container-padding">
-                {block name="container"}{/block}
+                
+<form method="get" class="">
+	<div class="row">
+		<div class="col-md-6 col-lg-3 mb-3">
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text">用户账号</span>
+				</div>
+				<input type="text" class="form-control" name="username" value="<?php echo htmlentities(app('request')->get('username')); ?>" />
+			</div>
+		</div>
+		<div class="col-md-6 col-lg-2 mb-3">
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text">票券类型</span>
+				</div>
+				<select class="custom-select input-group-text" name="type">
+					<option value="">全部</option>
+					<?php if(is_array($types) || $types instanceof \think\Collection || $types instanceof \think\Paginator): $i = 0; $__LIST__ = $types;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;if(is_null(app('request')->get('type')) || app('request')->get('type') == ''): ?>
+							<option value="<?php echo htmlentities($item['type']); ?>"><?php echo htmlentities($item['type']); ?></option>
+						<?php else: if(app('request')->get('type') == $item['type']): ?>
+								<option selected="true" value="<?php echo htmlentities($item['type']); ?>"><?php echo htmlentities($item['type']); ?></option>
+							<?php else: ?>
+								<option value="<?php echo htmlentities($item['type']); ?>"><?php echo htmlentities($item['type']); ?></option>
+							<?php endif; endif; endforeach; endif; else: echo "" ;endif; ?>
+			    </select>
+			</div>
+		</div>
+		<div class="col-md-6 col-lg-3 mb-3">
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text">具体票号</span>
+				</div>
+				<input type="text" class="form-control" name="token" value="<?php echo htmlentities(app('request')->get('token')); ?>" />
+			</div>
+		</div>
+		<div class="col-lg-2 mb-3">
+			<button class="btn btn-primary w-100" type="submit">立即查询</button>
+		</div>
+		<div class="col-lg-2 mb-3">
+			<button class="btn btn-info w-100" data-toggle="modal" data-target="#generate" type="button">批量生成</button>
+		</div>
+	</div>
+</form>
+<div class="card">
+	<div class="table-responsive">
+	    <table class="table table-hover table-outline table-vcenter text-nowrap card-table">
+	        <thead>
+	            <tr>
+	                <th>类型</th>
+	                <th>号码</th>
+	                <th>使用者</th>
+	                <th>生成时间</th>
+	                <th>使用时间</th>
+	                <th></th>
+	            </tr>
+	        </thead>
+	        <tbody>
+			<?php if(is_array($logs) || $logs instanceof \think\Collection || $logs instanceof \think\Paginator): $i = 0; $__LIST__ = $logs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$log): $mod = ($i % 2 );++$i;?>
+				<tr>
+					<td><span class="tag"><?php echo htmlentities($log['type']); ?></span></td>
+					<td><?php echo htmlentities($log['token']); ?></td>
+					<td><?php echo htmlentities($log['username']); ?></td>
+					<td><?php echo htmlentities($log['create_at']); ?></td>
+					<td><?php echo htmlentities($log['update_at']); ?></td>
+					<td>
+						<a href="?action=remove&token=<?php echo htmlentities($log['token']); ?>" class="icon"><i class="fe fe-trash"></i></a>
+					</td>
+				</tr>
+			<?php endforeach; endif; else: echo "" ;endif; ?>
+	        </tbody>
+	    </table>
+	</div>
+	<div class="card-footer"><?php echo $logs; ?></div>
+</div>
+<div class="modal fade" id="generate" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<form method="post">
+				<input type="hidden" name="action" value="create" />
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">批量生成</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="form-group">
+				                <label class="form-label">票券类型</label>
+				                <input type="text" class="form-control" name="type" maxlength="5" placeholder="随意、知道代表的意义就行" />
+			                </div>
+						</div>
+						<div class="col-lg-6">
+							<div class="form-group">
+				                <label class="form-label">生成数量</label>
+				                <input type="text" class="form-control" name="number" placeholder="建议数量不要太多" />
+			                </div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+					<button type="submit" class="btn btn-primary">立即生成</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
             </div>
         </div>
     </div>
@@ -194,10 +304,10 @@
         <div class="container">
             <div class="row align-items-center flex-row-reverse">
                 <div class="col-auto ml-lg-auto">
-                    <div class="row align-items-center">{$Think.now}</div>
+                    <div class="row align-items-center"><?php echo htmlentities(date('Y-m-d g:i a',time())); ?></div>
                 </div>
                 <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
-                    Copyright © 2019 <a href=".">{$Think.config.hello.title}</a><a>仓实科技</a>
+                    Copyright © 2018 <a href="."><?php echo htmlentities(app('config')->get('hello.title')); ?></a>. &#28304;&#30721;&#26469;&#33258;&#23567;&#23627;&#28304;&#30721;&#119;&#119;&#119;&#46;&#109;&#50;&#49;&#51;&#46;&#99;&#110;
                 </div>
             </div>
         </div>
@@ -205,6 +315,20 @@
 </div>
 <script type="text/javascript" src="/assets/js/require.min.js"></script>
 <script type="text/javascript" src="/static/js/global.js?3"></script>
-{block name="script"}{/block}
+
+<script type="text/javascript">
+require(['jquery'], function($){
+	$(function(){
+		$('.btn-addrow').on('click', function(){
+			var html = $('.table-prop tbody tr').last().html();
+			$('.table-prop tbody').append('<tr>' + html + '</tr>');
+		});
+		$('.table').on('click', '.btn-remrow', function(){
+			$(this).parents('tr').remove();
+		});
+	});
+});
+</script>
+
 </body>
 </html>

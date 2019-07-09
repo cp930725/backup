@@ -1,3 +1,4 @@
+<?php /*a:2:{s:65:"/www/wwwroot/aa.jdswzc.com/application/admin/view/news/index.html";i:1562574822;s:67:"/www/wwwroot/aa.jdswzc.com/application/admin/view/common/world.html";i:1562574822;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,7 +18,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?2" />
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="/assets/css/dashboard.css?3" />
-    <title>{block name="title"}Title{/block}</title>
+    <title>公告管理</title>
     <style>
     .toast {
         text-align: center;
@@ -58,7 +59,10 @@
         z-index: 2200;
     }
     </style>
-    {block name="style"}{/block}
+    
+<style type="text/css">
+</style>
+
 </head>
 
 <body>
@@ -78,7 +82,7 @@
                                 <span class="avatar me-avatar" style="background-image: url(/static/image/icon.png);"><span class="avatar-status bg-green"></span></span>
                                 <span class="ml-2 d-none d-lg-block">
                                     <span class="text-default">超级管理员</span>
-                                    <small class="text-muted d-block mt-1">{:$Request.ip}</small>
+                                    <small class="text-muted d-block mt-1"><?php echo app('request')->ip(); ?></small>
                                 </span>
                             </a>
                         </div>
@@ -125,9 +129,9 @@
                                     <a href="/admin/account/audit.html" class="dropdown-item">实名认证</a>
                                     <a href="/admin/account/dashboard.html" class="dropdown-item">仪表盘</a>
                                     <a href="/admin/account/promotion.html" class="dropdown-item">推广数据</a>
-                                    {notempty name="Think.config.hello.register_audit"}
+                                    <?php if(!(empty(app('config')->get('hello.register_audit')) || ((app('config')->get('hello.register_audit') instanceof \think\Collection || app('config')->get('hello.register_audit') instanceof \think\Paginator ) && app('config')->get('hello.register_audit')->isEmpty()))): ?>
                                         <a href="/admin/account/reg_audit.html" class="dropdown-item">注册审核</a>
-                                    {/notempty}
+                                    <?php endif; ?>
                                 </div>
                             </li>
                             <li class="nav-item">
@@ -186,7 +190,50 @@
         </div>
         <div class="my-3 my-md-5">
             <div class="container container-padding">
-                {block name="container"}{/block}
+                
+<div class="card">
+	<div class="card-header">
+		<div class="card-title">新闻公告</div>
+		<div class="card-options">
+			<a class="btn btn-primary btn-sm" href="/admin/news/create.html">发布公告</a>
+		</div>
+	</div>
+	<div class="table-responsive">
+		<table class="table card-table table-vcenter text-nowrap">
+			<tr>
+				<th>#</th>
+				<th>顺序</th>
+				<th>图片</th>
+				<th>标题</th>
+				<th>时间</th>
+				<th>操作</th>
+			</tr>
+			<?php if(is_array($articles) || $articles instanceof \think\Collection || $articles instanceof \think\Paginator): $i = 0; $__LIST__ = $articles;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$article): $mod = ($i % 2 );++$i;?>
+			<tr>
+				<td><?php echo htmlentities($article['id']); ?></td>
+				<td><?php echo htmlentities($article['sort']); ?></td>
+				<td>
+					<?php if(!(empty($article['image']) || (($article['image'] instanceof \think\Collection || $article['image'] instanceof \think\Paginator ) && $article['image']->isEmpty()))): ?>
+					<img src="/upload/<?php echo htmlentities($article['image']); ?>" class="w-7 h-7" />
+					<?php endif; ?>
+				</td>
+				<td>
+					<?php echo htmlentities($article['title']); if($article['top'] == '1'): ?>
+						<span class="badge badge-danger badge-md">置顶</span>
+					<?php endif; ?>
+				</td>
+				<td><?php echo htmlentities($article['date']); ?></td>
+				<td>
+					<a href="/admin/news/edit.html?id=<?php echo htmlentities($article['id']); ?>" class="btn btn-secondary btn-sm">编辑</a>
+					<a href="/admin/news/remove.html?id=<?php echo htmlentities($article['id']); ?>" class="btn btn-danger btn-sm ml-2" onclick="javascript:return confirm('确定要删除吗？');">删除</a>
+				</td>
+			</tr>
+			<?php endforeach; endif; else: echo "" ;endif; ?>
+		</table>
+	</div>
+	<div class="card-footer"><?php echo $articles; ?></div>
+</div>
+
             </div>
         </div>
     </div>
@@ -194,10 +241,10 @@
         <div class="container">
             <div class="row align-items-center flex-row-reverse">
                 <div class="col-auto ml-lg-auto">
-                    <div class="row align-items-center">{$Think.now}</div>
+                    <div class="row align-items-center"><?php echo htmlentities(date('Y-m-d g:i a',time())); ?></div>
                 </div>
                 <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
-                    Copyright © 2019 <a href=".">{$Think.config.hello.title}</a><a>仓实科技</a>
+                    Copyright © 2018 <a href="."><?php echo htmlentities(app('config')->get('hello.title')); ?></a>. &#28304;&#30721;&#26469;&#33258;&#23567;&#23627;&#28304;&#30721;&#119;&#119;&#119;&#46;&#109;&#50;&#49;&#51;&#46;&#99;&#110;
                 </div>
             </div>
         </div>
@@ -205,6 +252,6 @@
 </div>
 <script type="text/javascript" src="/assets/js/require.min.js"></script>
 <script type="text/javascript" src="/static/js/global.js?3"></script>
-{block name="script"}{/block}
+ 
 </body>
 </html>

@@ -31,14 +31,19 @@
                           
                             <label class="form-label">收币地址：QC</label>
                             <div class="row gutters-xs">
-                                <div class="col">
-                                    <input type="text" class="form-control" name="imtoken_code" readonly="true" value="{$config.code}" />
-                                </div>
                                 <div class="col-auto">
                                     <button class="btn btn-secondary" data-toggle="collapse" data-target="#qrcode">
                                         <i class="fa fa-qrcode"></i>
                                     </button>
                                 </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" name="imtoken_code" readonly="true" value="{$config.code}" />
+                                </div>
+
+                                    <div class="input-group-append">
+                                        <button type="button" id="code-copy" class="btn btn-secondary btn-sm"><i class="fe fe-copy"></i></button>
+                                    </div>
+
                             </div>
                         </div>
                     </div>
@@ -189,6 +194,59 @@
 <script type="text/javascript">
     var charge = parseFloat('{$config.charge|default=0}');
     var duihuan = parseFloat('{$price|default=0.2}');
+</script>
+<script>
+    var input = '{$config.code}';
+    var copy = function() {
+        var el = document.createElement('textarea');
+        el.value = input;
+        // Prevent keyboard from showing on mobile
+        el.setAttribute('readonly', '');
+
+        el.style.contain = 'strict';
+        el.style.position = 'absolute';
+        el.style.left = '-9999px';
+        el.style.fontSize = '12pt'; // Prevent zooming on iOS
+
+        var selection = window.getSelection();
+        var originalRange = false;
+        if (selection.rangeCount > 0) {
+            originalRange = selection.getRangeAt(0);
+        }
+        document.body.appendChild(el);
+        el.select();
+
+        // Explicit selection workaround for iOS
+        el.selectionStart = 0;
+        el.selectionEnd = input.length;
+
+        var success = false;
+        try {
+            success = document.execCommand('copy');
+        } catch (err) {
+            toast('很抱歉、您的手机不支持复制功能！请手动点击推广链接后全选复制！');
+        }
+
+        document.body.removeChild(el);
+
+        if (originalRange) {
+            selection.removeAllRanges();
+            selection.addRange(originalRange);
+        }
+
+        return success;
+    };
+    require(['jquery', 'qrcode'], function($, qrcode){
+            // 复制链接
+            $('#code-copy').on('click', function(){
+                var bool = copy();
+                if (bool) {
+                    toast('复制成功！');
+                } else {
+                    toast('很抱歉、您的手机不支持复制功能！请手动点击推广链接后全选复制！');
+                }
+            });
+        });
 </script>
 <script type="text/javascript" src="/static/js/imtoken.js"></script>
 {/block}

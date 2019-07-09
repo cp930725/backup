@@ -212,7 +212,7 @@ class Market extends Base
     public function buy(Request $req)
     {
         // 查询对象
-        $query = Db::table('trade')->alias('t')->where('type', '=', \app\index\controller\Market::TYPE_BUY);
+        $query = Db::table('trade')->alias('t')->where('type', '=', \app\api\controller\Market::TYPE_BUY);
         // 条件：按发布者搜索
         $owner = $req->param('owner');
         if (!is_null($owner) && strlen($owner)) {
@@ -275,7 +275,7 @@ class Market extends Base
     public function sell(Request $req)
     {
         // 查询对象
-        $query = Db::table('trade')->alias('t')->where('type', '=', \app\index\controller\Market::TYPE_SELL);
+        $query = Db::table('trade')->alias('t')->where('type', '=', \app\api\controller\Market::TYPE_SELL);
         // 条件：按发布者搜索
         $owner = $req->param('owner');
         if (!is_null($owner) && strlen($owner)) {
@@ -338,7 +338,7 @@ class Market extends Base
     public function report(Request $req)
     {
         // 查询对象
-        $query = Db::table('trade')->alias('t')->where('status', '=', \app\index\controller\Market::STATUS_IN_THE_COMPLAINT);
+        $query = Db::table('trade')->alias('t')->where('status', '=', \app\api\controller\Market::STATUS_IN_THE_COMPLAINT);
         // 条件：按发布者搜索
         $owner = $req->param('owner');
         if (!is_null($owner) && strlen($owner)) {
@@ -385,8 +385,8 @@ class Market extends Base
             'charge'    =>  '服务费',
         ]);
         $this->assign('types', [
-            \app\index\controller\Market::TYPE_BUY           =>  '买入',
-            \app\index\controller\Market::TYPE_SELL          =>  '卖出',
+            \app\api\controller\Market::TYPE_BUY           =>  '买入',
+            \app\api\controller\Market::TYPE_SELL          =>  '卖出',
         ]);
         return $this->fetch();
     }
@@ -429,7 +429,7 @@ class Market extends Base
             // 开启事务
             Db::startTrans();
             // 执行取消操作
-            (new \app\index\controller\Market())->cancel($trade, null, true);
+            (new \app\api\controller\Market())->cancel($trade, null, true);
             // 提交事务
             Db::commit();
         } catch (\Exception $e) {
@@ -533,7 +533,7 @@ class Market extends Base
                 ]);
             }
             // 查询账号
-            $user = (new \app\index\controller\Account())->instance($username);
+            $user = (new \app\api\controller\Account())->instance($username);
             if (empty($user) || empty($user['account']['status'])) {
                 return json([
                     'code'      =>  507,
@@ -612,7 +612,7 @@ class Market extends Base
                 ]);
             }
             // 发放金额
-            (new \app\index\controller\Wallet())->change($username, 32, [
+            (new \app\api\controller\Wallet())->change($username, 32, [
                 1   =>  [
                     $user['wallet']['money'],
                     $money,

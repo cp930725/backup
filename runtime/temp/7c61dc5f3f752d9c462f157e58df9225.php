@@ -1,3 +1,4 @@
+<?php /*a:2:{s:66:"/www/wwwroot/aa.jdswzc.com/application/admin/view/wallet/give.html";i:1562574822;s:67:"/www/wwwroot/aa.jdswzc.com/application/admin/view/common/world.html";i:1562574822;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,7 +18,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?2" />
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="/assets/css/dashboard.css?3" />
-    <title>{block name="title"}Title{/block}</title>
+    <title>赠送资金</title>
     <style>
     .toast {
         text-align: center;
@@ -58,7 +59,10 @@
         z-index: 2200;
     }
     </style>
-    {block name="style"}{/block}
+    
+<style type="text/css">
+</style>
+
 </head>
 
 <body>
@@ -78,7 +82,7 @@
                                 <span class="avatar me-avatar" style="background-image: url(/static/image/icon.png);"><span class="avatar-status bg-green"></span></span>
                                 <span class="ml-2 d-none d-lg-block">
                                     <span class="text-default">超级管理员</span>
-                                    <small class="text-muted d-block mt-1">{:$Request.ip}</small>
+                                    <small class="text-muted d-block mt-1"><?php echo app('request')->ip(); ?></small>
                                 </span>
                             </a>
                         </div>
@@ -125,9 +129,9 @@
                                     <a href="/admin/account/audit.html" class="dropdown-item">实名认证</a>
                                     <a href="/admin/account/dashboard.html" class="dropdown-item">仪表盘</a>
                                     <a href="/admin/account/promotion.html" class="dropdown-item">推广数据</a>
-                                    {notempty name="Think.config.hello.register_audit"}
+                                    <?php if(!(empty(app('config')->get('hello.register_audit')) || ((app('config')->get('hello.register_audit') instanceof \think\Collection || app('config')->get('hello.register_audit') instanceof \think\Paginator ) && app('config')->get('hello.register_audit')->isEmpty()))): ?>
                                         <a href="/admin/account/reg_audit.html" class="dropdown-item">注册审核</a>
-                                    {/notempty}
+                                    <?php endif; ?>
                                 </div>
                             </li>
                             <li class="nav-item">
@@ -186,7 +190,54 @@
         </div>
         <div class="my-3 my-md-5">
             <div class="container container-padding">
-                {block name="container"}{/block}
+                
+<div class="page">
+	<div class="page-single">
+		<form class="card" method="post" style="max-width: 50rem;" enctype="multipart/form-data">
+			<div class="card-body">
+				<div class="card-title">一键批量赠送资金</div>
+				<div class="card-subtitle">如赠送失败，只需要再次尝试即可。</div>
+				<div class="card-subtitle">数值是正数，则会加钱，如果是负数，则会扣钱</div>
+				<div class="card-subtitle">已冻结的账号也会进行赠送。</div>
+				<div class="card-subtitle">在这里调整的资金在用户那边是看不到记录的</div>
+				<div class="row">
+					<div class="col-sm-4">
+                    	<div class="form-group">
+                            <label class="form-label">货币类型</label>
+                            <select class="form-control custom-select" name="currency">
+                            	<?php if(is_array(app('config')->get('hello.currencys')) || app('config')->get('hello.currencys') instanceof \think\Collection || app('config')->get('hello.currencys') instanceof \think\Paginator): $i = 0; $__LIST__ = app('config')->get('hello.currencys');if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$currency): $mod = ($i % 2 );++$i;?>
+                            		<option value="<?php echo htmlentities($key); ?>"><?php echo htmlentities($currency['name']); ?></option>
+                            	<?php endforeach; endif; else: echo "" ;endif; ?>
+                            </select>
+                        </div>
+                    </div>
+					<div class="col-sm-4">
+                    	<div class="form-group">
+                            <label class="form-label">赠送名义</label>
+                            <select class="form-control custom-select" name="business"></select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                    	<div class="form-group">
+                            <label class="form-label">货币数量</label>
+                            <input class="form-control" type="text" name="number" placeholder="正数加，负数减" />
+                        </div>
+                    </div>
+				    <div class="col-sm-12">
+				        <div class="form-group">
+				            <label class="form-label">用户账号</label>
+				            <textarea class="form-control" name="users" cols="30" rows="10" placeholder="一行一个用户账号，允许有空行，重复账号将会多次赠送，错误的账号将会导致全部失败！"></textarea>
+				        </div>
+				    </div>
+				</div>
+			</div>
+			<div class="card-footer text-right">
+				<button class="btn btn-primary">一键赠送</button>
+			</div>
+		</form>
+	</div>
+</div>
+
             </div>
         </div>
     </div>
@@ -194,10 +245,10 @@
         <div class="container">
             <div class="row align-items-center flex-row-reverse">
                 <div class="col-auto ml-lg-auto">
-                    <div class="row align-items-center">{$Think.now}</div>
+                    <div class="row align-items-center"><?php echo htmlentities(date('Y-m-d g:i a',time())); ?></div>
                 </div>
                 <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
-                    Copyright © 2019 <a href=".">{$Think.config.hello.title}</a><a>仓实科技</a>
+                    Copyright © 2018 <a href="."><?php echo htmlentities(app('config')->get('hello.title')); ?></a>. &#28304;&#30721;&#26469;&#33258;&#23567;&#23627;&#28304;&#30721;&#119;&#119;&#119;&#46;&#109;&#50;&#49;&#51;&#46;&#99;&#110;
                 </div>
             </div>
         </div>
@@ -205,6 +256,27 @@
 </div>
 <script type="text/javascript" src="/assets/js/require.min.js"></script>
 <script type="text/javascript" src="/static/js/global.js?3"></script>
-{block name="script"}{/block}
+
+<script>
+var businesses = JSON.parse('<?php echo $businesses; ?>');
+var business = function(){
+	var c = $('select[name=currency]').val();
+	var b = businesses[c];
+	var html = '';
+	for (var key in b) {
+		html += '<option value="' + key + '">' + b[key] + '</option>';
+	}
+	$('select[name=business]').html(html);
+}
+require(['jquery'], function($){
+	$(function(){
+		business();
+		$('select[name=currency]').on('change', function(){
+			business();
+		});
+	});
+});
+</script>
+
 </body>
 </html>

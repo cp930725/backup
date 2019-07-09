@@ -1,4 +1,4 @@
-<?php /*a:2:{s:66:"/www/wwwroot/aa.jdswzc.com/application/api/view/funding/index.html";i:1562576963;s:67:"/www/wwwroot/aa.jdswzc.com/application/api/view/common/default.html";i:1562661391;}*/ ?>
+<?php /*a:2:{s:67:"/www/wwwroot/aa.jdswzc.com/application/api/view/transfer/index.html";i:1562574822;s:67:"/www/wwwroot/aa.jdswzc.com/application/api/view/common/default.html";i:1562661391;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="/assets/css/dashboard.css?3" />
     <link rel="stylesheet" href="/static/css/global.css?3" />
-    <title>创业众筹</title>
+    <title>内部转账</title>
     <style>
         @media (max-width: 360px) {
             .icon-group {
@@ -34,32 +34,12 @@
     </style>
     
 <style>
-    .projects-image {
-        width: 118px;height: 90px;
-    }
-    .projects-title {
-        font-size: 0.95rem;
-        font-weight: bold;
-    }
-    .media-body {
-        position: relative;
-    }
-    /* .projects-info {
-        position: absolute;left: 0;bottom: 0;right: 0;
-    }
-    .progress {
-        position: absolute;left: 0;bottom:2rem;right: 2.8rem;
-    } */
-    .progress-label {
-        position: absolute;right: 0;top: -.6rem;
-    }
-    .w-86 {
-        width: 86% !important;
-    }
-    a.media {
-        height: 90px;
-        text-decoration: none;
-    }
+.btn-toggle-form {
+     position: absolute;
+    right: .3rem;
+    top: 0rem;
+    z-index: 1;
+}
 </style>
 
 </head>
@@ -144,22 +124,84 @@
         <div class="my-3 my-md-5">
             <div class="container container-padding">
                 
-<div class="d-flex mb-3">
-    <select class="form-control custom-select w-auto" name="filter">
-        <option value="all">全部</option>
-        <option value="invest">我参与的</option>
-        <option value="my">我发布的</option>
-    </select>
-    <select class="form-control custom-select w-auto ml-2" name="catalog">
-        <option value="all">类型</option>
-        <?php if(is_array(app('config')->get('hello.funding.catalog')) || app('config')->get('hello.funding.catalog') instanceof \think\Collection || app('config')->get('hello.funding.catalog') instanceof \think\Paginator): $i = 0; $__LIST__ = app('config')->get('hello.funding.catalog');if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?>
-        <option value="<?php echo htmlentities($key); ?>"><?php echo htmlentities($item); ?></option>
-        <?php endforeach; endif; else: echo "" ;endif; ?>
-    </select>
-    <a class="btn px-5 btn-success ml-auto" href="/funding/welcome.html">发起众筹</a>
+<div class="card card-form card-collapsed">
+    <div class="card-header" data-toggle="card-collapse">
+        <div class="card-title f1">提交转账</div>
+        <div class="card-options">
+            <a href="#" class="card-options-collapse mr-2" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label class="form-label">对方账号</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="对方账号" name="target" maxlength="11" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label class="form-label">数量</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="0" name="number" />
+                        <span class="input-group-append" id="basic-addon2">
+                            <span class="input-group-text"><?php echo htmlentities(app('config')->get('hello.unit')); ?></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="form-group">
+                    <label class="form-label">安全密码</label>
+                    <div class="input-group">
+                        <input type="password" class="form-control" placeholder="******" name="safeword" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex">
+            <div class="small text-muted mt-2">
+                手续费：<span class="charge">0</span>
+            </div>
+            <div class="ml-auto text-right">
+                <button type="submit" class="btn btn-primary btn-submit btn-transfer">立即转账</button>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="card p-3">
-    <div class="row projects"></div>
+<div class="card">
+    <div class="card-header">
+        <div class="card-title f1">历史记录</div>
+        <div class="card-options">
+            <div class="selectgroup selectgroup-pills list-switch">
+                <label class="selectgroup-item mb-0">
+                    <input type="radio" name="option" value="in" class="selectgroup-input" checked="true" />
+                    <span class="selectgroup-button selectgroup-button-sm">转入</span>
+                </label>
+                <label class="selectgroup-item mb-0">
+                    <input type="radio" name="option" value="out" class="selectgroup-input" />
+                    <span class="selectgroup-button selectgroup-button-sm">转出</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table card-table table-striped table-vcenter">
+            <thead>
+                <tr>
+                    <th>用户</th>
+                    <th width="20%" class="text-right">数量</th>
+                    <th width="20%" class="text-right pr-4">服务费</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div hidden class="card-footer card-more">
+        <div class="text-muted text-center">点击加载更多</div>
+    </div>
 </div>
 
             </div>
@@ -197,10 +239,10 @@
 <script type="text/javascript" src="/assets/js/require.min.js"></script>
 <script type="text/javascript" src="/static/js/global.js?3"></script>
 
-<script>
-    var frame = 'index';
+<script type="text/javascript">
+var charge = JSON.parse('<?php echo $charge; ?>');
 </script>
-<script src="/static/js/funding.js?2"></script>
+<script type="text/javascript" src="/static/js/transfer.js?1"></script>
 
 </body>
 </html>

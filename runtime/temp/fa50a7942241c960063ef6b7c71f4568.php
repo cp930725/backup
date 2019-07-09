@@ -1,3 +1,4 @@
+<?php /*a:2:{s:65:"/www/wwwroot/aa.jdswzc.com/application/admin/view/market/buy.html";i:1562574822;s:67:"/www/wwwroot/aa.jdswzc.com/application/admin/view/common/world.html";i:1562661509;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,7 +18,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?2" />
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="/assets/css/dashboard.css?3" />
-    <title>{block name="title"}Title{/block}</title>
+    <title>买入订单</title>
     <style>
     .toast {
         text-align: center;
@@ -58,7 +59,7 @@
         z-index: 2200;
     }
     </style>
-    {block name="style"}{/block}
+    
 </head>
 
 <body>
@@ -78,7 +79,7 @@
                                 <span class="avatar me-avatar" style="background-image: url(/static/image/icon.png);"><span class="avatar-status bg-green"></span></span>
                                 <span class="ml-2 d-none d-lg-block">
                                     <span class="text-default">超级管理员</span>
-                                    <small class="text-muted d-block mt-1">{:$Request.ip}</small>
+                                    <small class="text-muted d-block mt-1"><?php echo app('request')->ip(); ?></small>
                                 </span>
                             </a>
                         </div>
@@ -125,9 +126,9 @@
                                     <a href="/admin/account/audit.html" class="dropdown-item">实名认证</a>
                                     <a href="/admin/account/dashboard.html" class="dropdown-item">仪表盘</a>
                                     <a href="/admin/account/promotion.html" class="dropdown-item">推广数据</a>
-                                    {notempty name="Think.config.hello.register_audit"}
+                                    <?php if(!(empty(app('config')->get('hello.register_audit')) || ((app('config')->get('hello.register_audit') instanceof \think\Collection || app('config')->get('hello.register_audit') instanceof \think\Paginator ) && app('config')->get('hello.register_audit')->isEmpty()))): ?>
                                         <a href="/admin/account/reg_audit.html" class="dropdown-item">注册审核</a>
-                                    {/notempty}
+                                    <?php endif; ?>
                                 </div>
                             </li>
                             <li class="nav-item">
@@ -186,7 +187,140 @@
         </div>
         <div class="my-3 my-md-5">
             <div class="container container-padding">
-                {block name="container"}{/block}
+                
+<form method="get" class="">
+	<div class="row">
+		<div class="col-md-6 col-lg-4 mb-3">
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text">买方</span>
+				</div>
+				<input type="text" class="form-control" name="owner" value="<?php echo htmlentities(app('request')->get('owner')); ?>" />
+			</div>
+		</div>
+		<div class="col-md-6 col-lg-4 mb-3">
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text">卖方</span>
+				</div>
+				<input type="text" class="form-control" name="target" value="<?php echo htmlentities(app('request')->get('target')); ?>" />
+			</div>
+		</div>
+		<div class="col-md-6 col-lg-4 mb-3">
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text">订单状态</span>
+				</div>
+				<select class="custom-select" name="status">
+					<option value="-1">全部状态</option>
+					<?php if(is_array($statuses) || $statuses instanceof \think\Collection || $statuses instanceof \think\Paginator): $i = 0; $__LIST__ = $statuses;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;if(is_null(app('request')->get('status'))): ?>
+							<option value="<?php echo htmlentities($key); ?>"><?php echo htmlentities($item); ?></option>
+						<?php else: if(app('request')->get('status') == $key): ?>
+								<option value="<?php echo htmlentities($key); ?>" selected="true"><?php echo htmlentities($item); ?></option>
+							<?php else: ?>
+								<option value="<?php echo htmlentities($key); ?>"><?php echo htmlentities($item); ?></option>
+							<?php endif; endif; endforeach; endif; else: echo "" ;endif; ?>
+				</select>
+			</div>
+		</div>
+	    <div class="col-md-12 col-lg-6 mb-3">
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<select class="custom-select input-group-text" name="numberField">
+						<?php if(is_array($fields) || $fields instanceof \think\Collection || $fields instanceof \think\Paginator): $i = 0; $__LIST__ = $fields;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$field): $mod = ($i % 2 );++$i;if(app('request')->get('numberField') == $key): ?>
+								<option selected="true" value="<?php echo htmlentities($key); ?>"><?php echo htmlentities($field); ?></option>
+							<?php else: ?>
+								<option value="<?php echo htmlentities($key); ?>"><?php echo htmlentities($field); ?></option>
+							<?php endif; endforeach; endif; else: echo "" ;endif; ?>
+				    </select>
+				</div>
+				<select class="custom-select input-group-text" name="numberOperator">
+					<?php switch(app('request')->get('numberOperator')): case "2": ?>
+							<option value="1">大于</option>
+							<option value="2" selected="true">等于</option>
+							<option value="3">小于</option>
+						<?php break; case "3": ?>
+							<option value="1">大于</option>
+							<option value="2">等于</option>
+							<option value="3" selected="true">小于</option>
+						<?php break; default: ?>
+							<option value="1">大于</option>
+							<option value="2">等于</option>
+							<option value="3">小于</option>
+					<?php endswitch; ?>
+			    </select>
+				<input type="text" class="form-control" aria-label="Text input with dropdown button" name="numberValue" value="<?php echo htmlentities(app('request')->get('numberValue')); ?>" placeholder="时间格式：2018-08-08 12:30:00" />
+			</div>
+		</div>
+		<div class="col-md-12 col-lg-4 mb-3">
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text">排列顺序</span>
+				</div>
+				<select class="custom-select input-group-text" name="sortField">
+					<?php if(is_array($fields) || $fields instanceof \think\Collection || $fields instanceof \think\Paginator): $i = 0; $__LIST__ = $fields;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$field): $mod = ($i % 2 );++$i;if(app('request')->get('sortField') == $key): ?>
+							<option selected="true" value="<?php echo htmlentities($key); ?>">按<?php echo htmlentities($field); ?></option>
+						<?php else: ?>
+							<option value="<?php echo htmlentities($key); ?>">按<?php echo htmlentities($field); ?></option>
+						<?php endif; endforeach; endif; else: echo "" ;endif; ?>
+			    </select>
+			    <select class="custom-select input-group-text" name="sortType">
+			    	<?php if(app('request')->get('sortType') == 'asc'): ?>
+			    		<option value="desc">降序</option>
+			    		<option value="asc" selected="true">升序</option>
+			    	<?php else: ?>
+			    		<option value="desc">降序</option>
+			    		<option value="asc">升序</option>
+			    	<?php endif; ?>
+			    </select>
+			</div>
+		</div>
+		<div class="col-lg-2 mb-3">
+			<button class="btn btn-primary w-100" type="submit">立即查询</button>
+		</div>
+	</div>
+</form>
+<div class="card">
+	<div class="table-responsive">
+	    <table class="table table-hover table-outline table-vcenter text-nowrap card-table">
+	        <thead>
+	            <tr>
+	                <th>#</th>
+	                <th>状态</th>
+	                <th>买方</th>
+	                <th>卖方</th>
+	                <th>数量</th>
+	                <th>单价</th>
+	                <th>总价</th>
+	                <th>服务费</th>
+	                <th>时间</th>
+	                <th>操作</th>
+	            </tr>
+	        </thead>
+	        <tbody>
+	        	<?php if(is_array($trades) || $trades instanceof \think\Collection || $trades instanceof \think\Paginator): $i = 0; $__LIST__ = $trades;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$trade): $mod = ($i % 2 );++$i;?>
+	            <tr>
+	                <td><?php echo htmlentities($trade['tid']); ?></td>
+	                <td><?php echo htmlentities(app('config')->get('hello.trade.status')[$trade['status']]['name']); ?></td>
+	                <td><?php echo htmlentities($trade['owner']); ?></td>
+	                <td><?php echo htmlentities($trade['target']); ?></td>
+	                <td><?php echo htmlentities(money($trade['number'])); ?></td>
+	                <td><?php echo htmlentities(money($trade['price'])); ?></td>
+	                <td><?php echo htmlentities(money($trade['number']*$trade['price'])); ?></td>
+	                <td><?php echo htmlentities(money($trade['charge'])); ?></td>
+	                <td><?php echo htmlentities($trade['update_at']); ?></td>
+	                <td>
+	                	<a href="/admin/market/cancel.html?id=<?php echo htmlentities($trade['tid']); ?>" class="btn btn-secondary btn-sm" onclick="return confirm('您确定要执行该操作吗？');">强制关闭</a>
+	                	<a href="/admin/market/transaction.html?id=<?php echo htmlentities($trade['tid']); ?>" class="btn btn-secondary btn-sm">查看</a>
+	                </td>
+	            </tr>
+	            <?php endforeach; endif; else: echo "" ;endif; ?>
+	        </tbody>
+	    </table>
+	</div>
+	<div class="card-footer"><?php echo $trades; ?></div>
+</div>
+
             </div>
         </div>
     </div>
@@ -194,10 +328,10 @@
         <div class="container">
             <div class="row align-items-center flex-row-reverse">
                 <div class="col-auto ml-lg-auto">
-                    <div class="row align-items-center">{$Think.now}</div>
+                    <div class="row align-items-center"><?php echo htmlentities(date('Y-m-d g:i a',time())); ?></div>
                 </div>
                 <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
-                    Copyright © 2019 <a href=".">{$Think.config.hello.title}</a><a>仓实科技</a>
+                    Copyright © 2019 <a href="."><?php echo htmlentities(app('config')->get('hello.title')); ?></a><a>仓实科技</a>
                 </div>
             </div>
         </div>
@@ -205,6 +339,6 @@
 </div>
 <script type="text/javascript" src="/assets/js/require.min.js"></script>
 <script type="text/javascript" src="/static/js/global.js?3"></script>
-{block name="script"}{/block}
+ 
 </body>
 </html>
