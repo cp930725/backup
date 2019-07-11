@@ -3532,3 +3532,3795 @@
   'noCache' => '1562663827323',
 )
 [ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:30:44+08:00 ] 123.234.138.85 GET /
+[ info ] www.ggfb.cc/ [运行时间：0.114342s][吞吐率：8.75req/s] [内存消耗：1,059.08kb] [文件加载：60]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => '',
+  'route' => 'index/index/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=0snhd6g3vgh7o0j0c9hd6scbp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.ggfb.cc',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /www/wwwroot/aa.jdswzc.com/application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:30:44+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/css/layers.css
+[ info ] www.ggfb.cc/static/plugins/revo-slider/css/layers.css [运行时间：0.078660s][吞吐率：12.71req/s] [内存消耗：810.85kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:30:44+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/css/settings.css
+[ info ] www.ggfb.cc/static/plugins/revo-slider/css/settings.css [运行时间：0.097006s][吞吐率：10.31req/s] [内存消耗：810.85kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:30:44+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css
+[ info ] www.ggfb.cc/static/plugins/revo-slider/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css [运行时间：0.073700s][吞吐率：13.57req/s] [内存消耗：811.00kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:30:44+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/css/navigation.css
+[ info ] www.ggfb.cc/static/plugins/revo-slider/css/navigation.css [运行时间：0.084773s][吞吐率：11.80req/s] [内存消耗：810.87kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:30:44+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/fonts/font-awesome/css/font-awesome.min.css
+[ info ] www.ggfb.cc/static/plugins/revo-slider/fonts/font-awesome/css/font-awesome.min.css [运行时间：0.106236s][吞吐率：9.41req/s] [内存消耗：810.98kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:30:44+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/jquery.themepunch.revolution.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/jquery.themepunch.revolution.min.js [运行时间：0.039916s][吞吐率：25.05req/s] [内存消耗：810.92kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:30:44+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/jquery.themepunch.tools.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/jquery.themepunch.tools.min.js [运行时间：0.064268s][吞吐率：15.56req/s] [内存消耗：810.91kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:30:44+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.actions.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.actions.min.js [运行时间：0.055501s][吞吐率：18.02req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:30:45+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.carousel.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.carousel.min.js [运行时间：0.047253s][吞吐率：21.16req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:30:45+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/jquery.themepunch.revolution.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/jquery.themepunch.revolution.min.js [运行时间：0.055991s][吞吐率：17.86req/s] [内存消耗：810.92kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:30:45+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.kenburn.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.kenburn.min.js [运行时间：0.053873s][吞吐率：18.56req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:30:45+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.layeranimation.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.layeranimation.min.js [运行时间：0.064075s][吞吐率：15.61req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:30:45+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.actions.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.actions.min.js [运行时间：0.107087s][吞吐率：9.34req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:30:45+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.migration.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.migration.min.js [运行时间：0.087888s][吞吐率：11.38req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:30:45+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.navigation.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.navigation.min.js [运行时间：0.044533s][吞吐率：22.46req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:30:45+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.carousel.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.carousel.min.js [运行时间：0.079037s][吞吐率：12.65req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:30:45+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.parallax.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.parallax.min.js [运行时间：0.051044s][吞吐率：19.59req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:30:46+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.slideanims.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.slideanims.min.js [运行时间：0.058226s][吞吐率：17.17req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:30:46+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.kenburn.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.kenburn.min.js [运行时间：0.060837s][吞吐率：16.44req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:30:46+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.video.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.video.min.js [运行时间：0.044909s][吞吐率：22.27req/s] [内存消耗：810.91kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:30:46+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.layeranimation.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.layeranimation.min.js [运行时间：0.065021s][吞吐率：15.38req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:30:46+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.migration.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.migration.min.js [运行时间：0.047170s][吞吐率：21.20req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:30:46+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.navigation.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.navigation.min.js [运行时间：0.051274s][吞吐率：19.50req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:30:47+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.parallax.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.parallax.min.js [运行时间：0.044709s][吞吐率：22.37req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:30:47+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.slideanims.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.slideanims.min.js [运行时间：0.055401s][吞吐率：18.05req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:30:47+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.video.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.video.min.js [运行时间：0.052479s][吞吐率：19.06req/s] [内存消耗：810.91kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:30:51+08:00 ] 123.234.138.85 GET /book
+[ info ] www.ggfb.cc/book [运行时间：0.062303s][吞吐率：16.05req/s] [内存消耗：1,046.40kb] [文件加载：60]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'book',
+  'route' => 'index/index/book',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=0snhd6g3vgh7o0j0c9hd6scbp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ggfb.cc/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.ggfb.cc',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /www/wwwroot/aa.jdswzc.com/application/index/view/index/book.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:34:50+08:00 ] 123.234.138.85 GET /
+[ info ] www.ggfb.cc/ [运行时间：0.023096s][吞吐率：43.30req/s] [内存消耗：1,059.08kb] [文件加载：60]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => '',
+  'route' => 'index/index/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=0snhd6g3vgh7o0j0c9hd6scbp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.ggfb.cc',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /www/wwwroot/aa.jdswzc.com/application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:34:50+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/css/layers.css
+[ info ] www.ggfb.cc/static/plugins/revo-slider/css/layers.css [运行时间：0.017110s][吞吐率：58.45req/s] [内存消耗：810.85kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:34:50+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css
+[ info ] www.ggfb.cc/static/plugins/revo-slider/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css [运行时间：0.013781s][吞吐率：72.56req/s] [内存消耗：811.00kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:34:50+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/css/navigation.css
+[ info ] www.ggfb.cc/static/plugins/revo-slider/css/navigation.css [运行时间：0.025206s][吞吐率：39.67req/s] [内存消耗：810.87kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:34:50+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/css/settings.css
+[ info ] www.ggfb.cc/static/plugins/revo-slider/css/settings.css [运行时间：0.041210s][吞吐率：24.27req/s] [内存消耗：810.85kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:34:50+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/fonts/font-awesome/css/font-awesome.min.css
+[ info ] www.ggfb.cc/static/plugins/revo-slider/fonts/font-awesome/css/font-awesome.min.css [运行时间：0.016961s][吞吐率：58.96req/s] [内存消耗：810.98kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:34:51+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/jquery.themepunch.tools.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/jquery.themepunch.tools.min.js [运行时间：0.016316s][吞吐率：61.29req/s] [内存消耗：810.91kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:34:51+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.kenburn.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.kenburn.min.js [运行时间：0.033209s][吞吐率：30.11req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:34:51+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/jquery.themepunch.revolution.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/jquery.themepunch.revolution.min.js [运行时间：0.044580s][吞吐率：22.43req/s] [内存消耗：810.92kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:34:51+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.actions.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.actions.min.js [运行时间：0.059717s][吞吐率：16.75req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:34:51+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.layeranimation.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.layeranimation.min.js [运行时间：0.028139s][吞吐率：35.54req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:34:51+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.carousel.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.carousel.min.js [运行时间：0.054700s][吞吐率：18.28req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:34:51+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.migration.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.migration.min.js [运行时间：0.051580s][吞吐率：19.39req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:34:51+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.parallax.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.parallax.min.js [运行时间：0.028403s][吞吐率：35.21req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:34:51+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.navigation.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.navigation.min.js [运行时间：0.023459s][吞吐率：42.63req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:34:51+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.slideanims.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.slideanims.min.js [运行时间：0.020498s][吞吐率：48.79req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:34:51+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.video.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.video.min.js [运行时间：0.024423s][吞吐率：40.95req/s] [内存消耗：810.91kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:34:52+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.kenburn.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.kenburn.min.js [运行时间：0.014550s][吞吐率：68.73req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:34:52+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.layeranimation.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.layeranimation.min.js [运行时间：0.021414s][吞吐率：46.70req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:34:52+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.migration.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.migration.min.js [运行时间：0.015639s][吞吐率：63.94req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:34:52+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.navigation.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.navigation.min.js [运行时间：0.020201s][吞吐率：49.50req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:34:52+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.parallax.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.parallax.min.js [运行时间：0.022145s][吞吐率：45.16req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:34:53+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.slideanims.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.slideanims.min.js [运行时间：0.015007s][吞吐率：66.64req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:34:53+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.video.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.video.min.js [运行时间：0.020150s][吞吐率：49.63req/s] [内存消耗：810.91kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:34:56+08:00 ] 123.234.138.85 GET /book
+[ info ] www.ggfb.cc/book [运行时间：0.017436s][吞吐率：57.35req/s] [内存消耗：1,046.40kb] [文件加载：60]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'book',
+  'route' => 'index/index/book',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=0snhd6g3vgh7o0j0c9hd6scbp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ggfb.cc/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.ggfb.cc',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /www/wwwroot/aa.jdswzc.com/application/index/view/index/book.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:38:10+08:00 ] 123.234.138.85 GET /api
+[ info ] www.ggfb.cc/api [运行时间：7.789311s][吞吐率：0.13req/s] [内存消耗：2,056.17kb] [文件加载：74]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api',
+  'route' => 'api/index/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=0snhd6g3vgh7o0j0c9hd6scbp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.ggfb.cc',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000936s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:7.033613s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000606s ]
+---------------------------------------------------------------
+[ 2019-07-09T17:38:10+08:00 ] 123.234.138.85 GET /signin
+[ info ] www.ggfb.cc/signin [运行时间：0.064565s][吞吐率：15.49req/s] [内存消耗：2,203.96kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'signin',
+  'route' => 'account/signin',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=0snhd6g3vgh7o0j0c9hd6scbp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.ggfb.cc',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/aa.jdswzc.com/application/api/view/account/signin.html [ array (
+  0 => 'platform',
+  1 => 'group',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000879s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.002505s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000676s ]
+---------------------------------------------------------------
+[ 2019-07-09T17:38:17+08:00 ] 123.234.138.85 GET /
+[ info ] www.ggfb.cc/ [运行时间：0.017069s][吞吐率：58.59req/s] [内存消耗：1,059.08kb] [文件加载：60]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => '',
+  'route' => 'index/index/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=0snhd6g3vgh7o0j0c9hd6scbp8',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'www.ggfb.cc',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /www/wwwroot/aa.jdswzc.com/application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:38:17+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/css/settings.css
+[ info ] www.ggfb.cc/static/plugins/revo-slider/css/settings.css [运行时间：0.054657s][吞吐率：18.30req/s] [内存消耗：810.85kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:38:17+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css
+[ info ] www.ggfb.cc/static/plugins/revo-slider/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css [运行时间：0.051438s][吞吐率：19.44req/s] [内存消耗：811.00kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:38:17+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/css/layers.css
+[ info ] www.ggfb.cc/static/plugins/revo-slider/css/layers.css [运行时间：0.063730s][吞吐率：15.69req/s] [内存消耗：810.85kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:38:17+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/css/navigation.css
+[ info ] www.ggfb.cc/static/plugins/revo-slider/css/navigation.css [运行时间：0.023589s][吞吐率：42.39req/s] [内存消耗：810.87kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:38:17+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/fonts/font-awesome/css/font-awesome.min.css
+[ info ] www.ggfb.cc/static/plugins/revo-slider/fonts/font-awesome/css/font-awesome.min.css [运行时间：0.016685s][吞吐率：59.93req/s] [内存消耗：810.98kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:38:18+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/jquery.themepunch.tools.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/jquery.themepunch.tools.min.js [运行时间：0.085637s][吞吐率：11.68req/s] [内存消耗：810.91kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:38:18+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.actions.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.actions.min.js [运行时间：0.033956s][吞吐率：29.45req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:38:18+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.carousel.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.carousel.min.js [运行时间：0.043787s][吞吐率：22.84req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:38:18+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.layeranimation.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.layeranimation.min.js [运行时间：0.049084s][吞吐率：20.37req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:38:18+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.kenburn.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.kenburn.min.js [运行时间：0.055988s][吞吐率：17.86req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:38:18+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/jquery.themepunch.revolution.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/jquery.themepunch.revolution.min.js [运行时间：0.060146s][吞吐率：16.63req/s] [内存消耗：810.92kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:38:18+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.parallax.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.parallax.min.js [运行时间：0.054291s][吞吐率：18.42req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:38:18+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.slideanims.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.slideanims.min.js [运行时间：0.041803s][吞吐率：23.92req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:38:18+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.migration.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.migration.min.js [运行时间：0.033513s][吞吐率：29.84req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:38:18+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.navigation.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.navigation.min.js [运行时间：0.060929s][吞吐率：16.41req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:38:18+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.kenburn.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.kenburn.min.js [运行时间：0.047032s][吞吐率：21.26req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:38:18+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.video.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.video.min.js [运行时间：0.040394s][吞吐率：24.76req/s] [内存消耗：810.91kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:38:18+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.layeranimation.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.layeranimation.min.js [运行时间：0.014652s][吞吐率：68.25req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:38:18+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.migration.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.migration.min.js [运行时间：0.014347s][吞吐率：69.70req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:38:18+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.navigation.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.navigation.min.js [运行时间：0.015803s][吞吐率：63.28req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:38:19+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.parallax.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.parallax.min.js [运行时间：0.021179s][吞吐率：47.22req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:38:19+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.slideanims.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.slideanims.min.js [运行时间：0.017594s][吞吐率：56.84req/s] [内存消耗：810.93kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:38:19+08:00 ] 123.234.138.85 GET /static/plugins/revo-slider/js/extensions/revolution.extension.video.min.js
+[ info ] www.ggfb.cc/static/plugins/revo-slider/js/extensions/revolution.extension.video.min.js [运行时间：0.021519s][吞吐率：46.47req/s] [内存消耗：810.91kb] [文件加载：55]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:44:54+08:00 ] 223.104.101.249 GET /account
+[ info ] www.ggfb.cc/account [运行时间：0.056338s][吞吐率：17.75req/s] [内存消耗：2,264.21kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'account',
+  'route' => 'account/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-forwarded-for-pound' => '223.104.101.249',
+  'x-forwarded-for' => '223.104.101.249',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 9; MI 6 Build/PKQ1.190118.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044803 Mobile Safari/537.36 bsl/1.0',
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://www.ggfb.cc/imtoken',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=ldls1d138uaslgj6ff0enha8df',
+  'connection' => 'close',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/tpg,*/*;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/aa.jdswzc.com/application/api/view/account/index.html [ array (
+  0 => 'platform',
+  1 => 'group',
+  2 => 'news',
+  3 => 'user',
+  4 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000582s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001590s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000429s ]
+[ sql ] [ SQL ] SELECT * FROM `config` [ RunTime:0.000356s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `account` [ RunTime:0.001205s ]
+[ sql ] [ SQL ] SELECT `uid`,`type`,`status`,`username`,`authen`,`inviter` FROM `account` WHERE  `username` = '15231045999' LIMIT 1 [ RunTime:0.000318s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `profile` [ RunTime:0.001353s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname`,`avatar`,`wechat`,`qq`,`alipay`,`realname`,`idcard`,`certificate`,`authen_reason`,`bankname`,`bankcard`,`bankaddress`,`phone`,`province`,`city`,`county` FROM `profile` WHERE  `username` = '15231045999' LIMIT 1 [ RunTime:0.000428s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wallet` [ RunTime:0.001396s ]
+[ sql ] [ SQL ] SELECT `username`,`money`,`deposit`,`cash`,`score`,`score_deposit`,`spend`,`profit`,`team_profit`,`bonus`,`trade`,`sell`,`buy`,`ts_in`,`ts_out` FROM `wallet` WHERE  `username` = '15231045999' LIMIT 1 [ RunTime:0.000372s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dashboard` [ RunTime:0.001708s ]
+[ sql ] [ SQL ] SELECT `username`,`power`,`team_power`,`team_count`,`authen`,`machine_count`,`machine_power`,`machine_expire`,`one`,`two`,`three`,`four`,`five`,`six`,`seven`,`eight`,`lv0`,`lv1`,`lv2`,`lv3`,`lv4`,`lv5`,`lv6`,`lv7`,`lv8` FROM `dashboard` WHERE  `username` = '15231045999' LIMIT 1 [ RunTime:0.000387s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.001331s ]
+[ sql ] [ SQL ] SELECT `id`,`image`,`title`,`date` FROM `article` WHERE  `type` <> 8  AND `date` <= '2019-07-09 17:44:54' ORDER BY `top` DESC,`sort` DESC,`date` DESC LIMIT 5 [ RunTime:0.001373s ]
+---------------------------------------------------------------
+[ 2019-07-09T17:44:54+08:00 ] 125.39.46.25 GET /
+[ info ] www.ggfb.cc/ [运行时间：0.017289s][吞吐率：57.84req/s] [内存消耗：1,059.02kb] [文件加载：60]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => '',
+  'route' => 'index/index/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-CN; rv:1.9b4) Gecko/2008030317 Firefox/3.0b4',
+  'q-ua' => 'KQB22_GA/220020&KMTT_3/200020&JV2&151920&SunMicrosystemswtk&0&4309&V3',
+  'host' => 'www.ggfb.cc',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip,deflate',
+  'accept-charset' => 'gb2312,iso8859-1,utf-8',
+  'accept' => 'text/vnd.wap.wml,text/html,application/vnd.wap.xhtml+xml,application/xhtml+xml',
+  'content-length' => '0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /www/wwwroot/aa.jdswzc.com/application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:44:54+08:00 ] 111.30.142.186 GET /
+[ info ] www.ggfb.cc/ [运行时间：0.024127s][吞吐率：41.45req/s] [内存消耗：1,059.02kb] [文件加载：60]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => '',
+  'route' => 'index/index/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-CN; rv:1.9b4) Gecko/2008030317 Firefox/3.0b4',
+  'q-ua' => 'KQB22_GA/220020&KMTT_3/200020&JV2&151920&SunMicrosystemswtk&0&4309&V3',
+  'host' => 'www.ggfb.cc',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip,deflate',
+  'accept-charset' => 'gb2312,iso8859-1,utf-8',
+  'accept' => 'text/vnd.wap.wml,text/html,application/vnd.wap.xhtml+xml,application/xhtml+xml',
+  'content-length' => '0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /www/wwwroot/aa.jdswzc.com/application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T17:44:55+08:00 ] 223.104.101.249 GET /account
+[ info ] www.ggfb.cc/account [运行时间：0.050570s][吞吐率：19.77req/s] [内存消耗：2,264.21kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'account',
+  'route' => 'account/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-forwarded-for-pound' => '223.104.101.249',
+  'x-forwarded-for' => '223.104.101.249',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 9; MI 6 Build/PKQ1.190118.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044803 Mobile Safari/537.36 bsl/1.0',
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://www.ggfb.cc/account',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=ldls1d138uaslgj6ff0enha8df',
+  'connection' => 'close',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/tpg,*/*;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/aa.jdswzc.com/application/api/view/account/index.html [ array (
+  0 => 'platform',
+  1 => 'group',
+  2 => 'news',
+  3 => 'user',
+  4 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000792s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001454s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000382s ]
+[ sql ] [ SQL ] SELECT * FROM `config` [ RunTime:0.000340s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `account` [ RunTime:0.001447s ]
+[ sql ] [ SQL ] SELECT `uid`,`type`,`status`,`username`,`authen`,`inviter` FROM `account` WHERE  `username` = '15231045999' LIMIT 1 [ RunTime:0.000337s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `profile` [ RunTime:0.001490s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname`,`avatar`,`wechat`,`qq`,`alipay`,`realname`,`idcard`,`certificate`,`authen_reason`,`bankname`,`bankcard`,`bankaddress`,`phone`,`province`,`city`,`county` FROM `profile` WHERE  `username` = '15231045999' LIMIT 1 [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wallet` [ RunTime:0.001290s ]
+[ sql ] [ SQL ] SELECT `username`,`money`,`deposit`,`cash`,`score`,`score_deposit`,`spend`,`profit`,`team_profit`,`bonus`,`trade`,`sell`,`buy`,`ts_in`,`ts_out` FROM `wallet` WHERE  `username` = '15231045999' LIMIT 1 [ RunTime:0.000348s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dashboard` [ RunTime:0.001437s ]
+[ sql ] [ SQL ] SELECT `username`,`power`,`team_power`,`team_count`,`authen`,`machine_count`,`machine_power`,`machine_expire`,`one`,`two`,`three`,`four`,`five`,`six`,`seven`,`eight`,`lv0`,`lv1`,`lv2`,`lv3`,`lv4`,`lv5`,`lv6`,`lv7`,`lv8` FROM `dashboard` WHERE  `username` = '15231045999' LIMIT 1 [ RunTime:0.000352s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.001179s ]
+[ sql ] [ SQL ] SELECT `id`,`image`,`title`,`date` FROM `article` WHERE  `type` <> 8  AND `date` <= '2019-07-09 17:44:55' ORDER BY `top` DESC,`sort` DESC,`date` DESC LIMIT 5 [ RunTime:0.000441s ]
+---------------------------------------------------------------
+[ 2019-07-09T17:44:56+08:00 ] 223.104.101.249 GET /funding
+[ info ] www.ggfb.cc/funding [运行时间：0.082610s][吞吐率：12.11req/s] [内存消耗：2,358.26kb] [文件加载：75]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'funding',
+  'route' => 'funding/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-forwarded-for-pound' => '223.104.101.249',
+  'x-forwarded-for' => '223.104.101.249',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 9; MI 6 Build/PKQ1.190118.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044803 Mobile Safari/537.36 bsl/1.0',
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://www.ggfb.cc/account',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=ldls1d138uaslgj6ff0enha8df',
+  'connection' => 'close',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/tpg,*/*;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/aa.jdswzc.com/application/api/view/funding/index.html [ array (
+  0 => 'platform',
+  1 => 'group',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000732s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001452s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000404s ]
+---------------------------------------------------------------
+[ 2019-07-09T17:44:56+08:00 ] 223.104.101.249 POST /funding/list
+[ info ] www.ggfb.cc/funding/list [运行时间：0.036583s][吞吐率：27.34req/s] [内存消耗：2,193.42kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'funding/list',
+  'route' => 'funding/list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '223.104.101.249',
+  'x-forwarded-for' => '223.104.101.249',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 9; MI 6 Build/PKQ1.190118.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044803 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/funding',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=ldls1d138uaslgj6ff0enha8df',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '34',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'size' => '20',
+  'filter' => 'all',
+  'catalog' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000518s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001226s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `funding` [ RunTime:0.001112s ]
+[ sql ] [ SQL ] SELECT `f`.`id`,`f`.`title`,`f`.`image`,`f`.`target`,`f`.`current`,`f`.`people`,`f`.`create_at`,`p`.`nickname`,`p`.`idcard`,`p`.`avatar` FROM `funding` `f` LEFT JOIN `profile` `p` ON `p`.`username`=`f`.`owner` WHERE  `f`.`visible` = '1'  AND `f`.`status` <> '2' ORDER BY `f`.`status` ASC,`f`.`sort` DESC,`f`.`type` DESC,`f`.`update_at` DESC LIMIT 0,20 [ RunTime:0.000403s ]
+---------------------------------------------------------------
+[ 2019-07-09T17:45:00+08:00 ] 223.104.101.249 GET /market
+[ info ] www.ggfb.cc/market [运行时间：1.714933s][吞吐率：0.58req/s] [内存消耗：2,398.87kb] [文件加载：75]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'market',
+  'route' => 'market/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-forwarded-for-pound' => '223.104.101.249',
+  'x-forwarded-for' => '223.104.101.249',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 9; MI 6 Build/PKQ1.190118.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044803 Mobile Safari/537.36 bsl/1.0',
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://www.ggfb.cc/funding',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=ldls1d138uaslgj6ff0enha8df',
+  'connection' => 'close',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/tpg,*/*;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/aa.jdswzc.com/application/api/view/market/index.html [ array (
+  0 => 'platform',
+  1 => 'group',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000677s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001320s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000350s ]
+---------------------------------------------------------------
+[ 2019-07-09T17:45:01+08:00 ] 223.104.101.249 POST /market/overview
+[ info ] www.ggfb.cc/market/overview [运行时间：0.030782s][吞吐率：32.49req/s] [内存消耗：2,209.16kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'market/overview',
+  'route' => 'market/overview',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '223.104.101.249',
+  'x-forwarded-for' => '223.104.101.249',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 9; MI 6 Build/PKQ1.190118.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044803 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/market',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=ldls1d138uaslgj6ff0enha8df',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000502s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001207s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000463s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `market` [ RunTime:0.001019s ]
+[ sql ] [ SQL ] SELECT `date`,`price`,`high`,`low` FROM `market` WHERE  `date` <= '2019-07-09' ORDER BY `date` DESC LIMIT 7 [ RunTime:0.000282s ]
+---------------------------------------------------------------
+[ 2019-07-09T17:45:01+08:00 ] 223.104.101.249 POST /market/list
+[ info ] www.ggfb.cc/market/list [运行时间：0.033122s][吞吐率：30.19req/s] [内存消耗：2,212.63kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'market/list',
+  'route' => 'market/search',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '223.104.101.249',
+  'x-forwarded-for' => '223.104.101.249',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 9; MI 6 Build/PKQ1.190118.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044803 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/market',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=ldls1d138uaslgj6ff0enha8df',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '6',
+)
+[ info ] [ PARAM ] array (
+  'type' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000680s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001563s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000343s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `trade` [ RunTime:0.001056s ]
+[ sql ] [ SQL ] SELECT tid AS id,`t`.`type`,`t`.`status`,p.nickname AS owner,`number`,`price`,t.update_at AS date FROM `trade` `t` INNER JOIN `profile` `p` ON `p`.`username`=`t`.`owner` WHERE  `t`.`type` = '1'  AND `t`.`status` <> '0'  AND `t`.`status` <> '8' ORDER BY `t`.`status` ASC,`t`.`create_at` DESC LIMIT 0,100 [ RunTime:0.000380s ]
+---------------------------------------------------------------
+[ 2019-07-09T17:45:05+08:00 ] 223.104.101.249 GET /api
+[ info ] www.ggfb.cc/api [运行时间：0.041004s][吞吐率：24.39req/s] [内存消耗：2,067.73kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api',
+  'route' => 'api/index/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-forwarded-for-pound' => '223.104.101.249',
+  'x-forwarded-for' => '223.104.101.249',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 9; MI 6 Build/PKQ1.190118.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044803 Mobile Safari/537.36 bsl/1.0',
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://www.ggfb.cc/market',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=ldls1d138uaslgj6ff0enha8df',
+  'connection' => 'close',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/tpg,*/*;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/aa.jdswzc.com/application/api/view/index/index.html [ array (
+  0 => 'platform',
+  1 => 'group',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000803s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001845s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000506s ]
+---------------------------------------------------------------
+[ 2019-07-09T17:45:06+08:00 ] 223.104.101.249 POST /market/list
+[ info ] www.ggfb.cc/market/list [运行时间：0.050736s][吞吐率：19.71req/s] [内存消耗：2,212.63kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'market/list',
+  'route' => 'market/search',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '223.104.101.249',
+  'x-forwarded-for' => '223.104.101.249',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 9; MI 6 Build/PKQ1.190118.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044803 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/api',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=ldls1d138uaslgj6ff0enha8df',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '6',
+)
+[ info ] [ PARAM ] array (
+  'type' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000728s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001898s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000764s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `trade` [ RunTime:0.002922s ]
+[ sql ] [ SQL ] SELECT tid AS id,`t`.`type`,`t`.`status`,p.nickname AS owner,`number`,`price`,t.update_at AS date FROM `trade` `t` INNER JOIN `profile` `p` ON `p`.`username`=`t`.`owner` WHERE  `t`.`type` = '1'  AND `t`.`status` <> '0'  AND `t`.`status` <> '8' ORDER BY `t`.`status` ASC,`t`.`create_at` DESC LIMIT 0,100 [ RunTime:0.000578s ]
+---------------------------------------------------------------
+[ 2019-07-09T17:45:06+08:00 ] 223.104.101.249 POST /market/overview
+[ info ] www.ggfb.cc/market/overview [运行时间：0.082651s][吞吐率：12.10req/s] [内存消耗：2,209.16kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'market/overview',
+  'route' => 'market/overview',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '223.104.101.249',
+  'x-forwarded-for' => '223.104.101.249',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 9; MI 6 Build/PKQ1.190118.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044803 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/api',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=ldls1d138uaslgj6ff0enha8df',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000629s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001409s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000478s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `market` [ RunTime:0.001252s ]
+[ sql ] [ SQL ] SELECT `date`,`price`,`high`,`low` FROM `market` WHERE  `date` <= '2019-07-09' ORDER BY `date` DESC LIMIT 7 [ RunTime:0.000380s ]
+---------------------------------------------------------------
+[ 2019-07-09T17:45:06+08:00 ] 223.104.101.249 POST /index/list
+[ info ] www.ggfb.cc/index/list [运行时间：0.081923s][吞吐率：12.21req/s] [内存消耗：2,069.32kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'index/list',
+  'route' => 'api/index/list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '223.104.101.249',
+  'x-forwarded-for' => '223.104.101.249',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 9; MI 6 Build/PKQ1.190118.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044803 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/api',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=ldls1d138uaslgj6ff0enha8df',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '34',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'size' => '20',
+  'filter' => 'all',
+  'catalog' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000624s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001375s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000378s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `funding` [ RunTime:0.001196s ]
+[ sql ] [ SQL ] SELECT `f`.`id`,`f`.`title`,`f`.`image`,`f`.`target`,`f`.`current`,`f`.`people`,`f`.`create_at`,`p`.`nickname`,`p`.`idcard`,`p`.`avatar` FROM `funding` `f` LEFT JOIN `profile` `p` ON `p`.`username`=`f`.`owner` WHERE  `f`.`visible` = '1' ORDER BY `f`.`create_at` DESC LIMIT 0,3 [ RunTime:0.000395s ]
+---------------------------------------------------------------
+[ 2019-07-09T17:45:06+08:00 ] 223.104.101.249 POST /account/sync
+[ info ] www.ggfb.cc/account/sync [运行时间：0.060797s][吞吐率：16.45req/s] [内存消耗：2,242.80kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'account/sync',
+  'route' => 'account/sync',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '223.104.101.249',
+  'x-forwarded-for' => '223.104.101.249',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 9; MI 6 Build/PKQ1.190118.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044803 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/api',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=ldls1d138uaslgj6ff0enha8df',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000618s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001663s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000461s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `account` [ RunTime:0.001408s ]
+[ sql ] [ SQL ] SELECT `type` FROM `account` WHERE  `username` = '15231045999' LIMIT 1 [ RunTime:0.001242s ]
+[ sql ] [ SQL ] SELECT `uid`,`type`,`status`,`username`,`authen`,`inviter` FROM `account` WHERE  `username` = '15231045999' LIMIT 1 [ RunTime:0.000501s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `profile` [ RunTime:0.001576s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname`,`avatar`,`wechat`,`qq`,`alipay`,`realname`,`idcard`,`certificate`,`authen_reason`,`bankname`,`bankcard`,`bankaddress`,`phone`,`province`,`city`,`county` FROM `profile` WHERE  `username` = '15231045999' LIMIT 1 [ RunTime:0.001187s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wallet` [ RunTime:0.001507s ]
+[ sql ] [ SQL ] SELECT `username`,`money`,`deposit`,`cash`,`score`,`score_deposit`,`spend`,`profit`,`team_profit`,`bonus`,`trade`,`sell`,`buy`,`ts_in`,`ts_out` FROM `wallet` WHERE  `username` = '15231045999' LIMIT 1 [ RunTime:0.000449s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dashboard` [ RunTime:0.001588s ]
+[ sql ] [ SQL ] SELECT `username`,`power`,`team_power`,`team_count`,`authen`,`machine_count`,`machine_power`,`machine_expire`,`one`,`two`,`three`,`four`,`five`,`six`,`seven`,`eight`,`lv0`,`lv1`,`lv2`,`lv3`,`lv4`,`lv5`,`lv6`,`lv7`,`lv8` FROM `dashboard` WHERE  `username` = '15231045999' LIMIT 1 [ RunTime:0.000442s ]
+[ sql ] [ SQL ] SELECT COUNT(`id`) AS tp_count FROM `account` WHERE  `inviter` = '15231045999'  AND `authen` = 1 LIMIT 1 [ RunTime:0.000546s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `machine` [ RunTime:0.001421s ]
+[ sql ] [ SQL ] SELECT COUNT(`id`) AS tp_count FROM `machine` WHERE  `source` = 1  AND `username` = '15231045999' LIMIT 1 [ RunTime:0.000370s ]
+---------------------------------------------------------------
+[ 2019-07-09T17:45:10+08:00 ] 223.104.101.249 GET /market
+[ info ] www.ggfb.cc/market [运行时间：0.030945s][吞吐率：32.32req/s] [内存消耗：2,218.51kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'market',
+  'route' => 'market/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-forwarded-for-pound' => '223.104.101.249',
+  'x-forwarded-for' => '223.104.101.249',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 9; MI 6 Build/PKQ1.190118.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044803 Mobile Safari/537.36 bsl/1.0',
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://www.ggfb.cc/funding',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=ldls1d138uaslgj6ff0enha8df',
+  'connection' => 'close',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/tpg,*/*;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/aa.jdswzc.com/application/api/view/market/index.html [ array (
+  0 => 'platform',
+  1 => 'group',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000580s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001239s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000411s ]
+---------------------------------------------------------------
+[ 2019-07-09T17:45:10+08:00 ] 223.104.101.249 POST /market/list
+[ info ] www.ggfb.cc/market/list [运行时间：0.042473s][吞吐率：23.54req/s] [内存消耗：2,212.63kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'market/list',
+  'route' => 'market/search',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '223.104.101.249',
+  'x-forwarded-for' => '223.104.101.249',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 9; MI 6 Build/PKQ1.190118.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044803 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/market',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=ldls1d138uaslgj6ff0enha8df',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '6',
+)
+[ info ] [ PARAM ] array (
+  'type' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001200s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001818s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000491s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `trade` [ RunTime:0.001611s ]
+[ sql ] [ SQL ] SELECT tid AS id,`t`.`type`,`t`.`status`,p.nickname AS owner,`number`,`price`,t.update_at AS date FROM `trade` `t` INNER JOIN `profile` `p` ON `p`.`username`=`t`.`owner` WHERE  `t`.`type` = '1'  AND `t`.`status` <> '0'  AND `t`.`status` <> '8' ORDER BY `t`.`status` ASC,`t`.`create_at` DESC LIMIT 0,100 [ RunTime:0.000488s ]
+---------------------------------------------------------------
+[ 2019-07-09T17:45:10+08:00 ] 223.104.101.249 POST /market/overview
+[ info ] www.ggfb.cc/market/overview [运行时间：0.064982s][吞吐率：15.39req/s] [内存消耗：2,209.16kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'market/overview',
+  'route' => 'market/overview',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '223.104.101.249',
+  'x-forwarded-for' => '223.104.101.249',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 9; MI 6 Build/PKQ1.190118.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044803 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/market',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=ldls1d138uaslgj6ff0enha8df',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000989s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.002064s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000578s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `market` [ RunTime:0.001981s ]
+[ sql ] [ SQL ] SELECT `date`,`price`,`high`,`low` FROM `market` WHERE  `date` <= '2019-07-09' ORDER BY `date` DESC LIMIT 7 [ RunTime:0.000539s ]
+---------------------------------------------------------------
+[ 2019-07-09T17:45:12+08:00 ] 223.104.101.249 GET /funding
+[ info ] www.ggfb.cc/funding [运行时间：0.032389s][吞吐率：30.87req/s] [内存消耗：2,189.95kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'funding',
+  'route' => 'funding/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-forwarded-for-pound' => '223.104.101.249',
+  'x-forwarded-for' => '223.104.101.249',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 9; MI 6 Build/PKQ1.190118.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044803 Mobile Safari/537.36 bsl/1.0',
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://www.ggfb.cc/account',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=ldls1d138uaslgj6ff0enha8df',
+  'connection' => 'close',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/tpg,*/*;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/aa.jdswzc.com/application/api/view/funding/index.html [ array (
+  0 => 'platform',
+  1 => 'group',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000560s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001473s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000477s ]
+---------------------------------------------------------------
+[ 2019-07-09T17:45:13+08:00 ] 223.104.101.249 POST /funding/list
+[ info ] www.ggfb.cc/funding/list [运行时间：0.034996s][吞吐率：28.57req/s] [内存消耗：2,193.42kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'funding/list',
+  'route' => 'funding/list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '223.104.101.249',
+  'x-forwarded-for' => '223.104.101.249',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 9; MI 6 Build/PKQ1.190118.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044803 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/funding',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=ldls1d138uaslgj6ff0enha8df',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '34',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'size' => '20',
+  'filter' => 'all',
+  'catalog' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000521s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001330s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000414s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `funding` [ RunTime:0.001463s ]
+[ sql ] [ SQL ] SELECT `f`.`id`,`f`.`title`,`f`.`image`,`f`.`target`,`f`.`current`,`f`.`people`,`f`.`create_at`,`p`.`nickname`,`p`.`idcard`,`p`.`avatar` FROM `funding` `f` LEFT JOIN `profile` `p` ON `p`.`username`=`f`.`owner` WHERE  `f`.`visible` = '1'  AND `f`.`status` <> '2' ORDER BY `f`.`status` ASC,`f`.`sort` DESC,`f`.`type` DESC,`f`.`update_at` DESC LIMIT 0,20 [ RunTime:0.000437s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:06:41+08:00 ] 221.192.180.111 GET /api
+[ info ] www.ggfb.cc/api [运行时间：0.042889s][吞吐率：23.32req/s] [内存消耗：2,056.83kb] [文件加载：74]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api',
+  'route' => 'api/index/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-forwarded-for-pound' => '221.192.180.111',
+  'x-forwarded-for' => '221.192.180.111',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; MI 8 Lite Build/OPM1.171019.019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044705 Mobile Safari/537.36 bsl/1.0',
+  'upgrade-insecure-requests' => '1',
+  'host' => 'www.ggfb.cc',
+  'connection' => 'close',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/tpg,*/*;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000805s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001718s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000448s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:06:41+08:00 ] 221.192.180.111 GET /signin
+[ info ] www.ggfb.cc/signin [运行时间：0.036256s][吞吐率：27.58req/s] [内存消耗：2,204.86kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'signin',
+  'route' => 'account/signin',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-forwarded-for-pound' => '221.192.180.111',
+  'x-forwarded-for' => '221.192.180.111',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; MI 8 Lite Build/OPM1.171019.019; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044705 Mobile Safari/537.36 bsl/1.0',
+  'upgrade-insecure-requests' => '1',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=0qhraikfaialcrro9jhvrteuvb',
+  'connection' => 'close',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/tpg,*/*;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/aa.jdswzc.com/application/api/view/account/signin.html [ array (
+  0 => 'platform',
+  1 => 'group',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000691s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001952s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000460s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:06:45+08:00 ] 106.9.80.127 GET /api
+[ info ] www.ggfb.cc/api [运行时间：0.037198s][吞吐率：26.88req/s] [内存消耗：2,056.83kb] [文件加载：74]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api',
+  'route' => 'api/index/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-forwarded-for-pound' => '106.9.80.127',
+  'x-forwarded-for' => '106.9.80.127',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; vivo X20A Build/OPM1.171019.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044704 Mobile Safari/537.36 bsl/1.0',
+  'upgrade-insecure-requests' => '1',
+  'host' => 'www.ggfb.cc',
+  'connection' => 'close',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/tpg,*/*;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000637s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001286s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000817s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:06:46+08:00 ] 106.9.80.127 GET /signin
+[ info ] www.ggfb.cc/signin [运行时间：0.033744s][吞吐率：29.63req/s] [内存消耗：2,204.86kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'signin',
+  'route' => 'account/signin',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-forwarded-for-pound' => '106.9.80.127',
+  'x-forwarded-for' => '106.9.80.127',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; vivo X20A Build/OPM1.171019.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044704 Mobile Safari/537.36 bsl/1.0',
+  'upgrade-insecure-requests' => '1',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=midl7f2ujrhpam7vos7js9ej65',
+  'connection' => 'close',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/tpg,*/*;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/aa.jdswzc.com/application/api/view/account/signin.html [ array (
+  0 => 'platform',
+  1 => 'group',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000566s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001470s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000383s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:06:49+08:00 ] 223.104.101.244 GET /api
+[ info ] www.ggfb.cc/api [运行时间：0.042444s][吞吐率：23.56req/s] [内存消耗：2,056.82kb] [文件加载：74]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api',
+  'route' => 'api/index/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-forwarded-for-pound' => '223.104.101.244',
+  'x-forwarded-for' => '223.104.101.244',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; PBEM00 Build/OPM1.171019.026; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044705 Mobile Safari/537.36 bsl/1.0',
+  'upgrade-insecure-requests' => '1',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=f2u2h9dn2dtqrjoar0g843i0c6',
+  'connection' => 'close',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/tpg,*/*;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000685s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001894s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000532s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:06:49+08:00 ] 111.30.142.227 GET /
+[ info ] www.ggfb.cc/ [运行时间：0.017504s][吞吐率：57.13req/s] [内存消耗：1,059.02kb] [文件加载：60]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => '',
+  'route' => 'index/index/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-CN; rv:1.9b4) Gecko/2008030317 Firefox/3.0b4',
+  'q-ua' => 'KQB22_GA/220020&KMTT_3/200020&JV2&151920&SunMicrosystemswtk&0&4309&V3',
+  'host' => 'www.ggfb.cc',
+  'connection' => 'close',
+  'accept-encoding' => 'gzip,deflate',
+  'accept-charset' => 'gb2312,iso8859-1,utf-8',
+  'accept' => 'text/vnd.wap.wml,text/html,application/vnd.wap.xhtml+xml,application/xhtml+xml',
+  'content-length' => '0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] /www/wwwroot/aa.jdswzc.com/application/index/view/index/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-09T18:06:49+08:00 ] 223.104.101.244 GET /signin
+[ info ] www.ggfb.cc/signin [运行时间：0.038033s][吞吐率：26.29req/s] [内存消耗：2,204.86kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'signin',
+  'route' => 'account/signin',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-forwarded-for-pound' => '223.104.101.244',
+  'x-forwarded-for' => '223.104.101.244',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; PBEM00 Build/OPM1.171019.026; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044705 Mobile Safari/537.36 bsl/1.0',
+  'upgrade-insecure-requests' => '1',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=f2u2h9dn2dtqrjoar0g843i0c6',
+  'connection' => 'close',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/tpg,*/*;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/aa.jdswzc.com/application/api/view/account/signin.html [ array (
+  0 => 'platform',
+  1 => 'group',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000555s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001384s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000363s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:07:01+08:00 ] 106.9.80.127 POST /signin
+[ info ] www.ggfb.cc/signin [运行时间：0.049650s][吞吐率：20.14req/s] [内存消耗：2,205.29kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'signin',
+  'route' => 'account/signin',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '106.9.80.127',
+  'x-forwarded-for' => '106.9.80.127',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; vivo X20A Build/OPM1.171019.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044704 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/signin',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=midl7f2ujrhpam7vos7js9ej65',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '38',
+)
+[ info ] [ PARAM ] array (
+  'username' => '17703307741',
+  'password' => '962464yy',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000545s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.004653s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000344s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `account` [ RunTime:0.001083s ]
+[ sql ] [ SQL ] SELECT `uid`,`type`,`status`,`username`,`authen`,`inviter` FROM `account` WHERE  `username` = '17703307741'  AND `password` = '7c71f3cc869fb7c090896092e230dab8' LIMIT 1 [ RunTime:0.000429s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `profile` [ RunTime:0.001160s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname`,`avatar`,`wechat`,`qq`,`alipay`,`realname`,`idcard`,`certificate`,`authen_reason`,`bankname`,`bankcard`,`bankaddress`,`phone`,`province`,`city`,`county` FROM `profile` WHERE  `username` = '17703307741' LIMIT 1 [ RunTime:0.000542s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wallet` [ RunTime:0.001178s ]
+[ sql ] [ SQL ] SELECT `username`,`money`,`deposit`,`cash`,`score`,`score_deposit`,`spend`,`profit`,`team_profit`,`bonus`,`trade`,`sell`,`buy`,`ts_in`,`ts_out` FROM `wallet` WHERE  `username` = '17703307741' LIMIT 1 [ RunTime:0.000303s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dashboard` [ RunTime:0.001238s ]
+[ sql ] [ SQL ] SELECT `username`,`power`,`team_power`,`team_count`,`authen`,`machine_count`,`machine_power`,`machine_expire`,`one`,`two`,`three`,`four`,`five`,`six`,`seven`,`eight`,`lv0`,`lv1`,`lv2`,`lv3`,`lv4`,`lv5`,`lv6`,`lv7`,`lv8` FROM `dashboard` WHERE  `username` = '17703307741' LIMIT 1 [ RunTime:0.000344s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `log` [ RunTime:0.001039s ]
+[ sql ] [ SQL ] INSERT INTO `log` (`username` , `type` , `text` , `ip` , `ua` , `create_at`) VALUES ('17703307741' , 3 , NULL , '106.9.80.127' , 'Mozilla/5.0 (Linux; Android 8.1.0; vivo X20A Build/OPM1.171019.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044704 Mobile Safari/537.36 bsl/1.0' , '2019-07-09 18:07:01') [ RunTime:0.003416s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:07:02+08:00 ] 106.9.80.127 GET /api
+[ info ] www.ggfb.cc/api [运行时间：0.034773s][吞吐率：28.76req/s] [内存消耗：2,068.02kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api',
+  'route' => 'api/index/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-forwarded-for-pound' => '106.9.80.127',
+  'x-forwarded-for' => '106.9.80.127',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; vivo X20A Build/OPM1.171019.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044704 Mobile Safari/537.36 bsl/1.0',
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://www.ggfb.cc/signin',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=midl7f2ujrhpam7vos7js9ej65',
+  'connection' => 'close',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/tpg,*/*;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/aa.jdswzc.com/application/api/view/index/index.html [ array (
+  0 => 'platform',
+  1 => 'group',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000569s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001441s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000361s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:07:04+08:00 ] 106.9.80.127 POST /market/overview
+[ info ] www.ggfb.cc/market/overview [运行时间：0.046141s][吞吐率：21.67req/s] [内存消耗：2,209.45kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'market/overview',
+  'route' => 'market/overview',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '106.9.80.127',
+  'x-forwarded-for' => '106.9.80.127',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; vivo X20A Build/OPM1.171019.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044704 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/api',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=midl7f2ujrhpam7vos7js9ej65',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000725s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001992s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000356s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `market` [ RunTime:0.001118s ]
+[ sql ] [ SQL ] SELECT `date`,`price`,`high`,`low` FROM `market` WHERE  `date` <= '2019-07-09' ORDER BY `date` DESC LIMIT 7 [ RunTime:0.000392s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:07:04+08:00 ] 106.9.80.127 POST /market/list
+[ info ] www.ggfb.cc/market/list [运行时间：0.052989s][吞吐率：18.87req/s] [内存消耗：2,212.92kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'market/list',
+  'route' => 'market/search',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '106.9.80.127',
+  'x-forwarded-for' => '106.9.80.127',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; vivo X20A Build/OPM1.171019.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044704 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/api',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=midl7f2ujrhpam7vos7js9ej65',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '6',
+)
+[ info ] [ PARAM ] array (
+  'type' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000497s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001283s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000376s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `trade` [ RunTime:0.001120s ]
+[ sql ] [ SQL ] SELECT tid AS id,`t`.`type`,`t`.`status`,p.nickname AS owner,`number`,`price`,t.update_at AS date FROM `trade` `t` INNER JOIN `profile` `p` ON `p`.`username`=`t`.`owner` WHERE  `t`.`type` = '1'  AND `t`.`status` <> '0'  AND `t`.`status` <> '8' ORDER BY `t`.`status` ASC,`t`.`create_at` DESC LIMIT 0,100 [ RunTime:0.000434s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:07:04+08:00 ] 106.9.80.127 POST /index/list
+[ info ] www.ggfb.cc/index/list [运行时间：0.045591s][吞吐率：21.93req/s] [内存消耗：2,069.61kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'index/list',
+  'route' => 'api/index/list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '106.9.80.127',
+  'x-forwarded-for' => '106.9.80.127',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; vivo X20A Build/OPM1.171019.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044704 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/api',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=midl7f2ujrhpam7vos7js9ej65',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '34',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'size' => '20',
+  'filter' => 'all',
+  'catalog' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000735s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001942s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000513s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `funding` [ RunTime:0.001799s ]
+[ sql ] [ SQL ] SELECT `f`.`id`,`f`.`title`,`f`.`image`,`f`.`target`,`f`.`current`,`f`.`people`,`f`.`create_at`,`p`.`nickname`,`p`.`idcard`,`p`.`avatar` FROM `funding` `f` LEFT JOIN `profile` `p` ON `p`.`username`=`f`.`owner` WHERE  `f`.`visible` = '1' ORDER BY `f`.`create_at` DESC LIMIT 0,3 [ RunTime:0.000558s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:07:04+08:00 ] 223.104.101.244 POST /signin
+[ info ] www.ggfb.cc/signin [运行时间：0.051004s][吞吐率：19.61req/s] [内存消耗：2,204.98kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'signin',
+  'route' => 'account/signin',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'method' => 'get|post',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '223.104.101.244',
+  'x-forwarded-for' => '223.104.101.244',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; PBEM00 Build/OPM1.171019.026; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044705 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/signin',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=f2u2h9dn2dtqrjoar0g843i0c6',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '40',
+)
+[ info ] [ PARAM ] array (
+  'username' => '18403008020',
+  'password' => 'linbao1116',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000522s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001332s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000385s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `account` [ RunTime:0.001050s ]
+[ sql ] [ SQL ] SELECT `uid`,`type`,`status`,`username`,`authen`,`inviter` FROM `account` WHERE  `username` = '18403008020'  AND `password` = '44bb98eee7b69ff16b2ba66d09b45c72' LIMIT 1 [ RunTime:0.000449s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `profile` [ RunTime:0.001096s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname`,`avatar`,`wechat`,`qq`,`alipay`,`realname`,`idcard`,`certificate`,`authen_reason`,`bankname`,`bankcard`,`bankaddress`,`phone`,`province`,`city`,`county` FROM `profile` WHERE  `username` = '18403008020' LIMIT 1 [ RunTime:0.000382s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wallet` [ RunTime:0.001040s ]
+[ sql ] [ SQL ] SELECT `username`,`money`,`deposit`,`cash`,`score`,`score_deposit`,`spend`,`profit`,`team_profit`,`bonus`,`trade`,`sell`,`buy`,`ts_in`,`ts_out` FROM `wallet` WHERE  `username` = '18403008020' LIMIT 1 [ RunTime:0.000341s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dashboard` [ RunTime:0.001117s ]
+[ sql ] [ SQL ] SELECT `username`,`power`,`team_power`,`team_count`,`authen`,`machine_count`,`machine_power`,`machine_expire`,`one`,`two`,`three`,`four`,`five`,`six`,`seven`,`eight`,`lv0`,`lv1`,`lv2`,`lv3`,`lv4`,`lv5`,`lv6`,`lv7`,`lv8` FROM `dashboard` WHERE  `username` = '18403008020' LIMIT 1 [ RunTime:0.000344s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `log` [ RunTime:0.001043s ]
+[ sql ] [ SQL ] INSERT INTO `log` (`username` , `type` , `text` , `ip` , `ua` , `create_at`) VALUES ('18403008020' , 3 , NULL , '223.104.101.244' , 'Mozilla/5.0 (Linux; Android 8.1.0; PBEM00 Build/OPM1.171019.026; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044705 Mobile Safari/537.36 bsl/1.0' , '2019-07-09 18:07:04') [ RunTime:0.000448s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:07:04+08:00 ] 223.104.101.244 GET /api
+[ info ] www.ggfb.cc/api [运行时间：0.038083s][吞吐率：26.26req/s] [内存消耗：2,067.77kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api',
+  'route' => 'api/index/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-forwarded-for-pound' => '223.104.101.244',
+  'x-forwarded-for' => '223.104.101.244',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; PBEM00 Build/OPM1.171019.026; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044705 Mobile Safari/537.36 bsl/1.0',
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://www.ggfb.cc/signin',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=f2u2h9dn2dtqrjoar0g843i0c6',
+  'connection' => 'close',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/tpg,*/*;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/aa.jdswzc.com/application/api/view/index/index.html [ array (
+  0 => 'platform',
+  1 => 'group',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000735s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001603s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000522s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:07:04+08:00 ] 106.9.80.127 POST /account/sync
+[ info ] www.ggfb.cc/account/sync [运行时间：0.048842s][吞吐率：20.47req/s] [内存消耗：2,243.15kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'account/sync',
+  'route' => 'account/sync',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '106.9.80.127',
+  'x-forwarded-for' => '106.9.80.127',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; vivo X20A Build/OPM1.171019.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044704 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/api',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=midl7f2ujrhpam7vos7js9ej65',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000503s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001593s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000381s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `account` [ RunTime:0.001057s ]
+[ sql ] [ SQL ] SELECT `type` FROM `account` WHERE  `username` = '17703307741' LIMIT 1 [ RunTime:0.000353s ]
+[ sql ] [ SQL ] SELECT `uid`,`type`,`status`,`username`,`authen`,`inviter` FROM `account` WHERE  `username` = '17703307741' LIMIT 1 [ RunTime:0.000509s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `profile` [ RunTime:0.001475s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname`,`avatar`,`wechat`,`qq`,`alipay`,`realname`,`idcard`,`certificate`,`authen_reason`,`bankname`,`bankcard`,`bankaddress`,`phone`,`province`,`city`,`county` FROM `profile` WHERE  `username` = '17703307741' LIMIT 1 [ RunTime:0.000669s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wallet` [ RunTime:0.001606s ]
+[ sql ] [ SQL ] SELECT `username`,`money`,`deposit`,`cash`,`score`,`score_deposit`,`spend`,`profit`,`team_profit`,`bonus`,`trade`,`sell`,`buy`,`ts_in`,`ts_out` FROM `wallet` WHERE  `username` = '17703307741' LIMIT 1 [ RunTime:0.001280s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dashboard` [ RunTime:0.001282s ]
+[ sql ] [ SQL ] SELECT `username`,`power`,`team_power`,`team_count`,`authen`,`machine_count`,`machine_power`,`machine_expire`,`one`,`two`,`three`,`four`,`five`,`six`,`seven`,`eight`,`lv0`,`lv1`,`lv2`,`lv3`,`lv4`,`lv5`,`lv6`,`lv7`,`lv8` FROM `dashboard` WHERE  `username` = '17703307741' LIMIT 1 [ RunTime:0.000940s ]
+[ sql ] [ SQL ] SELECT COUNT(`id`) AS tp_count FROM `account` WHERE  `inviter` = '17703307741'  AND `authen` = 1 LIMIT 1 [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `machine` [ RunTime:0.001078s ]
+[ sql ] [ SQL ] SELECT COUNT(`id`) AS tp_count FROM `machine` WHERE  `source` = 1  AND `username` = '17703307741' LIMIT 1 [ RunTime:0.000307s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:07:07+08:00 ] 223.104.101.244 POST /index/list
+[ info ] www.ggfb.cc/index/list [运行时间：0.034512s][吞吐率：28.98req/s] [内存消耗：2,069.37kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'index/list',
+  'route' => 'api/index/list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '223.104.101.244',
+  'x-forwarded-for' => '223.104.101.244',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; PBEM00 Build/OPM1.171019.026; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044705 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/api',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=f2u2h9dn2dtqrjoar0g843i0c6',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '34',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'size' => '20',
+  'filter' => 'all',
+  'catalog' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000635s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001387s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000367s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `funding` [ RunTime:0.001745s ]
+[ sql ] [ SQL ] SELECT `f`.`id`,`f`.`title`,`f`.`image`,`f`.`target`,`f`.`current`,`f`.`people`,`f`.`create_at`,`p`.`nickname`,`p`.`idcard`,`p`.`avatar` FROM `funding` `f` LEFT JOIN `profile` `p` ON `p`.`username`=`f`.`owner` WHERE  `f`.`visible` = '1' ORDER BY `f`.`create_at` DESC LIMIT 0,3 [ RunTime:0.000559s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:07:07+08:00 ] 223.104.101.244 POST /account/sync
+[ info ] www.ggfb.cc/account/sync [运行时间：0.040220s][吞吐率：24.86req/s] [内存消耗：2,242.84kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'account/sync',
+  'route' => 'account/sync',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '223.104.101.244',
+  'x-forwarded-for' => '223.104.101.244',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; PBEM00 Build/OPM1.171019.026; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044705 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/api',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=f2u2h9dn2dtqrjoar0g843i0c6',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000623s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001261s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000376s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `account` [ RunTime:0.001048s ]
+[ sql ] [ SQL ] SELECT `type` FROM `account` WHERE  `username` = '18403008020' LIMIT 1 [ RunTime:0.000338s ]
+[ sql ] [ SQL ] SELECT `uid`,`type`,`status`,`username`,`authen`,`inviter` FROM `account` WHERE  `username` = '18403008020' LIMIT 1 [ RunTime:0.000347s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `profile` [ RunTime:0.001131s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname`,`avatar`,`wechat`,`qq`,`alipay`,`realname`,`idcard`,`certificate`,`authen_reason`,`bankname`,`bankcard`,`bankaddress`,`phone`,`province`,`city`,`county` FROM `profile` WHERE  `username` = '18403008020' LIMIT 1 [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wallet` [ RunTime:0.001055s ]
+[ sql ] [ SQL ] SELECT `username`,`money`,`deposit`,`cash`,`score`,`score_deposit`,`spend`,`profit`,`team_profit`,`bonus`,`trade`,`sell`,`buy`,`ts_in`,`ts_out` FROM `wallet` WHERE  `username` = '18403008020' LIMIT 1 [ RunTime:0.000330s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dashboard` [ RunTime:0.001148s ]
+[ sql ] [ SQL ] SELECT `username`,`power`,`team_power`,`team_count`,`authen`,`machine_count`,`machine_power`,`machine_expire`,`one`,`two`,`three`,`four`,`five`,`six`,`seven`,`eight`,`lv0`,`lv1`,`lv2`,`lv3`,`lv4`,`lv5`,`lv6`,`lv7`,`lv8` FROM `dashboard` WHERE  `username` = '18403008020' LIMIT 1 [ RunTime:0.000329s ]
+[ sql ] [ SQL ] SELECT COUNT(`id`) AS tp_count FROM `account` WHERE  `inviter` = '18403008020'  AND `authen` = 1 LIMIT 1 [ RunTime:0.000353s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `machine` [ RunTime:0.001030s ]
+[ sql ] [ SQL ] SELECT COUNT(`id`) AS tp_count FROM `machine` WHERE  `source` = 1  AND `username` = '18403008020' LIMIT 1 [ RunTime:0.000308s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:07:07+08:00 ] 223.104.101.244 POST /market/list
+[ info ] www.ggfb.cc/market/list [运行时间：0.056596s][吞吐率：17.67req/s] [内存消耗：2,212.68kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'market/list',
+  'route' => 'market/search',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '223.104.101.244',
+  'x-forwarded-for' => '223.104.101.244',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; PBEM00 Build/OPM1.171019.026; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044705 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/api',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=f2u2h9dn2dtqrjoar0g843i0c6',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '6',
+)
+[ info ] [ PARAM ] array (
+  'type' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000501s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001293s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000321s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `trade` [ RunTime:0.001121s ]
+[ sql ] [ SQL ] SELECT tid AS id,`t`.`type`,`t`.`status`,p.nickname AS owner,`number`,`price`,t.update_at AS date FROM `trade` `t` INNER JOIN `profile` `p` ON `p`.`username`=`t`.`owner` WHERE  `t`.`type` = '1'  AND `t`.`status` <> '0'  AND `t`.`status` <> '8' ORDER BY `t`.`status` ASC,`t`.`create_at` DESC LIMIT 0,100 [ RunTime:0.000359s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:07:07+08:00 ] 223.104.101.244 POST /market/overview
+[ info ] www.ggfb.cc/market/overview [运行时间：0.042709s][吞吐率：23.41req/s] [内存消耗：2,209.21kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'market/overview',
+  'route' => 'market/overview',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '223.104.101.244',
+  'x-forwarded-for' => '223.104.101.244',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; PBEM00 Build/OPM1.171019.026; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044705 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/api',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=f2u2h9dn2dtqrjoar0g843i0c6',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000704s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001873s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000846s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `market` [ RunTime:0.002858s ]
+[ sql ] [ SQL ] SELECT `date`,`price`,`high`,`low` FROM `market` WHERE  `date` <= '2019-07-09' ORDER BY `date` DESC LIMIT 7 [ RunTime:0.000798s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:07:09+08:00 ] 223.104.101.244 GET /account
+[ info ] www.ggfb.cc/account [运行时间：0.040431s][吞吐率：24.73req/s] [内存消耗：2,264.23kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'account',
+  'route' => 'account/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-forwarded-for-pound' => '223.104.101.244',
+  'x-forwarded-for' => '223.104.101.244',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; PBEM00 Build/OPM1.171019.026; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044705 Mobile Safari/537.36 bsl/1.0',
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://www.ggfb.cc/api',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=f2u2h9dn2dtqrjoar0g843i0c6',
+  'connection' => 'close',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/tpg,*/*;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/aa.jdswzc.com/application/api/view/account/index.html [ array (
+  0 => 'platform',
+  1 => 'group',
+  2 => 'news',
+  3 => 'user',
+  4 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000474s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001273s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000354s ]
+[ sql ] [ SQL ] SELECT * FROM `config` [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `account` [ RunTime:0.001014s ]
+[ sql ] [ SQL ] SELECT `uid`,`type`,`status`,`username`,`authen`,`inviter` FROM `account` WHERE  `username` = '18403008020' LIMIT 1 [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `profile` [ RunTime:0.001077s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname`,`avatar`,`wechat`,`qq`,`alipay`,`realname`,`idcard`,`certificate`,`authen_reason`,`bankname`,`bankcard`,`bankaddress`,`phone`,`province`,`city`,`county` FROM `profile` WHERE  `username` = '18403008020' LIMIT 1 [ RunTime:0.000299s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wallet` [ RunTime:0.001063s ]
+[ sql ] [ SQL ] SELECT `username`,`money`,`deposit`,`cash`,`score`,`score_deposit`,`spend`,`profit`,`team_profit`,`bonus`,`trade`,`sell`,`buy`,`ts_in`,`ts_out` FROM `wallet` WHERE  `username` = '18403008020' LIMIT 1 [ RunTime:0.000305s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dashboard` [ RunTime:0.001145s ]
+[ sql ] [ SQL ] SELECT `username`,`power`,`team_power`,`team_count`,`authen`,`machine_count`,`machine_power`,`machine_expire`,`one`,`two`,`three`,`four`,`five`,`six`,`seven`,`eight`,`lv0`,`lv1`,`lv2`,`lv3`,`lv4`,`lv5`,`lv6`,`lv7`,`lv8` FROM `dashboard` WHERE  `username` = '18403008020' LIMIT 1 [ RunTime:0.000319s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.001076s ]
+[ sql ] [ SQL ] SELECT `id`,`image`,`title`,`date` FROM `article` WHERE  `type` <> 8  AND `date` <= '2019-07-09 18:07:09' ORDER BY `top` DESC,`sort` DESC,`date` DESC LIMIT 5 [ RunTime:0.000426s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:07:14+08:00 ] 223.104.101.244 GET /team/inviter
+[ info ] www.ggfb.cc/team/inviter [运行时间：0.144361s][吞吐率：6.93req/s] [内存消耗：3,128.84kb] [文件加载：105]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'team/inviter',
+  'route' => 'team/inviter',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-forwarded-for-pound' => '223.104.101.244',
+  'x-forwarded-for' => '223.104.101.244',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; PBEM00 Build/OPM1.171019.026; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044705 Mobile Safari/537.36 bsl/1.0',
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://www.ggfb.cc/account',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=f2u2h9dn2dtqrjoar0g843i0c6',
+  'connection' => 'close',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/tpg,*/*;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/aa.jdswzc.com/application/api/view/team/inviter.html [ array (
+  0 => 'platform',
+  1 => 'group',
+  2 => 'image',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000653s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001334s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000367s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:07:18+08:00 ] 106.9.80.127 GET /market
+[ info ] www.ggfb.cc/market [运行时间：0.035888s][吞吐率：27.86req/s] [内存消耗：2,218.80kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'market',
+  'route' => 'market/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-forwarded-for-pound' => '106.9.80.127',
+  'x-forwarded-for' => '106.9.80.127',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; vivo X20A Build/OPM1.171019.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044704 Mobile Safari/537.36 bsl/1.0',
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://www.ggfb.cc/api',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=midl7f2ujrhpam7vos7js9ej65',
+  'connection' => 'close',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/tpg,*/*;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/aa.jdswzc.com/application/api/view/market/index.html [ array (
+  0 => 'platform',
+  1 => 'group',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000550s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001656s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000483s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:07:18+08:00 ] 106.9.80.127 POST /market/overview
+[ info ] www.ggfb.cc/market/overview [运行时间：0.034678s][吞吐率：28.84req/s] [内存消耗：2,209.45kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'market/overview',
+  'route' => 'market/overview',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '106.9.80.127',
+  'x-forwarded-for' => '106.9.80.127',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; vivo X20A Build/OPM1.171019.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044704 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/market',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=midl7f2ujrhpam7vos7js9ej65',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000541s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001243s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000385s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `market` [ RunTime:0.001181s ]
+[ sql ] [ SQL ] SELECT `date`,`price`,`high`,`low` FROM `market` WHERE  `date` <= '2019-07-09' ORDER BY `date` DESC LIMIT 7 [ RunTime:0.000329s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:07:19+08:00 ] 106.9.80.127 POST /market/list
+[ info ] www.ggfb.cc/market/list [运行时间：0.034555s][吞吐率：28.94req/s] [内存消耗：2,212.92kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'market/list',
+  'route' => 'market/search',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '106.9.80.127',
+  'x-forwarded-for' => '106.9.80.127',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; vivo X20A Build/OPM1.171019.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044704 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/market',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=midl7f2ujrhpam7vos7js9ej65',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '6',
+)
+[ info ] [ PARAM ] array (
+  'type' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000543s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001283s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000344s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `trade` [ RunTime:0.001064s ]
+[ sql ] [ SQL ] SELECT tid AS id,`t`.`type`,`t`.`status`,p.nickname AS owner,`number`,`price`,t.update_at AS date FROM `trade` `t` INNER JOIN `profile` `p` ON `p`.`username`=`t`.`owner` WHERE  `t`.`type` = '1'  AND `t`.`status` <> '0'  AND `t`.`status` <> '8' ORDER BY `t`.`status` ASC,`t`.`create_at` DESC LIMIT 0,100 [ RunTime:0.000485s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:07:21+08:00 ] 106.9.80.127 GET /funding
+[ info ] www.ggfb.cc/funding [运行时间：0.067550s][吞吐率：14.80req/s] [内存消耗：2,190.24kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'funding',
+  'route' => 'funding/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-forwarded-for-pound' => '106.9.80.127',
+  'x-forwarded-for' => '106.9.80.127',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; vivo X20A Build/OPM1.171019.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044704 Mobile Safari/537.36 bsl/1.0',
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://www.ggfb.cc/market',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=midl7f2ujrhpam7vos7js9ej65',
+  'connection' => 'close',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/tpg,*/*;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/aa.jdswzc.com/application/api/view/funding/index.html [ array (
+  0 => 'platform',
+  1 => 'group',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001058s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.002238s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000601s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:07:22+08:00 ] 106.9.80.127 POST /funding/list
+[ info ] www.ggfb.cc/funding/list [运行时间：0.085517s][吞吐率：11.69req/s] [内存消耗：2,193.71kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'funding/list',
+  'route' => 'funding/list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '106.9.80.127',
+  'x-forwarded-for' => '106.9.80.127',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; vivo X20A Build/OPM1.171019.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044704 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/funding',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=midl7f2ujrhpam7vos7js9ej65',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '34',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'size' => '20',
+  'filter' => 'all',
+  'catalog' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000967s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.002442s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000616s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `funding` [ RunTime:0.002748s ]
+[ sql ] [ SQL ] SELECT `f`.`id`,`f`.`title`,`f`.`image`,`f`.`target`,`f`.`current`,`f`.`people`,`f`.`create_at`,`p`.`nickname`,`p`.`idcard`,`p`.`avatar` FROM `funding` `f` LEFT JOIN `profile` `p` ON `p`.`username`=`f`.`owner` WHERE  `f`.`visible` = '1'  AND `f`.`status` <> '2' ORDER BY `f`.`status` ASC,`f`.`sort` DESC,`f`.`type` DESC,`f`.`update_at` DESC LIMIT 0,20 [ RunTime:0.001144s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:07:23+08:00 ] 106.9.80.127 GET /account
+[ info ] www.ggfb.cc/account [运行时间：0.110814s][吞吐率：9.02req/s] [内存消耗：2,264.47kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'account',
+  'route' => 'account/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-forwarded-for-pound' => '106.9.80.127',
+  'x-forwarded-for' => '106.9.80.127',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; vivo X20A Build/OPM1.171019.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044704 Mobile Safari/537.36 bsl/1.0',
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://www.ggfb.cc/funding',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=midl7f2ujrhpam7vos7js9ej65',
+  'connection' => 'close',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/tpg,*/*;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/aa.jdswzc.com/application/api/view/account/index.html [ array (
+  0 => 'platform',
+  1 => 'group',
+  2 => 'news',
+  3 => 'user',
+  4 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002452s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.002613s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000930s ]
+[ sql ] [ SQL ] SELECT * FROM `config` [ RunTime:0.000888s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `account` [ RunTime:0.003111s ]
+[ sql ] [ SQL ] SELECT `uid`,`type`,`status`,`username`,`authen`,`inviter` FROM `account` WHERE  `username` = '17703307741' LIMIT 1 [ RunTime:0.000936s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `profile` [ RunTime:0.003552s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname`,`avatar`,`wechat`,`qq`,`alipay`,`realname`,`idcard`,`certificate`,`authen_reason`,`bankname`,`bankcard`,`bankaddress`,`phone`,`province`,`city`,`county` FROM `profile` WHERE  `username` = '17703307741' LIMIT 1 [ RunTime:0.000859s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wallet` [ RunTime:0.003154s ]
+[ sql ] [ SQL ] SELECT `username`,`money`,`deposit`,`cash`,`score`,`score_deposit`,`spend`,`profit`,`team_profit`,`bonus`,`trade`,`sell`,`buy`,`ts_in`,`ts_out` FROM `wallet` WHERE  `username` = '17703307741' LIMIT 1 [ RunTime:0.000789s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dashboard` [ RunTime:0.003383s ]
+[ sql ] [ SQL ] SELECT `username`,`power`,`team_power`,`team_count`,`authen`,`machine_count`,`machine_power`,`machine_expire`,`one`,`two`,`three`,`four`,`five`,`six`,`seven`,`eight`,`lv0`,`lv1`,`lv2`,`lv3`,`lv4`,`lv5`,`lv6`,`lv7`,`lv8` FROM `dashboard` WHERE  `username` = '17703307741' LIMIT 1 [ RunTime:0.000886s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.003008s ]
+[ sql ] [ SQL ] SELECT `id`,`image`,`title`,`date` FROM `article` WHERE  `type` <> 8  AND `date` <= '2019-07-09 18:07:23' ORDER BY `top` DESC,`sort` DESC,`date` DESC LIMIT 5 [ RunTime:0.001185s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:07:31+08:00 ] 106.9.80.127 GET /api
+[ info ] www.ggfb.cc/api [运行时间：0.036521s][吞吐率：27.38req/s] [内存消耗：2,068.02kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api',
+  'route' => 'api/index/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-forwarded-for-pound' => '106.9.80.127',
+  'x-forwarded-for' => '106.9.80.127',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; vivo X20A Build/OPM1.171019.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044704 Mobile Safari/537.36 bsl/1.0',
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://www.ggfb.cc/account',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=midl7f2ujrhpam7vos7js9ej65',
+  'connection' => 'close',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/tpg,*/*;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/aa.jdswzc.com/application/api/view/index/index.html [ array (
+  0 => 'platform',
+  1 => 'group',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000571s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001301s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000387s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:07:31+08:00 ] 106.9.80.127 POST /index/list
+[ info ] www.ggfb.cc/index/list [运行时间：0.031218s][吞吐率：32.03req/s] [内存消耗：2,069.61kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'index/list',
+  'route' => 'api/index/list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '106.9.80.127',
+  'x-forwarded-for' => '106.9.80.127',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; vivo X20A Build/OPM1.171019.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044704 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/api',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=midl7f2ujrhpam7vos7js9ej65',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '34',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'size' => '20',
+  'filter' => 'all',
+  'catalog' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000554s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001315s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000354s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `funding` [ RunTime:0.001214s ]
+[ sql ] [ SQL ] SELECT `f`.`id`,`f`.`title`,`f`.`image`,`f`.`target`,`f`.`current`,`f`.`people`,`f`.`create_at`,`p`.`nickname`,`p`.`idcard`,`p`.`avatar` FROM `funding` `f` LEFT JOIN `profile` `p` ON `p`.`username`=`f`.`owner` WHERE  `f`.`visible` = '1' ORDER BY `f`.`create_at` DESC LIMIT 0,3 [ RunTime:0.000371s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:07:32+08:00 ] 106.9.80.127 POST /market/list
+[ info ] www.ggfb.cc/market/list [运行时间：0.037472s][吞吐率：26.69req/s] [内存消耗：2,212.92kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'market/list',
+  'route' => 'market/search',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '106.9.80.127',
+  'x-forwarded-for' => '106.9.80.127',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; vivo X20A Build/OPM1.171019.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044704 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/api',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=midl7f2ujrhpam7vos7js9ej65',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '6',
+)
+[ info ] [ PARAM ] array (
+  'type' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000687s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.002032s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000583s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `trade` [ RunTime:0.001496s ]
+[ sql ] [ SQL ] SELECT tid AS id,`t`.`type`,`t`.`status`,p.nickname AS owner,`number`,`price`,t.update_at AS date FROM `trade` `t` INNER JOIN `profile` `p` ON `p`.`username`=`t`.`owner` WHERE  `t`.`type` = '1'  AND `t`.`status` <> '0'  AND `t`.`status` <> '8' ORDER BY `t`.`status` ASC,`t`.`create_at` DESC LIMIT 0,100 [ RunTime:0.000495s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:07:32+08:00 ] 106.9.80.127 POST /market/overview
+[ info ] www.ggfb.cc/market/overview [运行时间：0.062142s][吞吐率：16.09req/s] [内存消耗：2,209.45kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'market/overview',
+  'route' => 'market/overview',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '106.9.80.127',
+  'x-forwarded-for' => '106.9.80.127',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; vivo X20A Build/OPM1.171019.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044704 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/api',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=midl7f2ujrhpam7vos7js9ej65',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000702s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001628s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000494s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `market` [ RunTime:0.001765s ]
+[ sql ] [ SQL ] SELECT `date`,`price`,`high`,`low` FROM `market` WHERE  `date` <= '2019-07-09' ORDER BY `date` DESC LIMIT 7 [ RunTime:0.000535s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:07:32+08:00 ] 106.9.80.127 POST /account/sync
+[ info ] www.ggfb.cc/account/sync [运行时间：0.054475s][吞吐率：18.36req/s] [内存消耗：2,243.15kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'account/sync',
+  'route' => 'account/sync',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '106.9.80.127',
+  'x-forwarded-for' => '106.9.80.127',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; vivo X20A Build/OPM1.171019.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044704 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/api',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=midl7f2ujrhpam7vos7js9ej65',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000817s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001428s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000439s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `account` [ RunTime:0.001298s ]
+[ sql ] [ SQL ] SELECT `type` FROM `account` WHERE  `username` = '17703307741' LIMIT 1 [ RunTime:0.000313s ]
+[ sql ] [ SQL ] SELECT `uid`,`type`,`status`,`username`,`authen`,`inviter` FROM `account` WHERE  `username` = '17703307741' LIMIT 1 [ RunTime:0.000364s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `profile` [ RunTime:0.002239s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname`,`avatar`,`wechat`,`qq`,`alipay`,`realname`,`idcard`,`certificate`,`authen_reason`,`bankname`,`bankcard`,`bankaddress`,`phone`,`province`,`city`,`county` FROM `profile` WHERE  `username` = '17703307741' LIMIT 1 [ RunTime:0.000839s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wallet` [ RunTime:0.001911s ]
+[ sql ] [ SQL ] SELECT `username`,`money`,`deposit`,`cash`,`score`,`score_deposit`,`spend`,`profit`,`team_profit`,`bonus`,`trade`,`sell`,`buy`,`ts_in`,`ts_out` FROM `wallet` WHERE  `username` = '17703307741' LIMIT 1 [ RunTime:0.000394s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dashboard` [ RunTime:0.001407s ]
+[ sql ] [ SQL ] SELECT `username`,`power`,`team_power`,`team_count`,`authen`,`machine_count`,`machine_power`,`machine_expire`,`one`,`two`,`three`,`four`,`five`,`six`,`seven`,`eight`,`lv0`,`lv1`,`lv2`,`lv3`,`lv4`,`lv5`,`lv6`,`lv7`,`lv8` FROM `dashboard` WHERE  `username` = '17703307741' LIMIT 1 [ RunTime:0.000446s ]
+[ sql ] [ SQL ] SELECT COUNT(`id`) AS tp_count FROM `account` WHERE  `inviter` = '17703307741'  AND `authen` = 1 LIMIT 1 [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `machine` [ RunTime:0.001792s ]
+[ sql ] [ SQL ] SELECT COUNT(`id`) AS tp_count FROM `machine` WHERE  `source` = 1  AND `username` = '17703307741' LIMIT 1 [ RunTime:0.000494s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:07:49+08:00 ] 61.129.7.235 GET /api
+[ info ] www.ggfb.cc/api [运行时间：0.045013s][吞吐率：22.22req/s] [内存消耗：2,055.84kb] [文件加载：74]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api',
+  'route' => 'api/index/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'connection' => 'keep-alive',
+  'host' => 'www.ggfb.cc',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Linux; U; Android 6.0.1; zh-cn; OPPO R9s Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/38.0.0.0 Mobile Safari/537.36 OppoBrowser/4.2.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000726s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.001742s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000498s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:08:01+08:00 ] 106.9.80.127 GET /funding/4.html
+[ info ] www.ggfb.cc/funding/4.html [运行时间：0.202096s][吞吐率：4.95req/s] [内存消耗：2,662.23kb] [文件加载：75]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'funding/<id>',
+  'route' => 'funding/detail',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+    'id' => '4',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-forwarded-for-pound' => '106.9.80.127',
+  'x-forwarded-for' => '106.9.80.127',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; vivo X20A Build/OPM1.171019.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044704 Mobile Safari/537.36 bsl/1.0',
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://www.ggfb.cc/api',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=midl7f2ujrhpam7vos7js9ej65',
+  'connection' => 'close',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/tpg,*/*;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'id' => '4',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/aa.jdswzc.com/application/api/view/funding/detail.html [ array (
+  0 => 'platform',
+  1 => 'group',
+  2 => 'charge',
+  3 => 'fund',
+  4 => 'now',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002475s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.003779s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.001061s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `funding` [ RunTime:0.005334s ]
+[ sql ] [ SQL ] SELECT * FROM `funding` WHERE  `id` = 4 LIMIT 1 [ RunTime:0.002138s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:08:01+08:00 ] 106.9.80.127 POST /funding/log
+[ info ] www.ggfb.cc/funding/log [运行时间：0.120179s][吞吐率：8.32req/s] [内存消耗：2,186.68kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'funding/log',
+  'route' => 'funding/logs',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '106.9.80.127',
+  'x-forwarded-for' => '106.9.80.127',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; vivo X20A Build/OPM1.171019.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044704 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/funding/4.html',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=midl7f2ujrhpam7vos7js9ej65',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '19',
+)
+[ info ] [ PARAM ] array (
+  'id' => '4',
+  'page' => '1',
+  'size' => '20',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001329s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.003944s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.001452s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `funding_log` [ RunTime:0.004282s ]
+[ sql ] [ SQL ] SELECT `l`.`action`,`l`.`money`,l.create_at AS date,`p`.`nickname`,`p`.`idcard`,`p`.`avatar` FROM `funding_log` `l` LEFT JOIN `profile` `p` ON `p`.`username`=`l`.`username` WHERE  `fid` = 4 ORDER BY `l`.`update_at` DESC LIMIT 0,20 [ RunTime:0.001121s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:08:18+08:00 ] 223.104.101.244 GET /account
+[ info ] www.ggfb.cc/account [运行时间：0.137406s][吞吐率：7.28req/s] [内存消耗：2,264.23kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'account',
+  'route' => 'account/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-forwarded-for-pound' => '223.104.101.244',
+  'x-forwarded-for' => '223.104.101.244',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; PBEM00 Build/OPM1.171019.026; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044705 Mobile Safari/537.36 bsl/1.0',
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://www.ggfb.cc/team/inviter',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=f2u2h9dn2dtqrjoar0g843i0c6',
+  'connection' => 'close',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/tpg,*/*;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/aa.jdswzc.com/application/api/view/account/index.html [ array (
+  0 => 'platform',
+  1 => 'group',
+  2 => 'news',
+  3 => 'user',
+  4 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001338s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.004152s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.001207s ]
+[ sql ] [ SQL ] SELECT * FROM `config` [ RunTime:0.001193s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `account` [ RunTime:0.003606s ]
+[ sql ] [ SQL ] SELECT `uid`,`type`,`status`,`username`,`authen`,`inviter` FROM `account` WHERE  `username` = '18403008020' LIMIT 1 [ RunTime:0.000809s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `profile` [ RunTime:0.004033s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname`,`avatar`,`wechat`,`qq`,`alipay`,`realname`,`idcard`,`certificate`,`authen_reason`,`bankname`,`bankcard`,`bankaddress`,`phone`,`province`,`city`,`county` FROM `profile` WHERE  `username` = '18403008020' LIMIT 1 [ RunTime:0.001246s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wallet` [ RunTime:0.003687s ]
+[ sql ] [ SQL ] SELECT `username`,`money`,`deposit`,`cash`,`score`,`score_deposit`,`spend`,`profit`,`team_profit`,`bonus`,`trade`,`sell`,`buy`,`ts_in`,`ts_out` FROM `wallet` WHERE  `username` = '18403008020' LIMIT 1 [ RunTime:0.001099s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dashboard` [ RunTime:0.003413s ]
+[ sql ] [ SQL ] SELECT `username`,`power`,`team_power`,`team_count`,`authen`,`machine_count`,`machine_power`,`machine_expire`,`one`,`two`,`three`,`four`,`five`,`six`,`seven`,`eight`,`lv0`,`lv1`,`lv2`,`lv3`,`lv4`,`lv5`,`lv6`,`lv7`,`lv8` FROM `dashboard` WHERE  `username` = '18403008020' LIMIT 1 [ RunTime:0.002655s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `article` [ RunTime:0.003727s ]
+[ sql ] [ SQL ] SELECT `id`,`image`,`title`,`date` FROM `article` WHERE  `type` <> 8  AND `date` <= '2019-07-09 18:08:18' ORDER BY `top` DESC,`sort` DESC,`date` DESC LIMIT 5 [ RunTime:0.001561s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:08:22+08:00 ] 223.104.101.244 GET /api
+[ info ] www.ggfb.cc/api [运行时间：0.121224s][吞吐率：8.25req/s] [内存消耗：2,067.77kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'api',
+  'route' => 'api/index/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-forwarded-for-pound' => '223.104.101.244',
+  'x-forwarded-for' => '223.104.101.244',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; PBEM00 Build/OPM1.171019.026; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044705 Mobile Safari/537.36 bsl/1.0',
+  'upgrade-insecure-requests' => '1',
+  'referer' => 'http://www.ggfb.cc/account',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=f2u2h9dn2dtqrjoar0g843i0c6',
+  'connection' => 'close',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,image/tpg,*/*;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] /www/wwwroot/aa.jdswzc.com/application/api/view/index/index.html [ array (
+  0 => 'platform',
+  1 => 'group',
+  2 => 'config',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001097s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.003722s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.001601s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:08:23+08:00 ] 223.104.101.244 POST /index/list
+[ info ] www.ggfb.cc/index/list [运行时间：0.081835s][吞吐率：12.22req/s] [内存消耗：2,069.37kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'index/list',
+  'route' => 'api/index/list',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '223.104.101.244',
+  'x-forwarded-for' => '223.104.101.244',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; PBEM00 Build/OPM1.171019.026; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044705 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/api',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=f2u2h9dn2dtqrjoar0g843i0c6',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '34',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'size' => '20',
+  'filter' => 'all',
+  'catalog' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000838s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.002895s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000874s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `funding` [ RunTime:0.002175s ]
+[ sql ] [ SQL ] SELECT `f`.`id`,`f`.`title`,`f`.`image`,`f`.`target`,`f`.`current`,`f`.`people`,`f`.`create_at`,`p`.`nickname`,`p`.`idcard`,`p`.`avatar` FROM `funding` `f` LEFT JOIN `profile` `p` ON `p`.`username`=`f`.`owner` WHERE  `f`.`visible` = '1' ORDER BY `f`.`create_at` DESC LIMIT 0,3 [ RunTime:0.000957s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:08:23+08:00 ] 223.104.101.244 POST /market/list
+[ info ] www.ggfb.cc/market/list [运行时间：0.083161s][吞吐率：12.02req/s] [内存消耗：2,212.68kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'market/list',
+  'route' => 'market/search',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '223.104.101.244',
+  'x-forwarded-for' => '223.104.101.244',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; PBEM00 Build/OPM1.171019.026; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044705 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/api',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=f2u2h9dn2dtqrjoar0g843i0c6',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'content-length' => '6',
+)
+[ info ] [ PARAM ] array (
+  'type' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000774s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.002634s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000572s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `trade` [ RunTime:0.003347s ]
+[ sql ] [ SQL ] SELECT tid AS id,`t`.`type`,`t`.`status`,p.nickname AS owner,`number`,`price`,t.update_at AS date FROM `trade` `t` INNER JOIN `profile` `p` ON `p`.`username`=`t`.`owner` WHERE  `t`.`type` = '1'  AND `t`.`status` <> '0'  AND `t`.`status` <> '8' ORDER BY `t`.`status` ASC,`t`.`create_at` DESC LIMIT 0,100 [ RunTime:0.000757s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:08:23+08:00 ] 223.104.101.244 POST /market/overview
+[ info ] www.ggfb.cc/market/overview [运行时间：0.143108s][吞吐率：6.99req/s] [内存消耗：2,209.21kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'market/overview',
+  'route' => 'market/overview',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '223.104.101.244',
+  'x-forwarded-for' => '223.104.101.244',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; PBEM00 Build/OPM1.171019.026; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044705 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/api',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=f2u2h9dn2dtqrjoar0g843i0c6',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001088s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.004539s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000597s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `market` [ RunTime:0.002076s ]
+[ sql ] [ SQL ] SELECT `date`,`price`,`high`,`low` FROM `market` WHERE  `date` <= '2019-07-09' ORDER BY `date` DESC LIMIT 7 [ RunTime:0.000881s ]
+---------------------------------------------------------------
+[ 2019-07-09T18:08:23+08:00 ] 223.104.101.244 POST /account/sync
+[ info ] www.ggfb.cc/account/sync [运行时间：0.086588s][吞吐率：11.55req/s] [内存消耗：2,242.84kb] [文件加载：73]
+[ info ] [ LANG ] /www/wwwroot/aa.jdswzc.com/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'account/sync',
+  'route' => 'account/sync',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'x-requested-with' => 'XMLHttpRequest',
+  'x-forwarded-for-pound' => '223.104.101.244',
+  'x-forwarded-for' => '223.104.101.244',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 8.1.0; PBEM00 Build/OPM1.171019.026; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 /6.2 TBS/044705 Mobile Safari/537.36 bsl/1.0',
+  'referer' => 'http://www.ggfb.cc/api',
+  'origin' => 'http://www.ggfb.cc',
+  'host' => 'www.ggfb.cc',
+  'cookie' => 'PHPSESSID=f2u2h9dn2dtqrjoar0g843i0c6',
+  'connection' => 'close',
+  'authentication' => 'undefined',
+  'accept-language' => 'zh-CN,en-US;q=0.9',
+  'accept-encoding' => 'gzip',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'httponly' => true,
+  'secure' => false,
+  'expire' => 86400,
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000865s ] mysql:host=127.0.0.1;dbname=aa_jdswzc_com;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `config` [ RunTime:0.002479s ]
+[ sql ] [ SQL ] SELECT * FROM `config` WHERE  `token` = 'hello.group' LIMIT 1 [ RunTime:0.000649s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `account` [ RunTime:0.002716s ]
+[ sql ] [ SQL ] SELECT `type` FROM `account` WHERE  `username` = '18403008020' LIMIT 1 [ RunTime:0.000723s ]
+[ sql ] [ SQL ] SELECT `uid`,`type`,`status`,`username`,`authen`,`inviter` FROM `account` WHERE  `username` = '18403008020' LIMIT 1 [ RunTime:0.000726s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `profile` [ RunTime:0.002669s ]
+[ sql ] [ SQL ] SELECT `username`,`nickname`,`avatar`,`wechat`,`qq`,`alipay`,`realname`,`idcard`,`certificate`,`authen_reason`,`bankname`,`bankcard`,`bankaddress`,`phone`,`province`,`city`,`county` FROM `profile` WHERE  `username` = '18403008020' LIMIT 1 [ RunTime:0.000898s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `wallet` [ RunTime:0.002560s ]
+[ sql ] [ SQL ] SELECT `username`,`money`,`deposit`,`cash`,`score`,`score_deposit`,`spend`,`profit`,`team_profit`,`bonus`,`trade`,`sell`,`buy`,`ts_in`,`ts_out` FROM `wallet` WHERE  `username` = '18403008020' LIMIT 1 [ RunTime:0.000789s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dashboard` [ RunTime:0.002391s ]
+[ sql ] [ SQL ] SELECT `username`,`power`,`team_power`,`team_count`,`authen`,`machine_count`,`machine_power`,`machine_expire`,`one`,`two`,`three`,`four`,`five`,`six`,`seven`,`eight`,`lv0`,`lv1`,`lv2`,`lv3`,`lv4`,`lv5`,`lv6`,`lv7`,`lv8` FROM `dashboard` WHERE  `username` = '18403008020' LIMIT 1 [ RunTime:0.000647s ]
+[ sql ] [ SQL ] SELECT COUNT(`id`) AS tp_count FROM `account` WHERE  `inviter` = '18403008020'  AND `authen` = 1 LIMIT 1 [ RunTime:0.000593s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `machine` [ RunTime:0.002369s ]
+[ sql ] [ SQL ] SELECT COUNT(`id`) AS tp_count FROM `machine` WHERE  `source` = 1  AND `username` = '18403008020' LIMIT 1 [ RunTime:0.000579s ]

@@ -1,4 +1,4 @@
-<?php /*a:2:{s:68:"/www/wwwroot/aa.jdswzc.com/application/admin/view/event/funding.html";i:1562578227;s:67:"/www/wwwroot/aa.jdswzc.com/application/admin/view/common/world.html";i:1562662267;}*/ ?>
+<?php /*a:2:{s:68:"/www/wwwroot/aa.jdswzc.com/application/admin/view/event/funding.html";i:1562738414;s:67:"/www/wwwroot/aa.jdswzc.com/application/admin/view/common/world.html";i:1562662267;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -350,7 +350,7 @@
                 <input type="hidden" name="action" value="update" />
                 <div class="modal-header">
                     <h5 class="modal-title">编辑项目</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="close bonus" data-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row">
@@ -443,7 +443,7 @@
                             </div>
                         </div>
                         <div class="col-lg-12">
-                            <div class="form-group">
+                            <div class="form-group bonus-form">
                                 <label class="form-label">投资分红</label>
                                 <div class="input-group">
                                     <input type="text" class="form-control" data-min="0" name="min[]" placeholder="最少" />
@@ -507,7 +507,7 @@ require(['jquery', 'ZeroClipboard'], function($, ZeroClipboard){
         });
         // 项目分红
         var add = function(data) {
-            var html = '<div class="input-group">' +
+            var html = '<div class="input-group delete">' +
                 '<input type="text" class="form-control"  name="min[]" placeholder="最少" />' +
                 '<input type="text" class="form-control" name="max[]" placeholder="最多" /><input type="text" class="form-control" name="bonus[]" placeholder="0.03" />' +
                 '<span class="input-group-append minus"><span class="input-group-text"><i class="fe fe-minus"></i></span></span></div>';
@@ -520,7 +520,10 @@ require(['jquery', 'ZeroClipboard'], function($, ZeroClipboard){
 
             $(document).on('click', '.minus', function () {
                 $(this).parent().remove();
-            })
+            });
+          	$('.close').click(function() {
+              	$('.delete').remove();
+            });
         });
         // 编辑项目
         $('.btn-edit').on('click', function(){
@@ -543,7 +546,6 @@ require(['jquery', 'ZeroClipboard'], function($, ZeroClipboard){
                         var bonus = res.data.bonus;
                         bonus = bonus.substring(0,bonus.length-1)
                         var arr = bonus.split(';');
-
                         $.each(arr, function (key, value) {
                             add($('.modal-update .plus'));
                             var val = value.split(',');
@@ -551,6 +553,7 @@ require(['jquery', 'ZeroClipboard'], function($, ZeroClipboard){
                             $('.modal-update input[name="max[]"]').eq(key).val(val[1]);
                             $('.modal-update input[name="bonus[]"]').eq(key).val(val[2]);
                         });
+                      	$('.bonus-form').children().last().remove();
                     } else {
                         var bonus = res.data.bonus.substring(0,res.data.bonus.length-1);
                         var arr = bonus.split(',');

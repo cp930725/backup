@@ -1,4 +1,4 @@
-<?php /*a:2:{s:64:"/www/wwwroot/aa.jdswzc.com/application/api/view/index/index.html";i:1562574822;s:67:"/www/wwwroot/aa.jdswzc.com/application/api/view/common/default.html";i:1562662293;}*/ ?>
+<?php /*a:2:{s:64:"/www/wwwroot/aa.jdswzc.com/application/api/view/index/index.html";i:1562739596;s:67:"/www/wwwroot/aa.jdswzc.com/application/api/view/common/default.html";i:1562662293;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -119,7 +119,7 @@
             <div class="container container-padding">
                 
 <div class="d-flex mb-3">
-  <div style="width:100%; height:120px;  " >        <img style="text-align: center; height:122px; " src="/static/image/banner.png" width="100%" alt=""></div>
+  <div style="width:100%; height:120px;  " >        <a href="team/inviter"><img style="text-align: center; height:122px; " src="/static/image/banner.png" width="100%" alt=""></a></div>
 </div>
 <div id="market" data-market="<?php echo htmlentities(app('config')->get('hello.unit')); ?>" class="mb-3" style="height: 10rem;"></div>
 <a class="pull-right" href="/funding">查看更多>>></a>

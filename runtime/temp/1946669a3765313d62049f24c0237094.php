@@ -1,4 +1,4 @@
-<?php /*a:2:{s:63:"/www/wwwroot/aa.jdswzc.com/application/api/view/team/index.html";i:1562574822;s:67:"/www/wwwroot/aa.jdswzc.com/application/api/view/common/default.html";i:1562661391;}*/ ?>
+<?php /*a:2:{s:63:"/www/wwwroot/aa.jdswzc.com/application/api/view/team/index.html";i:1562574822;s:67:"/www/wwwroot/aa.jdswzc.com/application/api/view/common/default.html";i:1562662293;}*/ ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -31,6 +31,9 @@
                 display: none !important;
             }
         }
+      a:hover{
+      	text-decoration: none;
+      }
     </style>
     
 </head>

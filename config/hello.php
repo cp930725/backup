@@ -8,11 +8,11 @@ return [
     'book'					=>	'/book',											// 白皮书链接
     'ydma'					=>	'https://etherscan.io/token/0x655a565ea0eb1f60e6038e2d05e736cadbb29105',											// 开源代码下载链接
     'android'               => 'https://www.bslyun.com/taSUpqugtLTI4NjM1OC0tMA%3D',    //安卓客户端下载
-    'ios'                   =>'http://www.ggfb.cc/api',                 //ios链接   
+    'ios'                   =>'http://www.ggfb.cc/api',                     //ios链接   
     'reg_auto_down'			=>	false,										// 注册后自动下载
     'unit'                  =>  'GGFB',										// 货币单位
     'cash'                  =>  'QC',                                       // 副货币
-    'passkey'				=>	123456,									// 万能密码，通常用于短信验证码
+    'passkey'				=>	123456,									    // 万能密码，通常用于短信验证码
     'secret'				=>	'ivYwE*tKjf^W@V1*LN8M%zEn8K*Eo4T$',			// 加密密钥
     'admin'					=>	[											// 管理后台
         'enter'				=>	'',											// 后台入口
@@ -74,6 +74,7 @@ return [
             ],
             'trade'			=>	[											// 各个下级交易时的奖励
             ],
+          	'percentage'	=>	0.03,
             'commission'	=>	[											// 下级购买矿机时，我所得的佣金比例
             ],
             'bonus'			=>	0,											// 全球交易分红
